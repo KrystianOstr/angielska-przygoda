@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle xmlns="http://www.w3.org/2000/svg" cx="100" cy="98" r="50" fill="#F5CBA7" stroke="#1F1F1F" stroke-width="4"/>
+<path xmlns="http://www.w3.org/2000/svg" d="M56,92 Q58,48 100,42 Q142,48 144,92 Q131,72 108,70 Q88,70 72,76 Q62,80 56,92 Z" fill="#6B3E26" stroke="#1F1F1F" stroke-width="4" stroke-linejoin="round"/>
+<ellipse xmlns="http://www.w3.org/2000/svg" cx="50" cy="100" rx="7" ry="11" fill="#F5CBA7" stroke="#1F1F1F" stroke-width="4"/>
+<ellipse xmlns="http://www.w3.org/2000/svg" cx="150" cy="100" rx="7" ry="11" fill="#F5CBA7" stroke="#1F1F1F" stroke-width="4"/>
+<circle xmlns="http://www.w3.org/2000/svg" cx="82" cy="96" r="6" fill="#1F1F1F"/>
+<circle xmlns="http://www.w3.org/2000/svg" cx="118" cy="96" r="6" fill="#1F1F1F"/>
+<path xmlns="http://www.w3.org/2000/svg" d="M100,98 L96,112 L104,112 Z" fill="none" stroke="#1F1F1F" stroke-width="4" stroke-linejoin="round"/>
+<path xmlns="http://www.w3.org/2000/svg" d="M84,123 Q100,136 116,123" fill="none" stroke="#1F1F1F" stroke-width="4" stroke-linecap="round"/>
+<path xmlns="http://www.w3.org/2000/svg" d="M56,92 Q58,48 100,42 Q142,48 144,92 Q131,72 108,70 Q88,70 72,76 Q62,80 56,92 Z" fill="#FF5A4E" opacity="0.95"/></svg>

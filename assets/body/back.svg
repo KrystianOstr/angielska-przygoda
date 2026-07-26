@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><ellipse xmlns="http://www.w3.org/2000/svg" cx="79" cy="185" rx="8" ry="4" fill="#F5CBA7" stroke="#1F1F1F" stroke-width="4"/>
+<ellipse xmlns="http://www.w3.org/2000/svg" cx="121" cy="185" rx="8" ry="4" fill="#F5CBA7" stroke="#1F1F1F" stroke-width="4"/>
+<polyline xmlns="http://www.w3.org/2000/svg" points="92,116 84,150 80,177" fill="none" stroke="#6C8AE4" stroke-width="12" stroke-linecap="round"/>
+<polyline xmlns="http://www.w3.org/2000/svg" points="108,116 116,150 120,177" fill="none" stroke="#6C8AE4" stroke-width="12" stroke-linecap="round"/>
+<polyline xmlns="http://www.w3.org/2000/svg" points="78,68 55,95 45,120" fill="none" stroke="#F5CBA7" stroke-width="10" stroke-linecap="round"/>
+<polyline xmlns="http://www.w3.org/2000/svg" points="122,68 145,95 155,120" fill="none" stroke="#F5CBA7" stroke-width="10" stroke-linecap="round"/>
+<rect xmlns="http://www.w3.org/2000/svg" x="78" y="60" width="44" height="56" rx="12" fill="#5DADE2" stroke="#1F1F1F" stroke-width="4"/>
+<rect xmlns="http://www.w3.org/2000/svg" x="94" y="52" width="12" height="8" rx="4" fill="#F5CBA7" stroke="#1F1F1F" stroke-width="4"/>
+<circle xmlns="http://www.w3.org/2000/svg" cx="100" cy="35" r="18" fill="#F5CBA7" stroke="#1F1F1F" stroke-width="4"/>
+<path xmlns="http://www.w3.org/2000/svg" d="M84,26 Q100,10 116,26 L116,43 Q100,52 84,43 Z" fill="#6B3E26" stroke="#1F1F1F" stroke-width="4" stroke-linejoin="round"/>
+<rect xmlns="http://www.w3.org/2000/svg" x="80" y="62" width="40" height="50" rx="10" fill="#FF5A4E" opacity="0.95"/></svg>
