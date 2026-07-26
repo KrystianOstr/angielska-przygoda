@@ -1,10 +1,128 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><ellipse xmlns="http://www.w3.org/2000/svg" cx="79" cy="185" rx="8" ry="4" fill="#F5CBA7" stroke="#1F1F1F" stroke-width="4"/>
 <ellipse xmlns="http://www.w3.org/2000/svg" cx="121" cy="185" rx="8" ry="4" fill="#F5CBA7" stroke="#1F1F1F" stroke-width="4"/>
 <polyline xmlns="http://www.w3.org/2000/svg" points="92,116 84,150 80,177" fill="none" stroke="#6C8AE4" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline xmlns="http://www.w3.org/2000/svg" points="108,116 116,150 120,177" fill="none" stroke="#6C8AE4" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline xmlns="http://www.w3.org/2000/svg" points="78,68 55,95 45,120" fill="none" stroke="#F5CBA7" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline xmlns="http://www.w3.org/2000/svg" points="122,68 145,95 155,120" fill="none" stroke="#F5CBA7" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-<rect xmlns="http://www.w3.org/2000/svg" x="78" y="60" width="44" height="56" rx="12" fill="#5DADE2" stroke="#1F1F1F" stroke-width="4"/>
-<rect xmlns="http://www.w3.org/2000/svg" x="94" y="52" width="12" height="8" rx="4" fill="#F5CBA7" stroke="#1F1F1F" stroke-width="4"/>
-<circle xmlns="http://www.w3.org/2000/svg" cx="100" cy="35" r="18" fill="#F5CBA7" stroke="#1F1F1F" stroke-width="4"/>
-<rect xmlns="http://www.w3.org/2000/svg" x="90" y="48" width="20" height="16" rx="6" fill="#FF5A4E" stroke="#1F1F1F" stroke-width="2"/></svg>
+<polyline xmlns="http://www.w3.org/2000/svg" points="108,116 116,150 120,177" fill="none" stroke="#6C8AE4" stroke-width="12" stroke-linecap="round" stroke-linejoin="r…5152 tokens truncated…"#45a84f"/><path d="M25 19Q38 14 43 29Q31 34 25 19M72 15Q82 26 68 35Q58 24 72 15M80 31Q81 44 65 42Q66 31 80 31" fill="#55bd5c"/><path d="M29 51C32 36 48 31 61 37C76 44 73 62 62 71L51 88L43 72C32 68 26 61 29 51Z" fill="#ef476f"/><path d="M43 72L51 88L58 73" fill="#fff" stroke="none"/>`,
+bellpepper:`<path d="M49 29Q47 17 59 14" fill="none" stroke="#328b3d"/><path d="M35 31C19 34 18 55 25 73C30 86 45 84 50 77C57 85 73 86 78 71C85 51 76 31 62 31C56 31 53 34 50 39C46 34 42 30 35 31Z" fill="#ef4b36"/><path d="M39 31Q50 24 62 31L58 41H42Z" fill="#45a84f"/>`,
+cauliflower:`<path d="M43 82L44 55H58L59 82Z" fill="#72c84d"/><path d="M45 69Q30 66 25 54Q39 51 48 61M57 68Q72 64 77 52Q63 50 54 60" fill="#4dae45"/><circle cx="34" cy="45" r="15" fill="#fff4cf"/><circle cx="50" cy="35" r="17" fill="#fff9de"/><circle cx="67" cy="45" r="15" fill="#f3e8c4"/><circle cx="50" cy="50" r="18" fill="#fff8d8"/>`,
+lettuce:`<path d="M50 82C25 82 16 68 22 53C12 41 23 27 37 31C41 15 60 14 65 29C81 25 89 42 78 53C87 69 72 82 50 82Z" fill="#7bd454"/><path d="M50 75V31M50 59L32 44M50 60L68 42M38 70L27 57M61 70L74 56" fill="none" stroke="#3ba64a" stroke-width="4"/>`,
+cabbage:`<circle cx="50" cy="52" r="33" fill="#65c958"/><path d="M50 22Q34 38 50 80M50 22Q67 39 50 80M22 51Q37 42 50 52Q64 42 78 51M27 66Q39 58 50 67Q61 58 73 66" fill="none" stroke="#3b9e49" stroke-width="4"/>`,
+sausage:`<path d="M25 31C14 43 19 66 37 74C54 82 75 75 80 60" fill="none" stroke="#161616" stroke-width="24"/><path d="M25 31C14 43 19 66 37 74C54 82 75 75 80 60" fill="none" stroke="#bb552d" stroke-width="16"/><path d="M25 31L18 23M80 60L88 66" fill="none"/><path d="M36 43L43 49M50 52L57 58M63 42L70 48" fill="none" stroke="#7f301d" stroke-width="3"/>`,
+hotdog:`<path d="M12 61Q14 40 31 34H69Q86 40 88 61Q86 78 70 82H30Q14 78 12 61Z" fill="#e9ad50"/><path d="M23 55Q25 42 38 39H64Q78 42 78 56V62Q77 70 66 72H35Q24 69 23 61Z" fill="#d84e32"/><path d="M14 59Q23 63 30 72M86 59Q77 63 70 72" fill="none" stroke="#f6c56e" stroke-width="10"/><path d="M30 53Q40 46 50 54Q60 61 71 52" fill="none" stroke="#ffd43b" stroke-width="4"/>`,
+gummybear:`<circle cx="35" cy="26" r="10" fill="#f28b32"/><circle cx="65" cy="26" r="10" fill="#f28b32"/><circle cx="50" cy="38" r="22" fill="#ff9b3d"/><ellipse cx="50" cy="66" rx="24" ry="25" fill="#f28b32"/><circle cx="24" cy="60" r="9" fill="#f28b32"/><circle cx="76" cy="60" r="9" fill="#f28b32"/><circle cx="36" cy="86" r="9" fill="#f28b32"/><circle cx="64" cy="86" r="9" fill="#f28b32"/><circle cx="43" cy="36" r="3" fill="#7b3d16" stroke="none"/><circle cx="57" cy="36" r="3" fill="#7b3d16" stroke="none"/><path d="M44 47Q50 52 56 47" fill="none" stroke="#7b3d16" stroke-width="3"/>`
+};
+const artSvg=name=>`<svg class="art-icon" viewBox="0 0 100 100" aria-hidden="true"><g stroke="#161616" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">${FOOD_ART[name]}</g></svg>`;
+const makeFood=(rows,prefix)=>rows.map(([en,visual,pl,phon])=>({id:`${prefix}-${en.replaceAll(" ","-")}`,pic:visual.startsWith("@")?null:visual,art:visual.startsWith("@")?visual.slice(1):null,en,pl,phon}));
+const FRUIT_ITEMS=makeFood([
+["apple","🍎","jabłko","APyl"],["banana","🍌","banan","baNAna"],["orange","🍊","pomarańcza","ORYNdż"],
+["strawberry","🍓","truskawka","STROberi"],["grape","🍇","winogrono","grejp"],["pear","🍐","gruszka","per"],
+["lemon","@greenlemon","cytryna","LEMyn"],["watermelon","🍉","arbuz","ŁOTErmelon"],["cherry","🍒","wiśnia / czereśnia","CZERi"],
+["peach","🍑","brzoskwinia","piicz"],["pineapple","🍍","ananas","PAJnapyl"],["raspberry","@raspberry","malina","RAAZberi"],
+["blueberry","@blueberry","borówka","BLUUberi"],["plum","@plum","śliwka","plam"],["mango","🥭","mango","MANGgoł"],
+["kiwi","🥝","kiwi","KIIłi"],["coconut","🥥","kokos","KOŁkynat"],["melon","🍈","melon","MELyn"],
+["avocado","🥑","awokado","awyKAAdoł"],["lime","@lime","limonka","lajm"]],"fruit");
+const VEGETABLE_ITEMS=makeFood([
+["carrot","🥕","marchewka","KERyt"],["potato","🥔","ziemniak","pyTEJtoł"],["tomato","🍅","pomidor","tyMAAtoł"],
+["cucumber","🥒","ogórek","KJUkamber"],["onion","🧅","cebula","ANjyn"],["garlic","🧄","czosnek","GAAlik"],
+["lettuce","@lettuce","sałata","LETys"],["cabbage","@cabbage","kapusta","KABydż"],["broccoli","🥦","brokuł","BROKyli"],
+["cauliflower","@cauliflower","kalafior","KOLyflałer"],["bell pepper","@bellpepper","papryka","bel PEPyr"],["corn","🌽","kukurydza","korn"],
+["peas","@peas","groszek","piiz"],["beans","@beans","fasola","biinz"],["mushroom","🍄","grzyb","MASzrum"],
+["pumpkin","🎃","dynia","PAMkin"],["beetroot","@beetroot","burak","BIITruut"],
+["radish","@radish","rzodkiewka","RADysz"]],"vegetable");
+const GENERAL_FOOD_ITEMS=makeFood([
+["bread","🍞","chleb","bred"],["cheese","🧀","ser","cziiz"],["milk","🥛","mleko","myłk"],["egg","🥚","jajko","eg"],
+["butter","🧈","masło","BATyr"],["yogurt","🥣","jogurt","JOŁgert"],["rice","🍚","ryż","rajs"],["pasta","🍝","makaron","PASta"],
+["meat","🥩","mięso","miit"],["chicken","🍗","kurczak","CZYkyn"],["fish","🐟","ryba","fysz"],["sausage","@sausage","kiełbasa","SOSydż"],
+["ham","🍖","szynka","ham"],["soup","🍲","zupa","suup"],["sandwich","🥪","kanapka","SENDłycz"],["pizza","🍕","pizza","PIca"],
+["cake","🍰","ciasto","kejk"],["cookie","🍪","ciastko","kuki"],["chocolate","🍫","czekolada","CZOKlyt"],
+["ice cream","🍦","lody","ajs kriim"],["fries","🍟","frytki","frajs"],["hamburger","🍔","hamburger","HAMberger"],
+["hot dogs","@hotdog","parówki","hot dogs"],["ketchup","🍅","ketchup","KEczap"],
+["candies","🍬","cukierki","KENDiz"],["gummy candies","@gummybear","żelki","GAMi KENDiz"]],"general");
+const FOOD_MIX_ITEMS=[...FRUIT_ITEMS,...VEGETABLE_ITEMS,...GENERAL_FOOD_ITEMS];
+const FOOD_SUBCATEGORIES={fruits:{name:"Owoce",emoji:"🍓",items:FRUIT_ITEMS},vegetables:{name:"Warzywa",emoji:"🥕",items:VEGETABLE_ITEMS},general:{name:"Ogólne",emoji:"🍞",items:GENERAL_FOOD_ITEMS},mix:{name:"Mix jedzenia",emoji:"🎲",items:FOOD_MIX_ITEMS}};
+const ANIMAL_ITEMS=[
+{id:"dog",pic:"🐶",en:"dog",pl:"pies",phon:"dog"},
+{id:"cat",pic:"🐱",en:"cat",pl:"kot",phon:"ket"},
+{id:"bird",pic:"🐦",en:"bird",pl:"ptak",phon:"berd"},
+{id:"fish",pic:"🐟",en:"fish",pl:"ryba",phon:"fysz"},
+{id:"horse",pic:"🐴",en:"horse",pl:"koń",phon:"hors"},
+{id:"cow",pic:"🐮",en:"cow",pl:"krowa",phon:"kał"},
+{id:"pig",pic:"🐷",en:"pig",pl:"świnia",phon:"pyg"},
+{id:"sheep",pic:"🐑",en:"sheep",pl:"owca",phon:"sziip"},
+{id:"goat",pic:"🐐",en:"goat",pl:"koza",phon:"gołt"},
+{id:"chicken",pic:"🐔",en:"chicken",pl:"kura",phon:"CZYkyn"},
+{id:"duck",pic:"🦆",en:"duck",pl:"kaczka",phon:"dak"},
+{id:"rabbit",pic:"🐰",en:"rabbit",pl:"królik",phon:"RABit"},
+{id:"mouse",pic:"🐁",en:"mouse",pl:"mysz",phon:"małs"},
+{id:"rat",pic:"🐀",en:"rat",pl:"szczur",phon:"rat"},
+{id:"hamster",pic:"🐹",en:"hamster",pl:"chomik",phon:"HAMster"},
+{id:"turtle",pic:"🐢",en:"turtle",pl:"żółw",phon:"TERtyl"},
+{id:"frog",pic:"🐸",en:"frog",pl:"żaba",phon:"frog"},
+{id:"snake",pic:"🐍",en:"snake",pl:"wąż",phon:"snejk"},
+{id:"lion",pic:"🦁",en:"lion",pl:"lew",phon:"LAJyn"},
+{id:"tiger",pic:"🐯",en:"tiger",pl:"tygrys",phon:"TAJger"},
+{id:"elephant",pic:"🐘",en:"elephant",pl:"słoń",phon:"ELyfant"},
+{id:"monkey",pic:"🐵",en:"monkey",pl:"małpa",phon:"MANKi"},
+{id:"bear",pic:"🐻",en:"bear",pl:"niedźwiedź",phon:"ber"},
+{id:"wolf",pic:"🐺",en:"wolf",pl:"wilk",phon:"łulf"},
+{id:"fox",pic:"🦊",en:"fox",pl:"lis",phon:"foks"},
+{id:"deer",pic:"🦌",en:"deer",pl:"jeleń",phon:"dir"},
+{id:"giraffe",pic:"🦒",en:"giraffe",pl:"żyrafa",phon:"dżyRAF"},
+{id:"zebra",pic:"🦓",en:"zebra",pl:"zebra",phon:"ZEBra"},
+{id:"crocodile",pic:"🐊",en:"crocodile",pl:"krokodyl",phon:"KROKydajl"},
+{id:"dolphin",pic:"🐬",en:"dolphin",pl:"delfin",phon:"DOLfyn"}];
+const NUMBER_ITEMS=[
+{id:"zero",number:0,en:"zero",pl:"zero",phon:"ZIroł"},{id:"one",number:1,en:"one",pl:"jeden",phon:"łan"},
+{id:"two",number:2,en:"two",pl:"dwa",phon:"tuu"},{id:"three",number:3,en:"three",pl:"trzy",phon:"frii"},
+{id:"four",number:4,en:"four",pl:"cztery",phon:"for"},{id:"five",number:5,en:"five",pl:"pięć",phon:"fajw"},
+{id:"six",number:6,en:"six",pl:"sześć",phon:"syks"},{id:"seven",number:7,en:"seven",pl:"siedem",phon:"SEWyn"},
+{id:"eight",number:8,en:"eight",pl:"osiem",phon:"ejt"},{id:"nine",number:9,en:"nine",pl:"dziewięć",phon:"najn"},
+{id:"ten",number:10,en:"ten",pl:"dziesięć",phon:"ten"},{id:"eleven",number:11,en:"eleven",pl:"jedenaście",phon:"yLEWyn"},
+{id:"twelve",number:12,en:"twelve",pl:"dwanaście",phon:"tłelw"},{id:"thirteen",number:13,en:"thirteen",pl:"trzynaście",phon:"ferTIIN"},
+{id:"fourteen",number:14,en:"fourteen",pl:"czternaście",phon:"forTIIN"},{id:"fifteen",number:15,en:"fifteen",pl:"piętnaście",phon:"fyfTIIN"},
+{id:"sixteen",number:16,en:"sixteen",pl:"szesnaście",phon:"syksTIIN"},{id:"seventeen",number:17,en:"seventeen",pl:"siedemnaście",phon:"sewynTIIN"},
+{id:"eighteen",number:18,en:"eighteen",pl:"osiemnaście",phon:"ejTIIN"},{id:"nineteen",number:19,en:"nineteen",pl:"dziewiętnaście",phon:"najnTIIN"},
+{id:"twenty",number:20,en:"twenty",pl:"dwadzieścia",phon:"TŁENti"}];
+const NUMBER_SUBCATEGORIES={low:{name:"Liczby 0–10",emoji:"🔟",items:NUMBER_ITEMS.filter(x=>x.number<=10)},high:{name:"Liczby 11–20",emoji:"🔢",items:NUMBER_ITEMS.filter(x=>x.number>=11)}};
+const BODY_ITEMS=[
+["head","głowa","hed"],["face","twarz","fejs"],["hair","włosy","her"],["eye","oko","aj"],["ear","ucho","ir"],
+["nose","nos","nołz"],["mouth","usta","małf"],["tooth","ząb","tuuf"],["neck","szyja","nek"],["shoulder","bark","SZOŁlder"],
+["arm","ramię / ręka","aam"],["hand","dłoń","hend"],["finger","palec","FINGer"],["chest","klatka piersiowa","czest"],
+["back","plecy","bek"],["stomach","brzuch","STAmak"],["belly button","pępek","BELi BATyn"],["leg","noga","leg"],
+["knee","kolano","nii"],["foot","stopa","fut"],["toe","palec u stopy","toł"]].map(([en,pl,phon])=>({id:`body-${en.replaceAll(" ","-")}`,en,pl,phon,image:`assets/body/${en.replaceAll(" ","-")}.svg`}));
+const COLOR_ITEMS=[
+{id:"red",color:"#ef4444",en:"red",pl:"czerwony",phon:"red"},{id:"blue",color:"#3b82f6",en:"blue",pl:"niebieski",phon:"bluu"},
+{id:"green",color:"#22c55e",en:"green",pl:"zielony",phon:"griin"},{id:"yellow",color:"#facc15",en:"yellow",pl:"żółty",phon:"JEloł"},
+{id:"orange",color:"#f97316",en:"orange",pl:"pomarańczowy",phon:"ORYNdż"},{id:"purple",color:"#8b5cf6",en:"purple",pl:"fioletowy",phon:"PERpyl"},
+{id:"pink",color:"#ec4899",en:"pink",pl:"różowy",phon:"pink"},{id:"brown",color:"#92400e",en:"brown",pl:"brązowy",phon:"brałn"},
+{id:"black",color:"#111827",en:"black",pl:"czarny",phon:"blak"},{id:"white",color:"#ffffff",en:"white",pl:"biały",phon:"łajt"},
+{id:"grey",color:"#9ca3af",en:"grey",pl:"szary",phon:"grej"},{id:"beige",color:"#d6c3a5",en:"beige",pl:"beżowy",phon:"bejż"},
+{id:"gold",color:"#d4af37",en:"gold",pl:"złoty",phon:"gołld"},{id:"silver",color:"#c0c0c0",en:"silver",pl:"srebrny",phon:"SYLwer"},
+{id:"navyblue",color:"#1e3a8a",en:"navy blue",pl:"granatowy",phon:"NEJwi bluu"},{id:"lightblue",color:"#7dd3fc",en:"light blue",pl:"jasnoniebieski",phon:"lajt bluu"},
+{id:"darkgreen",color:"#166534",en:"dark green",pl:"ciemnozielony",phon:"dark griin"},{id:"turquoise",color:"#14b8a6",en:"turquoise",pl:"turkusowy",phon:"TERkwojz"},
+{id:"cream",color:"#fffdd0",en:"cream",pl:"kremowy",phon:"kriim"}];
+const CATEGORIES={food:{name:"Jedzenie",emoji:"🍎",items:FOOD_MIX_ITEMS},animals:{name:"Zwierzęta",emoji:"🐶",items:ANIMAL_ITEMS},colors:{name:"Kolory",emoji:"🎨",items:COLOR_ITEMS},numbers:{name:"Liczby",emoji:"🔢",items:NUMBER_ITEMS},body:{name:"Części ciała",emoji:"🧍",items:BODY_ITEMS}};
+const S={left:null,right:null,matched:new Set(),lock:false,voice:null,size:8,pool:[],category:CATEGORIES.food};
+const $=q=>document.querySelector(q);
+function show(id){["home","categories","food-subcategories","number-subcategories","size","game"].forEach(x=>$("#"+x).classList.toggle("hidden",x!==id))}
+function shuffle(a){a=[...a];for(let i=a.length-1;i;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function speak(t){if(!("speechSynthesis" in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.82;u.pitch=1.05;if(S.voice){u.voice=S.voice;u.lang=S.voice.lang}speechSynthesis.speak(u)}
+function tone(ok){const A=window.AudioContext||window.webkitAudioContext;if(!A)return;const c=new A(),fs=ok?[523,659,784]:[220,185];let t=c.currentTime;fs.forEach(f=>{const o=c.createOscillator(),g=c.createGain();o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.2,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+.22);o.connect(g).connect(c.destination);o.start(t);o.stop(t+.24);t+=.11})}
+function burst(){const b=$("#confetti"),colors=["#ff6b4a","#ffc93c","#1fb8a6","#7c5cfc","#3dd68c"];b.innerHTML="";for(let i=0;i<18;i++){const p=document.createElement("i");p.className="piece";p.style.left=Math.random()*100+"%";p.style.background=colors[i%5];p.style.animationDelay=Math.random()*.15+"s";b.appendChild(p)}setTimeout(()=>b.innerHTML="",1300)}
+function reset(newSet=false){if(newSet||!S.pool.length)S.pool=shuffle(S.category.items).slice(0,S.size);S.left=S.right=null;S.matched=new Set;S.lock=false;$("#count").textContent=0;$("#total").textContent=S.pool.length;$("#finish").classList.add("hidden");render()}
+function layout(n){return n===8?{cols:4,rows:4,mcols:4,mrows:4,width:"720px",height:"560px"}:n===14?{cols:7,rows:4,mcols:4,mrows:7,width:"920px",height:"600px"}:{cols:8,rows:5,mcols:5,mrows:8,width:"1050px",height:"650px"}}
+function render(){const B=$("#board"),conf=$("#confetti");B.querySelectorAll(".tile").forEach(e=>e.remove());const g=layout(S.pool.length);B.style.setProperty("--cols",g.cols);B.style.setProperty("--rows",g.rows);B.style.setProperty("--mobile-cols",g.mcols);B.style.setProperty("--mobile-rows",g.mrows);B.style.setProperty("--board-width",g.width);B.style.setProperty("--board-height",g.height);
+const cards=shuffle(S.pool.flatMap(x=>[{side:"left",x},{side:"right",x}]));
+cards.forEach(({side,x})=>{const b=document.createElement("button");b.className=`tile ${side==="left"?"image-tile":"word-tile"}`;b.dataset.id=x.id;b.dataset.side=side;if(side==="left"){if(x.art)b.innerHTML=artSvg(x.art);else if(x.image)b.innerHTML=`<img class="art-icon" src="${x.image}" alt="">`;else if(x.pic)b.textContent=x.pic;else if(x.number!==undefined)b.innerHTML=`<span class="number-pic">${x.number}</span>`;else b.innerHTML=`<span class="color-pic" style="background:${x.color}"></span>`}else b.innerHTML=`<span class="spk">🔊</span><span class="en">${x.en}</span><span class="phon">${x.phon}</span>`;b.onclick=()=>pick(side,x,b);B.appendChild(b)});B.appendChild(conf)}
+function clear(){document.querySelectorAll(".selected,.wrong").forEach(e=>e.classList.remove("selected","wrong"));S.left=S.right=null}
+function pick(side,x,b){if(S.lock||S.matched.has(x.id))return;speak(x.en);const k=side==="left"?"left":"right";if(S[k]===x.id){S[k]=null;b.classList.remove("selected");return}
+document.querySelectorAll(`.tile[data-side="${side}"].selected`).forEach(e=>e.classList.remove("selected"));S[k]=x.id;b.classList.add("selected");if(S.left&&S.right)check()}
+function check(){S.lock=true;if(S.left===S.right){const id=S.left;tone(true);burst();setTimeout(()=>{S.matched.add(id);document.querySelectorAll(`.tile[data-id="${id}"]`).forEach(e=>{e.classList.remove("selected");e.classList.add("matched");e.disabled=true});S.left=S.right=null;S.lock=false;$("#count").textContent=S.matched.size;if(S.matched.size===S.pool.length)setTimeout(()=>$("#finish").classList.remove("hidden"),500)},260)}
+else{tone(false);document.querySelectorAll(".selected").forEach(e=>e.classList.add("wrong"));setTimeout(()=>{clear();S.lock=false},650)}}
+function voices(){if(!("speechSynthesis" in window))return;const vs=speechSynthesis.getVoices(),us=vs.filter(v=>v.lang&&v.lang.toLowerCase()==="en-us"),female=["google us english","jenny","aria","zira","samantha","female"];S.voice=female.map(h=>us.find(v=>v.name.toLowerCase().includes(h))).find(Boolean)||us.find(v=>!["david","mark","guy","george","male"].some(h=>v.name.toLowerCase().includes(h)))||us[0]||vs.find(v=>v.lang&&v.lang.toLowerCase().startsWith("en"))||null}
+function sizeOptions(){const box=$("#sizes"),max=S.category.items.length,counts=[...new Set([8,14,Math.min(20,max)])].filter(n=>n<=max);$("#size-subtitle").textContent=`${S.category.emoji} ${S.category.name} — wybierz długość gry`;box.innerHTML="";counts.forEach((n,i)=>{const b=document.createElement("button");b.className="size-card";b.dataset.count=n;b.innerHTML=`<span class="size-number">${n}</span><span class="size-label">${i===0?"krótka":i===counts.length-1?"pełna":"średnia"}</span>`;b.onclick=()=>{S.size=n;reset(true);show("game")};box.appendChild(b)})}
+function openSize(category,backTarget){S.category=category;S.pool=[];$("#size-back").dataset.target=backTarget;sizeOptions();show("size")}
+$("#play").onclick=()=>show("categories");document.querySelectorAll(".category").forEach(b=>b.onclick=()=>{const key=b.dataset.category;if(key==="food")show("food-subcategories");else if(key==="numbers")show("number-subcategories");else openSize(CATEGORIES[key],"categories")});document.querySelectorAll(".food-subcategory").forEach(b=>b.onclick=()=>openSize(FOOD_SUBCATEGORIES[b.dataset.food],"food-subcategories"));document.querySelectorAll(".number-subcategory").forEach(b=>b.onclick=()=>openSize(NUMBER_SUBCATEGORIES[b.dataset.numbers],"number-subcategories"));document.querySelectorAll(".back").forEach(b=>b.onclick=()=>show(b.dataset.target));$("#replay").onclick=()=>reset(true);$("#topics").onclick=()=>{$("#finish").classList.add("hidden");show("categories")};
+voices();if("speechSynthesis" in window)speechSynthesis.onvoiceschanged=voices;
+</script>
+</body>
+</html>
