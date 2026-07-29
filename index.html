@@ -157,7 +157,37 @@ bellpepper:`<path d="M49 29Q47 17 59 14" fill="none" stroke="#328b3d"/><path d="
 cauliflower:`<path d="M43 82L44 55H58L59 82Z" fill="#72c84d"/><path d="M45 69Q30 66 25 54Q39 51 48 61M57 68Q72 64 77 52Q63 50 54 60" fill="#4dae45"/><circle cx="34" cy="45" r="15" fill="#fff4cf"/><circle cx="50" cy="35" r="17" fill="#fff9de"/><circle cx="67" cy="45" r="15" fill="#f3e8c4"/><circle cx="50" cy="50" r="18" fill="#fff8d8"/>`,
 lettuce:`<path d="M50 82C25 82 16 68 22 53C12 41 23 27 37 31C41 15 60 14 65 29C81 25 89 42 78 53C87 69 72 82 50 82Z" fill="#7bd454"/><path d="M50 75V31M50 59L32 44M50 60L68 42M38 70L27 57M61 70L74 56" fill="none" stroke="#3ba64a" stroke-width="4"/>`,
 cabbage:`<circle cx="50" cy="52" r="33" fill="#65c958"/><path d="M50 22Q34 38 50 80M50 22Q67 39 50 80M22 51Q37 42 50 52Q64 42 78 51M27 66Q39 58 50 67Q61 58 73 66" fill="none" stroke="#3b9e49" stroke-width="4"/>`,
-sausage:`<path d="M25 31C14 43 19 66 37 74C54 82 75 75 80 60" fill="none" strok…1062 tokens truncated…Diz"]],"general");
+sausage:`<path d="M25 31C14 43 19 66 37 74C54 82 75 75 80 60" fill="none" stroke="#161616" stroke-width="24"/><path d="M25 31C14 43 19 66 37 74C54 82 75 75 80 60" fill="none" stroke="#bb552d" stroke-width="16"/><path d="M25 31L18 23M80 60L88 66" fill="none"/><path d="M36 43L43 49M50 52L57 58M63 42L70 48" fill="none" stroke="#7f301d" stroke-width="3"/>`,
+hotdog:`<path d="M12 61Q14 40 31 34H69Q86 40 88 61Q86 78 70 82H30Q14 78 12 61Z" fill="#e9ad50"/><path d="M23 55Q25 42 38 39H64Q78 42 78 56V62Q77 70 66 72H35Q24 69 23 61Z" fill="#d84e32"/><path d="M14 59Q23 63 30 72M86 59Q77 63 70 72" fill="none" stroke="#f6c56e" stroke-width="10"/><path d="M30 53Q40 46 50 54Q60 61 71 52" fill="none" stroke="#ffd43b" stroke-width="4"/>`,
+gummybear:`<circle cx="35" cy="26" r="10" fill="#f28b32"/><circle cx="65" cy="26" r="10" fill="#f28b32"/><circle cx="50" cy="38" r="22" fill="#ff9b3d"/><ellipse cx="50" cy="66" rx="24" ry="25" fill="#f28b32"/><circle cx="24" cy="60" r="9" fill="#f28b32"/><circle cx="76" cy="60" r="9" fill="#f28b32"/><circle cx="36" cy="86" r="9" fill="#f28b32"/><circle cx="64" cy="86" r="9" fill="#f28b32"/><circle cx="43" cy="36" r="3" fill="#7b3d16" stroke="none"/><circle cx="57" cy="36" r="3" fill="#7b3d16" stroke="none"/><path d="M44 47Q50 52 56 47" fill="none" stroke="#7b3d16" stroke-width="3"/>`
+};
+const artSvg=name=>`<svg class="art-icon" viewBox="0 0 100 100" aria-hidden="true"><g stroke="#161616" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">${FOOD_ART[name]}</g></svg>`;
+const makeFood=(rows,prefix)=>rows.map(([en,visual,pl,phon])=>({id:`${prefix}-${en.split(" ").join("-")}`,pic:visual.startsWith("@")?null:visual,art:visual.startsWith("@")?visual.slice(1):null,en,pl,phon}));
+const FRUIT_ITEMS=makeFood([
+["apple","🍎","jabłko","APyl"],["banana","🍌","banan","baNAna"],["orange","🍊","pomarańcza","ORYNdż"],
+["strawberry","🍓","truskawka","STROberi"],["grape","🍇","winogrono","grejp"],["pear","🍐","gruszka","per"],
+["lemon","@greenlemon","cytryna","LEMyn"],["watermelon","🍉","arbuz","ŁOTErmelon"],["cherry","🍒","wiśnia / czereśnia","CZERi"],
+["peach","🍑","brzoskwinia","piicz"],["pineapple","🍍","ananas","PAJnapyl"],["raspberry","@raspberry","malina","RAAZberi"],
+["blueberry","@blueberry","borówka","BLUUberi"],["plum","@plum","śliwka","plam"],["mango","🥭","mango","MANGgoł"],
+["kiwi","🥝","kiwi","KIIłi"],["coconut","🥥","kokos","KOŁkynat"],["melon","🍈","melon","MELyn"],
+["avocado","🥑","awokado","awyKAAdoł"],["lime","@lime","limonka","lajm"]],"fruit");
+const VEGETABLE_ITEMS=makeFood([
+["carrot","🥕","marchewka","KERyt"],["potato","🥔","ziemniak","pyTEJtoł"],["tomato","🍅","pomidor","tyMAAtoł"],
+["cucumber","🥒","ogórek","KJUkamber"],["onion","🧅","cebula","ANjyn"],["garlic","🧄","czosnek","GAAlik"],
+["lettuce","@lettuce","sałata","LETys"],["cabbage","@cabbage","kapusta","KABydż"],["broccoli","🥦","brokuł","BROKyli"],
+["cauliflower","@cauliflower","kalafior","KOLyflałer"],["bell pepper","@bellpepper","papryka","bel PEPyr"],["corn","🌽","kukurydza","korn"],
+["peas","@peas","groszek","piiz"],["beans","@beans","fasola","biinz"],["mushroom","🍄","grzyb","MASzrum"],
+["pumpkin","🎃","dynia","PAMkin"],["beetroot","@beetroot","burak","BIITruut"],
+["radish","@radish","rzodkiewka","RADysz"]],"vegetable");
+const GENERAL_FOOD_ITEMS=makeFood([
+["bread","🍞","chleb","bred"],["cheese","🧀","ser","cziiz"],["milk","🥛","mleko","myłk"],["egg","🥚","jajko","eg"],
+["butter","🧈","masło","BATyr"],["yogurt","🥣","jogurt","JOŁgert"],["rice","🍚","ryż","rajs"],["pasta","🍝","makaron","PASta"],
+["meat","🥩","mięso","miit"],["chicken","🍗","kurczak","CZYkyn"],["fish","🐟","ryba","fysz"],["sausage","@sausage","kiełbasa","SOSydż"],
+["ham","🍖","szynka","ham"],["soup","🍲","zupa","suup"],["sandwich","🥪","kanapka","SENDłycz"],["pizza","🍕","pizza","PIca"],
+["cake","🍰","ciasto","kejk"],["cookie","🍪","ciastko","kuki"],["chocolate","🍫","czekolada","CZOKlyt"],
+["ice cream","🍦","lody","ajs kriim"],["fries","🍟","frytki","frajs"],["hamburger","🍔","hamburger","HAMberger"],
+["hot dogs","@hotdog","parówki","hot dogs"],["ketchup","🍅","ketchup","KEczap"],
+["candies","🍬","cukierki","KENDiz"],["gummy candies","@gummybear","żelki","GAMi KENDiz"]],"general");
 const FOOD_MIX_ITEMS=[...FRUIT_ITEMS,...VEGETABLE_ITEMS,...GENERAL_FOOD_ITEMS];
 const FOOD_SUBCATEGORIES={fruits:{name:"Owoce",emoji:"🍓",items:FRUIT_ITEMS},vegetables:{name:"Warzywa",emoji:"🥕",items:VEGETABLE_ITEMS},general:{name:"Ogólne",emoji:"🍞",items:GENERAL_FOOD_ITEMS},mix:{name:"Mix jedzenia",emoji:"🎲",items:FOOD_MIX_ITEMS}};
 const ANIMAL_ITEMS=[
