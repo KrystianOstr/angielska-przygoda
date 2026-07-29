@@ -6,11 +6,11 @@
 <title>Angielska Przygoda</title>
 <style>
 :root{--bg:#fff8e9;--card:#fff;--ink:#2b2118;--soft:#8a7a68;--coral:#ff6b4a;--teal:#1fb8a6;--yellow:#ffc93c;--purple:#7c5cfc;--ok:#3dd68c;--bad:#ff5470}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:var(--ink);background:var(--bg)}
-button{font:inherit;border:0}.app{min-height:100vh;background:radial-gradient(circle at 20% 10%,#ffc93c2e,transparent 45%),radial-gradient(circle at 85% 30%,#1fb8a624,transparent 40%)}
+*{box-sizing:border-box}body{margin:0;font-family:Roboto,"Segoe UI",Arial,sans-serif;color:var(--ink);text-transform:uppercase;letter-spacing:.01em;background:var(--bg)}
+button{font:inherit;border:0;text-transform:inherit}.app{min-height:100vh;background:radial-gradient(circle at 20% 10%,#ffc93c2e,transparent 45%),radial-gradient(circle at 85% 30%,#1fb8a624,transparent 40%)}
 .screen{max-width:720px;margin:auto;padding:36px 18px 46px}.hidden{display:none!important}.center{text-align:center}
 .badge,.progress{display:inline-block;background:#fff;border-radius:999px;padding:8px 16px;font-weight:800;box-shadow:0 3px 0 #2b21181a}
-h1,h2{font-family:"Arial Rounded MT Bold",Arial,sans-serif;margin:0}h1{font-size:34px;line-height:1.15;margin-top:15px}h2{font-size:25px}
+h1,h2{font-family:inherit;margin:0}h1{font-size:34px;line-height:1.15;margin-top:15px}h2{font-size:25px}
 .subtitle{color:var(--soft);font-weight:700;margin:10px 0 32px}.stack{display:grid;gap:14px}
 .card{width:100%;display:flex;align-items:center;gap:14px;text-align:left;background:#fff;border-radius:22px;padding:17px 18px;box-shadow:0 4px 0 #2b21181a;cursor:pointer;transition:.12s}
 .card:hover:not(:disabled),.cat:hover:not(:disabled),.tile:hover:not(:disabled){transform:translateY(-2px)}button:disabled{opacity:.52;cursor:not-allowed}
@@ -20,13 +20,14 @@ h1,h2{font-family:"Arial Rounded MT Bold",Arial,sans-serif;margin:0}h1{font-size
 .cats{display:grid;grid-template-columns:1fr 1fr;gap:16px}.cat{background:#fff;border-radius:22px;padding:24px 10px;box-shadow:0 4px 0 #2b21181a;cursor:pointer;display:flex;flex-direction:column;align-items:center;transition:.12s}
 .soon{margin-top:7px;color:var(--soft);font-size:12px;font-weight:800}.active{color:var(--teal)}
 .sizes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.size-card{background:#fff;border-radius:22px;padding:24px 8px;box-shadow:0 4px 0 #2b21181a;cursor:pointer;transition:.12s}.size-card:hover{transform:translateY(-2px)}.size-number{display:block;font-size:30px;font-weight:900;color:var(--purple)}.size-label{display:block;margin-top:5px;color:var(--soft);font-size:12px;font-weight:800}
+.sets{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}.set-card{min-height:145px}.set-number{display:block;font-size:30px;font-weight:900;color:var(--purple)}
 .game-screen{max-width:1180px;height:100vh;height:100dvh;padding-top:18px;padding-bottom:20px;overflow:hidden}.game-screen .top{margin-bottom:12px}
 .hint{text-align:center;color:var(--soft);font-weight:700;font-size:14px;margin:0 0 10px}
 .board{position:relative;display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));grid-template-rows:repeat(var(--rows),minmax(0,1fr));gap:10px;width:min(var(--board-width),100%);height:min(calc(100dvh - 132px),var(--board-height));margin:0 auto}
 .tile{min-width:0;min-height:0;border:3px solid transparent;border-radius:16px;background:#fff;box-shadow:0 3px 0 #2b21181a;cursor:pointer;transition:.12s;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .image-tile{padding:5px;font-size:clamp(30px,4.2vw,54px)}.art-icon{width:min(72px,78%);height:min(72px,78%);display:block}.word-tile{position:relative;flex-direction:column;padding:8px 5px}.spk{position:absolute;top:5px;right:7px;opacity:.3;font-size:12px}
 .number-pic{width:min(64px,72%);aspect-ratio:1;border-radius:20px;background:linear-gradient(145deg,#ffc93c,#ff9f43);display:flex;align-items:center;justify-content:center;color:#fff;font-size:clamp(24px,3.8vw,46px);font-weight:900;text-shadow:0 2px 0 #a85b1b;box-shadow:inset 0 -4px 0 #a85b1b33}.color-pic{width:min(68px,72%);aspect-ratio:1;border-radius:50%;border:4px solid #2b2118;box-shadow:inset 0 0 0 4px #ffffff99}
-.en{font-weight:900;font-size:clamp(12px,1.5vw,17px);line-height:1.05}.phon{color:var(--soft);font-size:clamp(9px,1vw,11px);font-weight:700;margin-top:3px}.selected{border-color:var(--purple);transform:translateY(-2px)}
+.en{font-weight:900;font-size:clamp(12px,1.5vw,17px);line-height:1.05;text-transform:uppercase}.selected{border-color:var(--purple);transform:translateY(-2px)}
 .matched{border-color:var(--ok);background:#ebfbf3}.wrong{border-color:var(--bad);animation:shake .45s}
 @keyframes shake{20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
 .confetti{pointer-events:none;position:absolute;inset:0;overflow:hidden}.piece{position:absolute;top:-10px;width:9px;height:14px;border-radius:2px;animation:fall 1.1s ease-in forwards}
@@ -34,7 +35,10 @@ h1,h2{font-family:"Arial Rounded MT Bold",Arial,sans-serif;margin:0}h1{font-size
 .overlay{position:fixed;inset:0;background:#2b211873;backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;padding:24px;z-index:10}
 .modal{width:min(350px,100%);background:#fff;border-radius:26px;padding:34px 30px;text-align:center;box-shadow:0 10px 0 #2b211826}.party{font-size:50px}.modal p{color:var(--soft);font-weight:700}
 .actions{display:grid;gap:12px;margin-top:25px}.btn{width:100%;border-radius:16px;padding:13px 18px;font-weight:900;cursor:pointer}.primary{background:var(--coral);color:#fff;box-shadow:0 4px 0 #c6472f}.secondary{background:#f3ecdd}
-@media(max-width:600px){.screen{padding-left:10px;padding-right:10px}h1{font-size:29px}.sizes{gap:8px}.size-card{padding:20px 5px}.game-screen{padding-top:8px;padding-bottom:8px}.game-screen .top{margin-bottom:7px}.hint{font-size:11px;margin-bottom:6px}.board{grid-template-columns:repeat(var(--mobile-cols),minmax(0,1fr));grid-template-rows:repeat(var(--mobile-rows),minmax(0,1fr));gap:5px;width:100%;height:calc(100dvh - 105px)}.tile{border-radius:11px;border-width:2px;box-shadow:0 2px 0 #2b21181a}.image-tile{font-size:clamp(24px,9vw,38px)}.number-pic{border-radius:12px;font-size:clamp(20px,7vw,32px)}.color-pic{border-width:3px}.en{font-size:clamp(9px,3.2vw,13px)}.phon{font-size:clamp(7px,2.3vw,9px);margin-top:1px}.spk{display:none}}
+.sentence-screen{max-width:720px;text-transform:uppercase;padding-top:24px}.sentence-topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}.sentence-heading{text-align:center;font-size:34px;margin:10px 0 5px}.sentence-subtitle{text-align:center;color:var(--soft);font-weight:900;margin:0 0 20px}.sentence-card{background:#fff;border-radius:26px;padding:24px;box-shadow:0 6px 0 #2b21181a}.sentence-instruction{text-align:center;color:var(--soft);font-size:15px;font-weight:900;margin-bottom:14px}.sentence-picture{min-height:145px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;padding:12px;border:3px dashed #f0d69a;border-radius:22px;background:#fff4d5}.sentence-fruit{font-size:52px;line-height:1;filter:drop-shadow(0 3px 0 #00000014)}.sentence-polish-row{display:flex;align-items:center;justify-content:center;gap:10px;margin:15px 0 5px}.sentence-polish{color:var(--soft);font-size:20px;font-weight:900;text-align:center}.sentence-speaker{width:42px;height:42px;flex:0 0 42px;border-radius:14px;background:#e7f7f5;color:#147d72;font-size:21px;font-weight:900;cursor:pointer;box-shadow:0 3px 0 #b9e4de}.sentence-speaker:hover{transform:translateY(-2px)}.sentence-answer{min-height:76px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:9px;padding:12px;margin-top:18px;border:3px solid #ded4ff;border-radius:20px;background:#f4f0ff}.sentence-placeholder{color:#9c8fbc;font-weight:900}.sentence-bank{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:18px 0}.sentence-word{border-radius:15px;padding:12px 17px;background:#fff;color:var(--ink);font-size:21px;font-weight:900;letter-spacing:.4px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 0 #2b211821}.sentence-word:hover{transform:translateY(-2px)}.sentence-answer .sentence-word{background:#e9e2ff;box-shadow:0 3px 0 #c9bdf4}.sentence-answer.correct{border-color:var(--ok);background:#ecfff5}.sentence-answer.sentence-wrong{border-color:var(--bad);animation:sentenceShake .35s ease}.sentence-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px}.sentence-btn{border-radius:16px;padding:14px;font-size:16px;font-weight:900;text-transform:uppercase;cursor:pointer}.sentence-check{background:var(--coral);color:#fff;box-shadow:0 4px 0 #c6472f}.sentence-next{background:#ede5d5;color:var(--ink)}.sentence-message{min-height:36px;padding-top:14px;text-align:center;font-size:18px;font-weight:900}.sentence-message.ok{color:#19965a}.sentence-message.bad{color:var(--bad)}
+@keyframes sentenceShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}50%{transform:translateX(6px)}75%{transform:translateX(-4px)}}
+@media(max-width:600px){.screen{padding-left:10px;padding-right:10px}h1{font-size:29px}.sizes{gap:8px}.size-card{padding:20px 5px}.sets{grid-template-columns:1fr 1fr;gap:10px}.set-card{min-height:125px;padding:17px 6px}.game-screen{padding-top:8px;padding-bottom:8px}.game-screen .top{margin-bottom:7px}.hint{font-size:11px;margin-bottom:6px}.board{grid-template-columns:repeat(var(--mobile-cols),minmax(0,1fr));grid-template-rows:repeat(var(--mobile-rows),minmax(0,1fr));gap:5px;width:100%;height:calc(100dvh - 105px)}.tile{border-radius:11px;border-width:2px;box-shadow:0 2px 0 #2b21181a}.image-tile{font-size:clamp(24px,9vw,38px)}.number-pic{border-radius:12px;font-size:clamp(20px,7vw,32px)}.color-pic{border-width:3px}.en{font-size:clamp(9px,3.2vw,13px)}.spk{display:none}}
+@media(max-width:520px){.sentence-screen{padding-top:12px}.sentence-topbar{align-items:flex-start}.sentence-topbar .badge,.sentence-topbar .progress{padding:7px 9px;font-size:11px}.sentence-heading{font-size:29px}.sentence-card{padding:16px}.sentence-picture{min-height:130px;gap:5px}.sentence-fruit{font-size:42px}.sentence-polish{font-size:17px}.sentence-word{padding:10px 13px;font-size:18px}.sentence-actions{gap:8px}.sentence-btn{padding:12px 7px;font-size:13px}}
 </style>
 </head>
 <body>
@@ -46,7 +50,7 @@ h1,h2{font-family:"Arial Rounded MT Bold",Arial,sans-serif;margin:0}h1{font-size
   <div class="stack">
     <button id="play" class="card"><span class="emoji">🧩</span><span class="grow"><span class="title">Dopasuj Pary</span><span class="desc">Połącz obrazek ze słówkiem</span></span></button>
     <button class="card" disabled><span class="emoji">🔤</span><span class="grow"><span class="title">Zgadnij Słowo</span><span class="desc">Już wkrótce</span></span>🔒</button>
-    <button class="card" disabled><span class="emoji">📝</span><span class="grow"><span class="title">Ułóż Zdanie</span><span class="desc">Już wkrótce</span></span>🔒</button>
+    <button id="sentence-play" class="card"><span class="emoji">📝</span><span class="grow"><span class="title">Ułóż Zdanie</span><span class="desc">Zbuduj zdanie I HAVE…</span></span></button>
   </div>
 </section>
 
@@ -79,6 +83,12 @@ h1,h2{font-family:"Arial Rounded MT Bold",Arial,sans-serif;margin:0}h1{font-size
   </div>
 </section>
 
+<section id="sets" class="screen hidden">
+  <div class="top"><div class="left"><button id="sets-back" class="icon back" data-target="categories">←</button><h2>Wybierz zestaw</h2></div></div>
+  <p id="sets-subtitle" class="subtitle center">Powtarzaj ten sam zestaw albo wybierz losowanie</p>
+  <div id="set-options" class="sets"></div>
+</section>
+
 <section id="size" class="screen hidden">
   <div class="top"><div class="left"><button id="size-back" class="icon back" data-target="categories">←</button><h2>Ile par?</h2></div></div>
   <p id="size-subtitle" class="subtitle center">Wybierz długość rozgrywki</p>
@@ -86,9 +96,43 @@ h1,h2{font-family:"Arial Rounded MT Bold",Arial,sans-serif;margin:0}h1{font-size
 </section>
 
 <section id="game" class="screen game-screen hidden">
-  <div class="top"><button class="icon back" data-target="size">←</button><div class="progress"><span id="count">0</span> / <span id="total">8</span> par</div></div>
+  <div class="top"><button id="game-back" class="icon back" data-target="size">←</button><div class="progress"><span id="count">0</span> / <span id="total">8</span> par</div></div>
   <p class="hint">🔊 Kliknij obrazek albo słówko, żeby usłyszeć wymowę!</p>
   <div id="board" class="board"><div id="confetti" class="confetti"></div></div>
+</section>
+
+<section id="sentence-categories" class="screen hidden">
+  <div class="top"><div class="left"><button class="icon back" data-target="home">←</button><h2>WYBIERZ KONSTRUKCJĘ</h2></div></div>
+  <div class="cats">
+    <button id="sentence-have" class="cat"><span class="emoji">🍎</span><span class="title">I HAVE…</span><span class="soon active">MAM + LICZBA + OWOC</span></button>
+    <button class="cat" disabled><span class="emoji">❤️</span><span class="title">I LIKE…</span><span class="soon">JUŻ WKRÓTCE</span></button>
+    <button class="cat" disabled><span class="emoji">🙂</span><span class="title">I AM…</span><span class="soon">JUŻ WKRÓTCE</span></button>
+  </div>
+</section>
+
+<section id="sentence-game" class="screen sentence-screen hidden">
+  <div class="sentence-topbar">
+    <button class="icon back" data-target="sentence-categories">←</button>
+    <span class="badge">📝 UŁÓŻ ZDANIE</span>
+    <span class="progress" id="sentence-score">0 POPRAWNYCH</span>
+  </div>
+  <h2 class="sentence-heading">I HAVE…</h2>
+  <p class="sentence-subtitle">MAM + LICZBA 1–10 + OWOC</p>
+  <div class="sentence-card">
+    <div class="sentence-instruction">UŁÓŻ ZDANIE PASUJĄCE DO OBRAZKA</div>
+    <div class="sentence-picture" id="sentence-picture"></div>
+    <div class="sentence-polish-row">
+      <div class="sentence-polish" id="sentence-polish"></div>
+      <button class="sentence-speaker" id="sentence-speak-polish" type="button" aria-label="CZYTAJ PO POLSKU">🔊</button>
+    </div>
+    <div class="sentence-answer" id="sentence-answer"></div>
+    <div class="sentence-bank" id="sentence-bank"></div>
+    <div class="sentence-actions">
+      <button class="sentence-btn sentence-check" id="sentence-check" type="button">SPRAWDŹ</button>
+      <button class="sentence-btn sentence-next" id="sentence-next" type="button">LOSUJ NASTĘPNE</button>
+    </div>
+    <div class="sentence-message" id="sentence-message"></div>
+  </div>
 </section>
 </div>
 
@@ -113,37 +157,7 @@ bellpepper:`<path d="M49 29Q47 17 59 14" fill="none" stroke="#328b3d"/><path d="
 cauliflower:`<path d="M43 82L44 55H58L59 82Z" fill="#72c84d"/><path d="M45 69Q30 66 25 54Q39 51 48 61M57 68Q72 64 77 52Q63 50 54 60" fill="#4dae45"/><circle cx="34" cy="45" r="15" fill="#fff4cf"/><circle cx="50" cy="35" r="17" fill="#fff9de"/><circle cx="67" cy="45" r="15" fill="#f3e8c4"/><circle cx="50" cy="50" r="18" fill="#fff8d8"/>`,
 lettuce:`<path d="M50 82C25 82 16 68 22 53C12 41 23 27 37 31C41 15 60 14 65 29C81 25 89 42 78 53C87 69 72 82 50 82Z" fill="#7bd454"/><path d="M50 75V31M50 59L32 44M50 60L68 42M38 70L27 57M61 70L74 56" fill="none" stroke="#3ba64a" stroke-width="4"/>`,
 cabbage:`<circle cx="50" cy="52" r="33" fill="#65c958"/><path d="M50 22Q34 38 50 80M50 22Q67 39 50 80M22 51Q37 42 50 52Q64 42 78 51M27 66Q39 58 50 67Q61 58 73 66" fill="none" stroke="#3b9e49" stroke-width="4"/>`,
-sausage:`<path d="M25 31C14 43 19 66 37 74C54 82 75 75 80 60" fill="none" stroke="#161616" stroke-width="24"/><path d="M25 31C14 43 19 66 37 74C54 82 75 75 80 60" fill="none" stroke="#bb552d" stroke-width="16"/><path d="M25 31L18 23M80 60L88 66" fill="none"/><path d="M36 43L43 49M50 52L57 58M63 42L70 48" fill="none" stroke="#7f301d" stroke-width="3"/>`,
-hotdog:`<path d="M12 61Q14 40 31 34H69Q86 40 88 61Q86 78 70 82H30Q14 78 12 61Z" fill="#e9ad50"/><path d="M23 55Q25 42 38 39H64Q78 42 78 56V62Q77 70 66 72H35Q24 69 23 61Z" fill="#d84e32"/><path d="M14 59Q23 63 30 72M86 59Q77 63 70 72" fill="none" stroke="#f6c56e" stroke-width="10"/><path d="M30 53Q40 46 50 54Q60 61 71 52" fill="none" stroke="#ffd43b" stroke-width="4"/>`,
-gummybear:`<circle cx="35" cy="26" r="10" fill="#f28b32"/><circle cx="65" cy="26" r="10" fill="#f28b32"/><circle cx="50" cy="38" r="22" fill="#ff9b3d"/><ellipse cx="50" cy="66" rx="24" ry="25" fill="#f28b32"/><circle cx="24" cy="60" r="9" fill="#f28b32"/><circle cx="76" cy="60" r="9" fill="#f28b32"/><circle cx="36" cy="86" r="9" fill="#f28b32"/><circle cx="64" cy="86" r="9" fill="#f28b32"/><circle cx="43" cy="36" r="3" fill="#7b3d16" stroke="none"/><circle cx="57" cy="36" r="3" fill="#7b3d16" stroke="none"/><path d="M44 47Q50 52 56 47" fill="none" stroke="#7b3d16" stroke-width="3"/>`
-};
-const artSvg=name=>`<svg class="art-icon" viewBox="0 0 100 100" aria-hidden="true"><g stroke="#161616" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">${FOOD_ART[name]}</g></svg>`;
-const makeFood=(rows,prefix)=>rows.map(([en,visual,pl,phon])=>({id:`${prefix}-${en.replaceAll(" ","-")}`,pic:visual.startsWith("@")?null:visual,art:visual.startsWith("@")?visual.slice(1):null,en,pl,phon}));
-const FRUIT_ITEMS=makeFood([
-["apple","🍎","jabłko","APyl"],["banana","🍌","banan","baNAna"],["orange","🍊","pomarańcza","ORYNdż"],
-["strawberry","🍓","truskawka","STROberi"],["grape","🍇","winogrono","grejp"],["pear","🍐","gruszka","per"],
-["lemon","@greenlemon","cytryna","LEMyn"],["watermelon","🍉","arbuz","ŁOTErmelon"],["cherry","🍒","wiśnia / czereśnia","CZERi"],
-["peach","🍑","brzoskwinia","piicz"],["pineapple","🍍","ananas","PAJnapyl"],["raspberry","@raspberry","malina","RAAZberi"],
-["blueberry","@blueberry","borówka","BLUUberi"],["plum","@plum","śliwka","plam"],["mango","🥭","mango","MANGgoł"],
-["kiwi","🥝","kiwi","KIIłi"],["coconut","🥥","kokos","KOŁkynat"],["melon","🍈","melon","MELyn"],
-["avocado","🥑","awokado","awyKAAdoł"],["lime","@lime","limonka","lajm"]],"fruit");
-const VEGETABLE_ITEMS=makeFood([
-["carrot","🥕","marchewka","KERyt"],["potato","🥔","ziemniak","pyTEJtoł"],["tomato","🍅","pomidor","tyMAAtoł"],
-["cucumber","🥒","ogórek","KJUkamber"],["onion","🧅","cebula","ANjyn"],["garlic","🧄","czosnek","GAAlik"],
-["lettuce","@lettuce","sałata","LETys"],["cabbage","@cabbage","kapusta","KABydż"],["broccoli","🥦","brokuł","BROKyli"],
-["cauliflower","@cauliflower","kalafior","KOLyflałer"],["bell pepper","@bellpepper","papryka","bel PEPyr"],["corn","🌽","kukurydza","korn"],
-["peas","@peas","groszek","piiz"],["beans","@beans","fasola","biinz"],["mushroom","🍄","grzyb","MASzrum"],
-["pumpkin","🎃","dynia","PAMkin"],["beetroot","@beetroot","burak","BIITruut"],
-["radish","@radish","rzodkiewka","RADysz"]],"vegetable");
-const GENERAL_FOOD_ITEMS=makeFood([
-["bread","🍞","chleb","bred"],["cheese","🧀","ser","cziiz"],["milk","🥛","mleko","myłk"],["egg","🥚","jajko","eg"],
-["butter","🧈","masło","BATyr"],["yogurt","🥣","jogurt","JOŁgert"],["rice","🍚","ryż","rajs"],["pasta","🍝","makaron","PASta"],
-["meat","🥩","mięso","miit"],["chicken","🍗","kurczak","CZYkyn"],["fish","🐟","ryba","fysz"],["sausage","@sausage","kiełbasa","SOSydż"],
-["ham","🍖","szynka","ham"],["soup","🍲","zupa","suup"],["sandwich","🥪","kanapka","SENDłycz"],["pizza","🍕","pizza","PIca"],
-["cake","🍰","ciasto","kejk"],["cookie","🍪","ciastko","kuki"],["chocolate","🍫","czekolada","CZOKlyt"],
-["ice cream","🍦","lody","ajs kriim"],["fries","🍟","frytki","frajs"],["hamburger","🍔","hamburger","HAMberger"],
-["hot dogs","@hotdog","parówki","hot dogs"],["ketchup","🍅","ketchup","KEczap"],
-["candies","🍬","cukierki","KENDiz"],["gummy candies","@gummybear","żelki","GAMi KENDiz"]],"general");
+sausage:`<path d="M25 31C14 43 19 66 37 74C54 82 75 75 80 60" fill="none" strok…1062 tokens truncated…Diz"]],"general");
 const FOOD_MIX_ITEMS=[...FRUIT_ITEMS,...VEGETABLE_ITEMS,...GENERAL_FOOD_ITEMS];
 const FOOD_SUBCATEGORIES={fruits:{name:"Owoce",emoji:"🍓",items:FRUIT_ITEMS},vegetables:{name:"Warzywa",emoji:"🥕",items:VEGETABLE_ITEMS},general:{name:"Ogólne",emoji:"🍞",items:GENERAL_FOOD_ITEMS},mix:{name:"Mix jedzenia",emoji:"🎲",items:FOOD_MIX_ITEMS}};
 const ANIMAL_ITEMS=[
@@ -195,7 +209,7 @@ const BODY_ITEMS=[
 ["nose","nos","nołz"],["mouth","usta","małf"],["tooth","ząb","tuuf"],["neck","szyja","nek"],["shoulder","bark","SZOŁlder"],
 ["arm","ramię / ręka","aam"],["hand","dłoń","hend"],["finger","palec","FINGer"],["chest","klatka piersiowa","czest"],
 ["back","plecy","bek"],["stomach","brzuch","STAmak"],["belly button","pępek","BELi BATyn"],["leg","noga","leg"],
-["knee","kolano","nii"],["foot","stopa","fut"],["toe","palec u stopy","toł"]].map(([en,pl,phon])=>({id:`body-${en.replaceAll(" ","-")}`,en,pl,phon,image:`assets/body/${en.replaceAll(" ","-")}.svg`}));
+["knee","kolano","nii"],["foot","stopa","fut"],["toe","palec u stopy","toł"]].map(([en,pl,phon])=>({id:`body-${en.split(" ").join("-")}`,en,pl,phon,image:`assets/body/${en.split(" ").join("-")}.svg`}));
 const COLOR_ITEMS=[
 {id:"red",color:"#ef4444",en:"red",pl:"czerwony",phon:"red"},{id:"blue",color:"#3b82f6",en:"blue",pl:"niebieski",phon:"bluu"},
 {id:"green",color:"#22c55e",en:"green",pl:"zielony",phon:"griin"},{id:"yellow",color:"#facc15",en:"yellow",pl:"żółty",phon:"JEloł"},
@@ -208,27 +222,51 @@ const COLOR_ITEMS=[
 {id:"darkgreen",color:"#166534",en:"dark green",pl:"ciemnozielony",phon:"dark griin"},{id:"turquoise",color:"#14b8a6",en:"turquoise",pl:"turkusowy",phon:"TERkwojz"},
 {id:"cream",color:"#fffdd0",en:"cream",pl:"kremowy",phon:"kriim"}];
 const CATEGORIES={food:{name:"Jedzenie",emoji:"🍎",items:FOOD_MIX_ITEMS},animals:{name:"Zwierzęta",emoji:"🐶",items:ANIMAL_ITEMS},colors:{name:"Kolory",emoji:"🎨",items:COLOR_ITEMS},numbers:{name:"Liczby",emoji:"🔢",items:NUMBER_ITEMS},body:{name:"Części ciała",emoji:"🧍",items:BODY_ITEMS}};
-const S={left:null,right:null,matched:new Set(),lock:false,voice:null,size:8,pool:[],category:CATEGORIES.food};
+const SENTENCE_NUMBERS=[
+{value:1,en:"one",pl:"jeden"},{value:2,en:"two",pl:"dwa"},{value:3,en:"three",pl:"trzy"},{value:4,en:"four",pl:"cztery"},{value:5,en:"five",pl:"pięć"},
+{value:6,en:"six",pl:"sześć"},{value:7,en:"seven",pl:"siedem"},{value:8,en:"eight",pl:"osiem"},{value:9,en:"nine",pl:"dziewięć"},{value:10,en:"ten",pl:"dziesięć"}];
+const SENTENCE_FRUITS=[
+{id:"apple",singular:"apple",plural:"apples",emoji:"🍎",plOne:"jedno jabłko",plTwo:"dwa",plFew:"jabłka",plMany:"jabłek"},
+{id:"banana",singular:"banana",plural:"bananas",emoji:"🍌",plOne:"jednego banana",plTwo:"dwa",plFew:"banany",plMany:"bananów"},
+{id:"orange",singular:"orange",plural:"oranges",emoji:"🍊",plOne:"jedną pomarańczę",plTwo:"dwie",plFew:"pomarańcze",plMany:"pomarańczy"},
+{id:"pear",singular:"pear",plural:"pears",emoji:"🍐",plOne:"jedną gruszkę",plTwo:"dwie",plFew:"gruszki",plMany:"gruszek"},
+{id:"strawberry",singular:"strawberry",plural:"strawberries",emoji:"🍓",plOne:"jedną truskawkę",plTwo:"dwie",plFew:"truskawki",plMany:"truskawek"},
+{id:"cherry",singular:"cherry",plural:"cherries",emoji:"🍒",plOne:"jedną wiśnię",plTwo:"dwie",plFew:"wiśnie",plMany:"wiśni"},
+{id:"lemon",singular:"lemon",plural:"lemons",emoji:"🍋",plOne:"jedną cytrynę",plTwo:"dwie",plFew:"cytryny",plMany:"cytryn"},
+{id:"peach",singular:"peach",plural:"peaches",emoji:"🍑",plOne:"jedną brzoskwinię",plTwo:"dwie",plFew:"brzoskwinie",plMany:"brzoskwiń"}];
+const S={left:null,right:null,matched:new Set(),lock:false,voice:null,size:8,pool:[],fixedItems:null,category:CATEGORIES.food};
+const SENTENCE_STATE={current:null,bank:[],answer:[],correctCount:0,locked:false,previousKey:null};
 const $=q=>document.querySelector(q);
-function show(id){["home","categories","food-subcategories","number-subcategories","size","game"].forEach(x=>$("#"+x).classList.toggle("hidden",x!==id))}
+function show(id){["home","categories","food-subcategories","number-subcategories","sets","size","game","sentence-categories","sentence-game"].forEach(x=>$("#"+x).classList.toggle("hidden",x!==id))}
 function shuffle(a){a=[...a];for(let i=a.length-1;i;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function speak(t){if(!("speechSynthesis" in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.82;u.pitch=1.05;if(S.voice){u.voice=S.voice;u.lang=S.voice.lang}speechSynthesis.speak(u)}
 function tone(ok){const A=window.AudioContext||window.webkitAudioContext;if(!A)return;const c=new A(),fs=ok?[523,659,784]:[220,185];let t=c.currentTime;fs.forEach(f=>{const o=c.createOscillator(),g=c.createGain();o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.2,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+.22);o.connect(g).connect(c.destination);o.start(t);o.stop(t+.24);t+=.11})}
 function burst(){const b=$("#confetti"),colors=["#ff6b4a","#ffc93c","#1fb8a6","#7c5cfc","#3dd68c"];b.innerHTML="";for(let i=0;i<18;i++){const p=document.createElement("i");p.className="piece";p.style.left=Math.random()*100+"%";p.style.background=colors[i%5];p.style.animationDelay=Math.random()*.15+"s";b.appendChild(p)}setTimeout(()=>b.innerHTML="",1300)}
-function reset(newSet=false){if(newSet||!S.pool.length)S.pool=shuffle(S.category.items).slice(0,S.size);S.left=S.right=null;S.matched=new Set;S.lock=false;$("#count").textContent=0;$("#total").textContent=S.pool.length;$("#finish").classList.add("hidden");render()}
-function layout(n){return n===8?{cols:4,rows:4,mcols:4,mrows:4,width:"720px",height:"560px"}:n===14?{cols:7,rows:4,mcols:4,mrows:7,width:"920px",height:"600px"}:{cols:8,rows:5,mcols:5,mrows:8,width:"1050px",height:"650px"}}
+function reset(newSet=false){if(S.fixedItems)S.pool=[...S.fixedItems];else if(newSet||!S.pool.length)S.pool=shuffle(S.category.items).slice(0,S.size);S.left=S.right=null;S.matched=new Set;S.lock=false;$("#count").textContent=0;$("#total").textContent=S.pool.length;$("#finish").classList.add("hidden");render()}
+function layout(n){const cards=n*2,cols=n<=8?4:n<=10?5:n<=12?6:n<=14?7:8,mcols=n<=14?4:5;return{cols,rows:Math.ceil(cards/cols),mcols,mrows:Math.ceil(cards/mcols),width:n<=8?"720px":n<=10?"800px":n<=14?"920px":"1050px",height:n<=10?"560px":n<=14?"600px":"650px"}}
 function render(){const B=$("#board"),conf=$("#confetti");B.querySelectorAll(".tile").forEach(e=>e.remove());const g=layout(S.pool.length);B.style.setProperty("--cols",g.cols);B.style.setProperty("--rows",g.rows);B.style.setProperty("--mobile-cols",g.mcols);B.style.setProperty("--mobile-rows",g.mrows);B.style.setProperty("--board-width",g.width);B.style.setProperty("--board-height",g.height);
 const cards=shuffle(S.pool.flatMap(x=>[{side:"left",x},{side:"right",x}]));
-cards.forEach(({side,x})=>{const b=document.createElement("button");b.className=`tile ${side==="left"?"image-tile":"word-tile"}`;b.dataset.id=x.id;b.dataset.side=side;if(side==="left"){if(x.art)b.innerHTML=artSvg(x.art);else if(x.image)b.innerHTML=`<img class="art-icon" src="${x.image}" alt="">`;else if(x.pic)b.textContent=x.pic;else if(x.number!==undefined)b.innerHTML=`<span class="number-pic">${x.number}</span>`;else b.innerHTML=`<span class="color-pic" style="background:${x.color}"></span>`}else b.innerHTML=`<span class="spk">🔊</span><span class="en">${x.en}</span><span class="phon">${x.phon}</span>`;b.onclick=()=>pick(side,x,b);B.appendChild(b)});B.appendChild(conf)}
+cards.forEach(({side,x})=>{const b=document.createElement("button");b.className=`tile ${side==="left"?"image-tile":"word-tile"}`;b.dataset.id=x.id;b.dataset.side=side;if(side==="left"){if(x.art)b.innerHTML=artSvg(x.art);else if(x.image)b.innerHTML=`<img class="art-icon" src="${x.image}" alt="">`;else if(x.pic)b.textContent=x.pic;else if(x.number!==undefined)b.innerHTML=`<span class="number-pic">${x.number}</span>`;else b.innerHTML=`<span class="color-pic" style="background:${x.color}"></span>`}else b.innerHTML=`<span class="spk">🔊</span><span class="en">${x.en}</span>`;b.onclick=()=>pick(side,x,b);B.appendChild(b)});B.appendChild(conf)}
 function clear(){document.querySelectorAll(".selected,.wrong").forEach(e=>e.classList.remove("selected","wrong"));S.left=S.right=null}
 function pick(side,x,b){if(S.lock||S.matched.has(x.id))return;speak(x.en);const k=side==="left"?"left":"right";if(S[k]===x.id){S[k]=null;b.classList.remove("selected");return}
 document.querySelectorAll(`.tile[data-side="${side}"].selected`).forEach(e=>e.classList.remove("selected"));S[k]=x.id;b.classList.add("selected");if(S.left&&S.right)check()}
 function check(){S.lock=true;if(S.left===S.right){const id=S.left;tone(true);burst();setTimeout(()=>{S.matched.add(id);document.querySelectorAll(`.tile[data-id="${id}"]`).forEach(e=>{e.classList.remove("selected");e.classList.add("matched");e.disabled=true});S.left=S.right=null;S.lock=false;$("#count").textContent=S.matched.size;if(S.matched.size===S.pool.length)setTimeout(()=>$("#finish").classList.remove("hidden"),500)},260)}
 else{tone(false);document.querySelectorAll(".selected").forEach(e=>e.classList.add("wrong"));setTimeout(()=>{clear();S.lock=false},650)}}
 function voices(){if(!("speechSynthesis" in window))return;const vs=speechSynthesis.getVoices(),us=vs.filter(v=>v.lang&&v.lang.toLowerCase()==="en-us"),female=["google us english","jenny","aria","zira","samantha","female"];S.voice=female.map(h=>us.find(v=>v.name.toLowerCase().includes(h))).find(Boolean)||us.find(v=>!["david","mark","guy","george","male"].some(h=>v.name.toLowerCase().includes(h)))||us[0]||vs.find(v=>v.lang&&v.lang.toLowerCase().startsWith("en"))||null}
-function sizeOptions(){const box=$("#sizes"),max=S.category.items.length,counts=[...new Set([8,14,Math.min(20,max)])].filter(n=>n<=max);$("#size-subtitle").textContent=`${S.category.emoji} ${S.category.name} — wybierz długość gry`;box.innerHTML="";counts.forEach((n,i)=>{const b=document.createElement("button");b.className="size-card";b.dataset.count=n;b.innerHTML=`<span class="size-number">${n}</span><span class="size-label">${i===0?"krótka":i===counts.length-1?"pełna":"średnia"}</span>`;b.onclick=()=>{S.size=n;reset(true);show("game")};box.appendChild(b)})}
-function openSize(category,backTarget){S.category=category;S.pool=[];$("#size-back").dataset.target=backTarget;sizeOptions();show("size")}
-$("#play").onclick=()=>show("categories");document.querySelectorAll(".category").forEach(b=>b.onclick=()=>{const key=b.dataset.category;if(key==="food")show("food-subcategories");else if(key==="numbers")show("number-subcategories");else openSize(CATEGORIES[key],"categories")});document.querySelectorAll(".food-subcategory").forEach(b=>b.onclick=()=>openSize(FOOD_SUBCATEGORIES[b.dataset.food],"food-subcategories"));document.querySelectorAll(".number-subcategory").forEach(b=>b.onclick=()=>openSize(NUMBER_SUBCATEGORIES[b.dataset.numbers],"number-subcategories"));document.querySelectorAll(".back").forEach(b=>b.onclick=()=>show(b.dataset.target));$("#replay").onclick=()=>reset(true);$("#topics").onclick=()=>{$("#finish").classList.add("hidden");show("categories")};
+function mixCounts(category){const max=category.items.length;return[...new Set([8,14,Math.min(20,max)])].filter(n=>n<=max)}
+function learningSets(items){const groups=[];for(let start=0;start<items.length;start+=10)groups.push({start:start+1,end:Math.min(start+10,items.length),items:items.slice(start,start+10)});if(groups.length>1&&groups[groups.length-1].items.length<5){const last=groups.pop(),previous=groups[groups.length-1];previous.items.push(...last.items);previous.end=last.end}return groups}
+function startFixed(items){S.fixedItems=[...items];S.pool=[];S.size=items.length;$("#game-back").dataset.target="sets";reset(true);show("game")}
+function renderSets(){const box=$("#set-options"),groups=learningSets(S.category.items),counts=mixCounts(S.category);$("#sets-subtitle").textContent=`${S.category.emoji} ${S.category.name} — wybierz stały zestaw albo MIX`;box.innerHTML="";groups.forEach((group,i)=>{const b=document.createElement("button");b.className="cat set-card";b.innerHTML=`<span class="set-number">${i+1}</span><span class="title">ZESTAW ${i+1}</span><span class="soon">słowa ${group.start}–${group.end}</span>`;b.onclick=()=>startFixed(group.items);box.appendChild(b)});const mix=document.createElement("button");mix.className="cat set-card";mix.innerHTML=`<span class="emoji">🎲</span><span class="title">MIX</span><span class="soon">losowe ${counts.join(" / ")}</span>`;mix.onclick=()=>openSize(S.category,"sets");box.appendChild(mix)}
+function openSets(category,backTarget){S.category=category;S.pool=[];S.fixedItems=null;$("#sets-back").dataset.target=backTarget;renderSets();show("sets")}
+function sizeOptions(){const box=$("#sizes"),counts=mixCounts(S.category);$("#size-subtitle").textContent=`${S.category.emoji} ${S.category.name} — wybierz długość gry`;box.innerHTML="";counts.forEach((n,i)=>{const b=document.createElement("button");b.className="size-card";b.dataset.count=n;b.innerHTML=`<span class="size-number">${n}</span><span class="size-label">${i===0?"krótka":i===counts.length-1?"pełna":"średnia"}</span>`;b.onclick=()=>{S.fixedItems=null;S.size=n;$("#game-back").dataset.target="size";reset(true);show("game")};box.appendChild(b)})}
+function openSize(category,backTarget){S.category=category;S.pool=[];S.fixedItems=null;$("#size-back").dataset.target=backTarget;sizeOptions();show("size")}
+function sentencePolishPhrase(fruit,number){if(number.value===1)return fruit.plOne;const numberWord=number.value===2?fruit.plTwo:number.pl;return`${numberWord} ${number.value<=4?fruit.plFew:fruit.plMany}`}
+function sentenceSpeak(text,lang="en-US",rate=.82){if(!("speechSynthesis" in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang=lang;u.rate=rate;const vs=speechSynthesis.getVoices(),prefix=lang.slice(0,2).toLowerCase(),matching=vs.filter(v=>v.lang&&v.lang.toLowerCase().startsWith(prefix));const voice=prefix==="en"&&S.voice?S.voice:matching[0];if(voice){u.voice=voice;u.lang=voice.lang}speechSynthesis.speak(u)}
+function sentenceCreateRound(){let number,fruit,key;do{number=SENTENCE_NUMBERS[Math.floor(Math.random()*SENTENCE_NUMBERS.length)];fruit=SENTENCE_FRUITS[Math.floor(Math.random()*SENTENCE_FRUITS.length)];key=`${number.value}-${fruit.id}`}while(key===SENTENCE_STATE.previousKey);SENTENCE_STATE.previousKey=key;const fruitWord=number.value===1?fruit.singular:fruit.plural,tokens=["I","have",number.en,fruitWord],sentence=`I have ${number.en} ${fruitWord}.`,polishSentence=`Mam ${sentencePolishPhrase(fruit,number)}.`;SENTENCE_STATE.current={number,fruit,tokens,sentence,polishSentence};SENTENCE_STATE.bank=shuffle(tokens.map((text,index)=>({id:`${key}-${index}-${text}`,text})));SENTENCE_STATE.answer=[];SENTENCE_STATE.locked=false;$("#sentence-picture").innerHTML=Array.from({length:number.value},()=>`<span class="sentence-fruit">${fruit.emoji}</span>`).join("");$("#sentence-polish").textContent=polishSentence.toUpperCase();$("#sentence-message").textContent="";$("#sentence-message").className="sentence-message";$("#sentence-answer").className="sentence-answer";sentenceRender()}
+function sentenceWordButton(item,source){const b=document.createElement("button");b.type="button";b.className="sentence-word";b.textContent=item.text.toUpperCase();b.onclick=()=>{if(SENTENCE_STATE.locked)return;sentenceSpeak(item.text,"en-US",.78);const from=source==="bank"?SENTENCE_STATE.bank:SENTENCE_STATE.answer,to=source==="bank"?SENTENCE_STATE.answer:SENTENCE_STATE.bank,index=from.findIndex(word=>word.id===item.id);if(index<0)return;to.push(from.splice(index,1)[0]);$("#sentence-message").textContent="";$("#sentence-message").className="sentence-message";sentenceRender()};return b}
+function sentenceRender(){const answer=$("#sentence-answer"),bank=$("#sentence-bank");answer.innerHTML="";bank.innerHTML="";if(!SENTENCE_STATE.answer.length){const placeholder=document.createElement("span");placeholder.className="sentence-placeholder";placeholder.textContent="KLIKAJ WYRAZY PONIŻEJ";answer.appendChild(placeholder)}else SENTENCE_STATE.answer.forEach(item=>answer.appendChild(sentenceWordButton(item,"answer")));SENTENCE_STATE.bank.forEach(item=>bank.appendChild(sentenceWordButton(item,"bank")))}
+function sentenceCheck(){if(SENTENCE_STATE.locked||!SENTENCE_STATE.current)return;const message=$("#sentence-message"),answer=$("#sentence-answer");if(SENTENCE_STATE.answer.length!==SENTENCE_STATE.current.tokens.length){message.textContent="UŻYJ WSZYSTKICH WYRAZÓW.";message.className="sentence-message bad";return}const submitted=SENTENCE_STATE.answer.map(item=>item.text).join(" "),expected=SENTENCE_STATE.current.tokens.join(" ");if(submitted===expected){SENTENCE_STATE.locked=true;SENTENCE_STATE.correctCount++;$("#sentence-score").textContent=`${SENTENCE_STATE.correctCount} POPRAWNYCH`;message.textContent=`BRAWO! ${SENTENCE_STATE.current.sentence.toUpperCase()}`;message.className="sentence-message ok";answer.className="sentence-answer correct";sentenceSpeak(SENTENCE_STATE.current.sentence,"en-US",.82)}else{message.textContent="SPRÓBUJ JESZCZE RAZ.";message.className="sentence-message bad";answer.className="sentence-answer sentence-wrong";setTimeout(()=>{if(!SENTENCE_STATE.locked)answer.className="sentence-answer"},450)}}
+$("#play").onclick=()=>show("categories");$("#sentence-play").onclick=()=>show("sentence-categories");$("#sentence-have").onclick=()=>{if(!SENTENCE_STATE.current)sentenceCreateRound();show("sentence-game")};document.querySelectorAll(".category").forEach(b=>b.onclick=()=>{const key=b.dataset.category;if(key==="food")show("food-subcategories");else if(key==="numbers")show("number-subcategories");else openSets(CATEGORIES[key],"categories")});document.querySelectorAll(".food-subcategory").forEach(b=>b.onclick=()=>{const key=b.dataset.food;if(key==="mix")openSize(FOOD_SUBCATEGORIES[key],"food-subcategories");else openSets(FOOD_SUBCATEGORIES[key],"food-subcategories")});document.querySelectorAll(".number-subcategory").forEach(b=>b.onclick=()=>openSets(NUMBER_SUBCATEGORIES[b.dataset.numbers],"number-subcategories"));document.querySelectorAll(".back").forEach(b=>b.onclick=()=>show(b.dataset.target));$("#replay").onclick=()=>reset(true);$("#topics").onclick=()=>{$("#finish").classList.add("hidden");show("categories")};$("#sentence-speak-polish").onclick=()=>{if(SENTENCE_STATE.current)sentenceSpeak(SENTENCE_STATE.current.polishSentence,"pl-PL",.84)};$("#sentence-check").onclick=sentenceCheck;$("#sentence-next").onclick=sentenceCreateRound;
 voices();if("speechSynthesis" in window)speechSynthesis.onvoiceschanged=voices;
 </script>
 </body>
