@@ -6,11 +6,11 @@
 <title>Angielska Przygoda</title>
 <style>
 :root{--bg:#fff8e9;--card:#fff;--ink:#2b2118;--soft:#8a7a68;--coral:#ff6b4a;--teal:#1fb8a6;--yellow:#ffc93c;--purple:#7c5cfc;--ok:#3dd68c;--bad:#ff5470}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:var(--ink);background:var(--bg)}
-button{font:inherit;border:0}.app{min-height:100vh;background:radial-gradient(circle at 20% 10%,#ffc93c2e,transparent 45%),radial-gradient(circle at 85% 30%,#1fb8a624,transparent 40%)}
+*{box-sizing:border-box}body{margin:0;font-family:Roboto,"Segoe UI",Arial,sans-serif;color:var(--ink);text-transform:uppercase;letter-spacing:.01em;background:var(--bg)}
+button{font:inherit;border:0;text-transform:inherit}.app{min-height:100vh;background:radial-gradient(circle at 20% 10%,#ffc93c2e,transparent 45%),radial-gradient(circle at 85% 30%,#1fb8a624,transparent 40%)}
 .screen{max-width:720px;margin:auto;padding:36px 18px 46px}.hidden{display:none!important}.center{text-align:center}
 .badge,.progress{display:inline-block;background:#fff;border-radius:999px;padding:8px 16px;font-weight:800;box-shadow:0 3px 0 #2b21181a}
-h1,h2{font-family:"Arial Rounded MT Bold",Arial,sans-serif;margin:0}h1{font-size:34px;line-height:1.15;margin-top:15px}h2{font-size:25px}
+h1,h2{font-family:inherit;margin:0}h1{font-size:34px;line-height:1.15;margin-top:15px}h2{font-size:25px}
 .subtitle{color:var(--soft);font-weight:700;margin:10px 0 32px}.stack{display:grid;gap:14px}
 .card{width:100%;display:flex;align-items:center;gap:14px;text-align:left;background:#fff;border-radius:22px;padding:17px 18px;box-shadow:0 4px 0 #2b21181a;cursor:pointer;transition:.12s}
 .card:hover:not(:disabled),.cat:hover:not(:disabled),.tile:hover:not(:disabled){transform:translateY(-2px)}button:disabled{opacity:.52;cursor:not-allowed}
@@ -101,9 +101,18 @@ h1,h2{font-family:"Arial Rounded MT Bold",Arial,sans-serif;margin:0}h1{font-size
   <div id="board" class="board"><div id="confetti" class="confetti"></div></div>
 </section>
 
+<section id="sentence-categories" class="screen hidden">
+  <div class="top"><div class="left"><button class="icon back" data-target="home">←</button><h2>WYBIERZ KONSTRUKCJĘ</h2></div></div>
+  <div class="cats">
+    <button id="sentence-have" class="cat"><span class="emoji">🍎</span><span class="title">I HAVE…</span><span class="soon active">MAM + LICZBA + OWOC</span></button>
+    <button class="cat" disabled><span class="emoji">❤️</span><span class="title">I LIKE…</span><span class="soon">JUŻ WKRÓTCE</span></button>
+    <button class="cat" disabled><span class="emoji">🙂</span><span class="title">I AM…</span><span class="soon">JUŻ WKRÓTCE</span></button>
+  </div>
+</section>
+
 <section id="sentence-game" class="screen sentence-screen hidden">
   <div class="sentence-topbar">
-    <button class="icon back" data-target="home">←</button>
+    <button class="icon back" data-target="sentence-categories">←</button>
     <span class="badge">📝 UŁÓŻ ZDANIE</span>
     <span class="progress" id="sentence-score">0 POPRAWNYCH</span>
   </div>
@@ -148,10 +157,7 @@ bellpepper:`<path d="M49 29Q47 17 59 14" fill="none" stroke="#328b3d"/><path d="
 cauliflower:`<path d="M43 82L44 55H58L59 82Z" fill="#72c84d"/><path d="M45 69Q30 66 25 54Q39 51 48 61M57 68Q72 64 77 52Q63 50 54 60" fill="#4dae45"/><circle cx="34" cy="45" r="15" fill="#fff4cf"/><circle cx="50" cy="35" r="17" fill="#fff9de"/><circle cx="67" cy="45" r="15" fill="#f3e8c4"/><circle cx="50" cy="50" r="18" fill="#fff8d8"/>`,
 lettuce:`<path d="M50 82C25 82 16 68 22 53C12 41 23 27 37 31C41 15 60 14 65 29C81 25 89 42 78 53C87 69 72 82 50 82Z" fill="#7bd454"/><path d="M50 75V31M50 59L32 44M50 60L68 42M38 70L27 57M61 70L74 56" fill="none" stroke="#3ba64a" stroke-width="4"/>`,
 cabbage:`<circle cx="50" cy="52" r="33" fill="#65c958"/><path d="M50 22Q34 38 50 80M50 22Q67 39 50 80M22 51Q37 42 50 52Q64 42 78 51M27 66Q39 58 50 67Q61 58 73 66" fill="none" stroke="#3b9e49" stroke-width="4"/>`,
-sausage:`<path d="M25 31C14 43 19 66 37 74C54 82 75 75 80 60" fill="none" stroke="#161616" stroke-width="24"/><path d="M25 31C14 43 19 66 37 74C54 82 75 75 80 60" fill="none" stroke="#bb552d" stroke-width="16"/><path d="M25 31L18 23M80 60L88 66" fill="none"/><path d="M36 43L43 49M50 52L57 58M63 42L70 48" fill="none" stroke="#7f301d" stroke-width="3"/>`,
-hotdog:`<path d="M12 61Q14 40 31 34H69Q86 40 88 61Q86 78 70 82H30Q14 78 12 61Z" fill="#e9ad50"/><path d="M23 55Q25 42 38 39H64Q78 42 78 56V62Q77 70 66 72H35Q24 69 23 61Z" fill="#d84e32"/><path d="M14 59Q23 63 30 72M86 59Q77 63 70 72" fill="none" stroke="#f6c56e" stroke-width="10"/><path d="M30 53Q40 46 50 54Q60 61 71 52" fill="none" stroke="#ffd43b" stroke-width="4"/>`,
-gummybear:`<circle cx="35" cy="26" r="10" fill="#f28b32"/><circle cx="65" cy="26" r="10" fill="#f28b32"/><circle cx="50" cy=…843 tokens truncated…chup","KEczap"],
-["candies","🍬","cukierki","KENDiz"],["gummy candies","@gummybear","żelki","GAMi KENDiz"]],"general");
+sausage:`<path d="M25 31C14 43 19 66 37 74C54 82 75 75 80 60" fill="none" strok…1062 tokens truncated…Diz"]],"general");
 const FOOD_MIX_ITEMS=[...FRUIT_ITEMS,...VEGETABLE_ITEMS,...GENERAL_FOOD_ITEMS];
 const FOOD_SUBCATEGORIES={fruits:{name:"Owoce",emoji:"🍓",items:FRUIT_ITEMS},vegetables:{name:"Warzywa",emoji:"🥕",items:VEGETABLE_ITEMS},general:{name:"Ogólne",emoji:"🍞",items:GENERAL_FOOD_ITEMS},mix:{name:"Mix jedzenia",emoji:"🎲",items:FOOD_MIX_ITEMS}};
 const ANIMAL_ITEMS=[
@@ -203,7 +209,7 @@ const BODY_ITEMS=[
 ["nose","nos","nołz"],["mouth","usta","małf"],["tooth","ząb","tuuf"],["neck","szyja","nek"],["shoulder","bark","SZOŁlder"],
 ["arm","ramię / ręka","aam"],["hand","dłoń","hend"],["finger","palec","FINGer"],["chest","klatka piersiowa","czest"],
 ["back","plecy","bek"],["stomach","brzuch","STAmak"],["belly button","pępek","BELi BATyn"],["leg","noga","leg"],
-["knee","kolano","nii"],["foot","stopa","fut"],["toe","palec u stopy","toł"]].map(([en,pl,phon])=>({id:`body-${en.replaceAll(" ","-")}`,en,pl,phon,image:`assets/body/${en.replaceAll(" ","-")}.svg`}));
+["knee","kolano","nii"],["foot","stopa","fut"],["toe","palec u stopy","toł"]].map(([en,pl,phon])=>({id:`body-${en.split(" ").join("-")}`,en,pl,phon,image:`assets/body/${en.split(" ").join("-")}.svg`}));
 const COLOR_ITEMS=[
 {id:"red",color:"#ef4444",en:"red",pl:"czerwony",phon:"red"},{id:"blue",color:"#3b82f6",en:"blue",pl:"niebieski",phon:"bluu"},
 {id:"green",color:"#22c55e",en:"green",pl:"zielony",phon:"griin"},{id:"yellow",color:"#facc15",en:"yellow",pl:"żółty",phon:"JEloł"},
@@ -231,7 +237,7 @@ const SENTENCE_FRUITS=[
 const S={left:null,right:null,matched:new Set(),lock:false,voice:null,size:8,pool:[],fixedItems:null,category:CATEGORIES.food};
 const SENTENCE_STATE={current:null,bank:[],answer:[],correctCount:0,locked:false,previousKey:null};
 const $=q=>document.querySelector(q);
-function show(id){["home","categories","food-subcategories","number-subcategories","sets","size","game","sentence-game"].forEach(x=>$("#"+x).classList.toggle("hidden",x!==id))}
+function show(id){["home","categories","food-subcategories","number-subcategories","sets","size","game","sentence-categories","sentence-game"].forEach(x=>$("#"+x).classList.toggle("hidden",x!==id))}
 function shuffle(a){a=[...a];for(let i=a.length-1;i;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function speak(t){if(!("speechSynthesis" in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.82;u.pitch=1.05;if(S.voice){u.voice=S.voice;u.lang=S.voice.lang}speechSynthesis.speak(u)}
 function tone(ok){const A=window.AudioContext||window.webkitAudioContext;if(!A)return;const c=new A(),fs=ok?[523,659,784]:[220,185];let t=c.currentTime;fs.forEach(f=>{const o=c.createOscillator(),g=c.createGain();o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.2,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+.22);o.connect(g).connect(c.destination);o.start(t);o.stop(t+.24);t+=.11})}
@@ -248,7 +254,7 @@ function check(){S.lock=true;if(S.left===S.right){const id=S.left;tone(true);bur
 else{tone(false);document.querySelectorAll(".selected").forEach(e=>e.classList.add("wrong"));setTimeout(()=>{clear();S.lock=false},650)}}
 function voices(){if(!("speechSynthesis" in window))return;const vs=speechSynthesis.getVoices(),us=vs.filter(v=>v.lang&&v.lang.toLowerCase()==="en-us"),female=["google us english","jenny","aria","zira","samantha","female"];S.voice=female.map(h=>us.find(v=>v.name.toLowerCase().includes(h))).find(Boolean)||us.find(v=>!["david","mark","guy","george","male"].some(h=>v.name.toLowerCase().includes(h)))||us[0]||vs.find(v=>v.lang&&v.lang.toLowerCase().startsWith("en"))||null}
 function mixCounts(category){const max=category.items.length;return[...new Set([8,14,Math.min(20,max)])].filter(n=>n<=max)}
-function learningSets(items){const groups=[];for(let start=0;start<items.length;start+=10)groups.push({start:start+1,end:Math.min(start+10,items.length),items:items.slice(start,start+10)});if(groups.length>1&&groups.at(-1).items.length<5){const last=groups.pop(),previous=groups.at(-1);previous.items.push(...last.items);previous.end=last.end}return groups}
+function learningSets(items){const groups=[];for(let start=0;start<items.length;start+=10)groups.push({start:start+1,end:Math.min(start+10,items.length),items:items.slice(start,start+10)});if(groups.length>1&&groups[groups.length-1].items.length<5){const last=groups.pop(),previous=groups[groups.length-1];previous.items.push(...last.items);previous.end=last.end}return groups}
 function startFixed(items){S.fixedItems=[...items];S.pool=[];S.size=items.length;$("#game-back").dataset.target="sets";reset(true);show("game")}
 function renderSets(){const box=$("#set-options"),groups=learningSets(S.category.items),counts=mixCounts(S.category);$("#sets-subtitle").textContent=`${S.category.emoji} ${S.category.name} — wybierz stały zestaw albo MIX`;box.innerHTML="";groups.forEach((group,i)=>{const b=document.createElement("button");b.className="cat set-card";b.innerHTML=`<span class="set-number">${i+1}</span><span class="title">ZESTAW ${i+1}</span><span class="soon">słowa ${group.start}–${group.end}</span>`;b.onclick=()=>startFixed(group.items);box.appendChild(b)});const mix=document.createElement("button");mix.className="cat set-card";mix.innerHTML=`<span class="emoji">🎲</span><span class="title">MIX</span><span class="soon">losowe ${counts.join(" / ")}</span>`;mix.onclick=()=>openSize(S.category,"sets");box.appendChild(mix)}
 function openSets(category,backTarget){S.category=category;S.pool=[];S.fixedItems=null;$("#sets-back").dataset.target=backTarget;renderSets();show("sets")}
@@ -260,7 +266,7 @@ function sentenceCreateRound(){let number,fruit,key;do{number=SENTENCE_NUMBERS[M
 function sentenceWordButton(item,source){const b=document.createElement("button");b.type="button";b.className="sentence-word";b.textContent=item.text.toUpperCase();b.onclick=()=>{if(SENTENCE_STATE.locked)return;sentenceSpeak(item.text,"en-US",.78);const from=source==="bank"?SENTENCE_STATE.bank:SENTENCE_STATE.answer,to=source==="bank"?SENTENCE_STATE.answer:SENTENCE_STATE.bank,index=from.findIndex(word=>word.id===item.id);if(index<0)return;to.push(from.splice(index,1)[0]);$("#sentence-message").textContent="";$("#sentence-message").className="sentence-message";sentenceRender()};return b}
 function sentenceRender(){const answer=$("#sentence-answer"),bank=$("#sentence-bank");answer.innerHTML="";bank.innerHTML="";if(!SENTENCE_STATE.answer.length){const placeholder=document.createElement("span");placeholder.className="sentence-placeholder";placeholder.textContent="KLIKAJ WYRAZY PONIŻEJ";answer.appendChild(placeholder)}else SENTENCE_STATE.answer.forEach(item=>answer.appendChild(sentenceWordButton(item,"answer")));SENTENCE_STATE.bank.forEach(item=>bank.appendChild(sentenceWordButton(item,"bank")))}
 function sentenceCheck(){if(SENTENCE_STATE.locked||!SENTENCE_STATE.current)return;const message=$("#sentence-message"),answer=$("#sentence-answer");if(SENTENCE_STATE.answer.length!==SENTENCE_STATE.current.tokens.length){message.textContent="UŻYJ WSZYSTKICH WYRAZÓW.";message.className="sentence-message bad";return}const submitted=SENTENCE_STATE.answer.map(item=>item.text).join(" "),expected=SENTENCE_STATE.current.tokens.join(" ");if(submitted===expected){SENTENCE_STATE.locked=true;SENTENCE_STATE.correctCount++;$("#sentence-score").textContent=`${SENTENCE_STATE.correctCount} POPRAWNYCH`;message.textContent=`BRAWO! ${SENTENCE_STATE.current.sentence.toUpperCase()}`;message.className="sentence-message ok";answer.className="sentence-answer correct";sentenceSpeak(SENTENCE_STATE.current.sentence,"en-US",.82)}else{message.textContent="SPRÓBUJ JESZCZE RAZ.";message.className="sentence-message bad";answer.className="sentence-answer sentence-wrong";setTimeout(()=>{if(!SENTENCE_STATE.locked)answer.className="sentence-answer"},450)}}
-$("#play").onclick=()=>show("categories");$("#sentence-play").onclick=()=>{if(!SENTENCE_STATE.current)sentenceCreateRound();show("sentence-game")};document.querySelectorAll(".category").forEach(b=>b.onclick=()=>{const key=b.dataset.category;if(key==="food")show("food-subcategories");else if(key==="numbers")show("number-subcategories");else openSets(CATEGORIES[key],"categories")});document.querySelectorAll(".food-subcategory").forEach(b=>b.onclick=()=>{const key=b.dataset.food;if(key==="mix")openSize(FOOD_SUBCATEGORIES[key],"food-subcategories");else openSets(FOOD_SUBCATEGORIES[key],"food-subcategories")});document.querySelectorAll(".number-subcategory").forEach(b=>b.onclick=()=>openSets(NUMBER_SUBCATEGORIES[b.dataset.numbers],"number-subcategories"));document.querySelectorAll(".back").forEach(b=>b.onclick=()=>show(b.dataset.target));$("#replay").onclick=()=>reset(true);$("#topics").onclick=()=>{$("#finish").classList.add("hidden");show("categories")};$("#sentence-speak-polish").onclick=()=>{if(SENTENCE_STATE.current)sentenceSpeak(SENTENCE_STATE.current.polishSentence,"pl-PL",.84)};$("#sentence-check").onclick=sentenceCheck;$("#sentence-next").onclick=sentenceCreateRound;
+$("#play").onclick=()=>show("categories");$("#sentence-play").onclick=()=>show("sentence-categories");$("#sentence-have").onclick=()=>{if(!SENTENCE_STATE.current)sentenceCreateRound();show("sentence-game")};document.querySelectorAll(".category").forEach(b=>b.onclick=()=>{const key=b.dataset.category;if(key==="food")show("food-subcategories");else if(key==="numbers")show("number-subcategories");else openSets(CATEGORIES[key],"categories")});document.querySelectorAll(".food-subcategory").forEach(b=>b.onclick=()=>{const key=b.dataset.food;if(key==="mix")openSize(FOOD_SUBCATEGORIES[key],"food-subcategories");else openSets(FOOD_SUBCATEGORIES[key],"food-subcategories")});document.querySelectorAll(".number-subcategory").forEach(b=>b.onclick=()=>openSets(NUMBER_SUBCATEGORIES[b.dataset.numbers],"number-subcategories"));document.querySelectorAll(".back").forEach(b=>b.onclick=()=>show(b.dataset.target));$("#replay").onclick=()=>reset(true);$("#topics").onclick=()=>{$("#finish").classList.add("hidden");show("categories")};$("#sentence-speak-polish").onclick=()=>{if(SENTENCE_STATE.current)sentenceSpeak(SENTENCE_STATE.current.polishSentence,"pl-PL",.84)};$("#sentence-check").onclick=sentenceCheck;$("#sentence-next").onclick=sentenceCreateRound;
 voices();if("speechSynthesis" in window)speechSynthesis.onvoiceschanged=voices;
 </script>
 </body>
