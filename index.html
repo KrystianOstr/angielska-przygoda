@@ -37,6 +37,9 @@ h1,h2{font-family:inherit;margin:0}h1{font-size:34px;line-height:1.15;margin-top
 .actions{display:grid;gap:12px;margin-top:25px}.btn{width:100%;border-radius:16px;padding:13px 18px;font-weight:900;cursor:pointer}.primary{background:var(--coral);color:#fff;box-shadow:0 4px 0 #c6472f}.secondary{background:#f3ecdd}
 .sentence-cats .cat{min-height:130px;padding:18px 8px}.sentence-cats .title{font-size:16px;text-align:center}.sentence-levels .cat{min-height:150px}.sentence-subjects{grid-template-columns:repeat(3,1fr)}.sentence-subjects .cat{min-height:145px}.sentence-subjects .title{font-size:24px}.sentence-screen{max-width:720px;text-transform:uppercase;padding-top:24px}.sentence-topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}.sentence-heading{text-align:center;font-size:34px;margin:10px 0 5px}.sentence-subtitle{text-align:center;color:var(--soft);font-weight:900;margin:0 0 20px}.sentence-card{background:#fff;border-radius:26px;padding:24px;box-shadow:0 6px 0 #2b21181a}.sentence-instruction{text-align:center;color:var(--soft);font-size:15px;font-weight:900;margin-bottom:14px}.sentence-picture{min-height:145px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;padding:12px;border:3px dashed #f0d69a;border-radius:22px;background:#fff4d5}.sentence-fruit{font-size:52px;line-height:1;filter:drop-shadow(0 3px 0 #00000014)}.sentence-negative{position:relative;display:flex;align-items:center;justify-content:center;min-width:min(390px,100%);min-height:112px}.sentence-negative-fruits{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;padding:8px 36px}.sentence-negative-mark{position:absolute;width:min(116px,35%);aspect-ratio:1;border:9px solid #ed3f4f;border-radius:50%;filter:drop-shadow(0 2px 0 #fff)}.sentence-negative-mark:after{content:"";position:absolute;left:8%;right:8%;top:44%;height:9px;border-radius:9px;background:#ed3f4f;transform:rotate(-45deg)}.sentence-polish-row{display:flex;align-items:center;justify-content:center;gap:10px;margin:15px 0 5px}.sentence-polish{color:var(--soft);font-size:20px;font-weight:900;text-align:center}.sentence-speaker{width:42px;height:42px;flex:0 0 42px;border-radius:14px;background:#e7f7f5;color:#147d72;font-size:21px;font-weight:900;cursor:pointer;box-shadow:0 3px 0 #b9e4de}.sentence-speaker:hover{transform:translateY(-2px)}.sentence-answer{min-height:76px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:9px;padding:12px;margin-top:18px;border:3px solid #ded4ff;border-radius:20px;background:#f4f0ff}.sentence-placeholder{color:#9c8fbc;font-weight:900}.sentence-bank{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:18px 0}.sentence-word{border-radius:15px;padding:12px 17px;background:#fff;color:var(--ink);font-size:21px;font-weight:900;letter-spacing:.4px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 0 #2b211821}.sentence-word:hover{transform:translateY(-2px)}.sentence-answer .sentence-word{background:#e9e2ff;box-shadow:0 3px 0 #c9bdf4}.sentence-answer.correct{border-color:var(--ok);background:#ecfff5}.sentence-answer.sentence-wrong{border-color:var(--bad);animation:sentenceShake .35s ease}.sentence-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px}.sentence-btn{border-radius:16px;padding:14px;font-size:16px;font-weight:900;text-transform:uppercase;cursor:pointer}.sentence-check{background:var(--coral);color:#fff;box-shadow:0 4px 0 #c6472f}.sentence-next{background:#ede5d5;color:var(--ink)}.sentence-message{min-height:36px;padding-top:14px;text-align:center;font-size:18px;font-weight:900}.sentence-message.ok{color:#19965a}.sentence-message.bad{color:var(--bad)}
 @keyframes sentenceShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}50%{transform:translateX(6px)}75%{transform:translateX(-4px)}}
+.guess-screen{max-width:1040px;height:100vh;height:100dvh;overflow:hidden;padding-top:16px;padding-bottom:16px;display:flex;flex-direction:column}.guess-topbar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px}.guess-topbar .progress{justify-self:end}.guess-instruction{text-align:center;color:var(--soft);font-size:15px;font-weight:900;margin:10px 0 12px}.guess-main{position:relative;flex:1;min-height:0;display:grid;grid-template-columns:minmax(240px,.82fr) minmax(360px,1.18fr);gap:18px}.guess-picture-card,.guess-answer-panel{min-height:0;background:#fff;border-radius:26px;box-shadow:0 5px 0 #2b21181a}.guess-picture-card{padding:18px;display:grid;grid-template-rows:1fr auto;gap:12px}.guess-picture{min-height:0;display:flex;align-items:center;justify-content:center;border:3px dashed #f0d69a;border-radius:22px;background:#fff4d5;font-size:clamp(90px,17vh,170px);overflow:hidden}.guess-picture svg{width:min(72%,230px);height:min(72%,230px)}.guess-picture .art-icon{width:min(72%,230px);height:min(72%,230px)}.guess-picture .number-pic,.guess-picture .color-pic{width:min(46%,180px)}.guess-hint{justify-self:center;border-radius:16px;padding:12px 18px;background:#fff0ae;color:#735600;font-weight:900;cursor:pointer;box-shadow:0 4px 0 #dec45f}.guess-hint:disabled{opacity:.55}.guess-answer-panel{padding:18px;display:grid;grid-template-rows:minmax(0,1fr) auto;gap:12px}.guess-options{min-height:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:12px}.guess-option{min-width:0;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 50px;border:3px solid transparent;border-radius:20px;background:#f8f5ee;box-shadow:0 3px 0 #2b21181a;overflow:hidden;transition:.12s}.guess-answer{min-width:0;background:transparent;padding:12px 8px 12px 16px;font-size:clamp(16px,2.2vw,24px);font-weight:900;cursor:pointer}.guess-option-speaker{border-left:2px solid #e9e0d2;background:#fff;font-size:20px;cursor:pointer}.guess-option:hover{transform:translateY(-2px)}.guess-option.guess-correct{border-color:var(--ok);background:#eafff3}.guess-option.guess-wrong{border-color:var(--bad);animation:shake .45s}.guess-feedback-row{min-height:52px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px}.guess-feedback{font-weight:900;color:var(--soft);text-align:center}.guess-feedback.ok{color:#19965a}.guess-next{border-radius:15px;padding:12px 17px;background:var(--coral);color:#fff;font-weight:900;cursor:pointer;box-shadow:0 4px 0 #c6472f}.guess-confetti{pointer-events:none;position:absolute;inset:0;overflow:hidden}.guess-summary{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0 4px}.guess-summary div{background:#f8f5ee;border-radius:16px;padding:13px 8px}.guess-summary strong{display:block;font-size:25px;color:var(--purple)}
+@media(max-width:720px){.guess-screen{padding:8px 10px}.guess-topbar .badge{font-size:11px;padding:7px 9px}.guess-topbar .progress{font-size:11px;padding:7px 9px}.guess-instruction{font-size:12px;margin:7px 0}.guess-main{grid-template-columns:1fr;grid-template-rows:minmax(150px,.78fr) minmax(270px,1.22fr);gap:9px}.guess-picture-card{padding:9px;grid-template-columns:1fr auto;grid-template-rows:1fr;gap:8px}.guess-picture{font-size:clamp(65px,16vh,115px)}.guess-picture svg,.guess-picture .art-icon{width:min(62%,145px);height:min(62%,145px)}.guess-picture .number-pic,.guess-picture .color-pic{width:min(42%,105px)}.guess-hint{align-self:center;padding:11px 10px;font-size:12px;max-width:105px}.guess-answer-panel{padding:9px;gap:8px}.guess-options{gap:8px}.guess-option{grid-template-columns:minmax(0,1fr) 42px;border-radius:15px}.guess-answer{font-size:clamp(13px,4vw,18px);padding:8px 4px 8px 8px}.guess-option-speaker{font-size:17px}.guess-feedback-row{min-height:43px;gap:6px}.guess-feedback{font-size:12px}.guess-next{padding:10px 12px;font-size:12px}}
+@media(max-height:670px) and (max-width:720px){.guess-instruction{margin:4px 0}.guess-main{grid-template-rows:minmax(125px,.68fr) minmax(245px,1.32fr)}.guess-picture-card{padding:7px}.guess-answer-panel{padding:7px}.guess-hint{padding:8px}.guess-feedback-row{min-height:36px}}
 @media(max-width:600px){.screen{padding-left:10px;padding-right:10px}h1{font-size:29px}.sizes{gap:8px}.size-card{padding:20px 5px}.sets{grid-template-columns:1fr 1fr;gap:10px}.set-card{min-height:125px;padding:17px 6px}.game-screen{padding-top:8px;padding-bottom:8px}.game-screen .top{margin-bottom:7px}.hint{font-size:11px;margin-bottom:6px}.board{grid-template-columns:repeat(var(--mobile-cols),minmax(0,1fr));grid-template-rows:repeat(var(--mobile-rows),minmax(0,1fr));gap:5px;width:100%;height:calc(100dvh - 105px)}.tile{border-radius:11px;border-width:2px;box-shadow:0 2px 0 #2b21181a}.image-tile{font-size:clamp(24px,9vw,38px)}.number-pic{border-radius:12px;font-size:clamp(20px,7vw,32px)}.color-pic{border-width:3px}.en{font-size:clamp(9px,3.2vw,13px)}.spk{display:none}}
 @media(max-width:520px){.sentence-screen{padding-top:12px}.sentence-topbar{align-items:flex-start}.sentence-topbar .badge,.sentence-topbar .progress{padding:7px 9px;font-size:11px}.sentence-heading{font-size:29px}.sentence-card{padding:16px}.sentence-picture{min-height:130px;gap:5px}.sentence-fruit{font-size:42px}.sentence-polish{font-size:17px}.sentence-word{padding:10px 13px;font-size:18px}.sentence-actions{gap:8px}.sentence-btn{padding:12px 7px;font-size:13px}}
 </style>
@@ -49,7 +52,7 @@ h1,h2{font-family:inherit;margin:0}h1{font-size:34px;line-height:1.15;margin-top
   <p class="subtitle">Wybierz grę i zacznij przygodę z angielskim</p>
   <div class="stack">
     <button id="play" class="card"><span class="emoji">🧩</span><span class="grow"><span class="title">Dopasuj Pary</span><span class="desc">Połącz obrazek ze słówkiem</span></span></button>
-    <button class="card" disabled><span class="emoji">🔤</span><span class="grow"><span class="title">Zgadnij Słowo</span><span class="desc">Już wkrótce</span></span>🔒</button>
+    <button id="guess-play" class="card"><span class="emoji">🔤</span><span class="grow"><span class="title">Zgadnij Słowo</span><span class="desc">Wybierz właściwe słowo do obrazka</span></span></button>
     <button id="sentence-play" class="card"><span class="emoji">📝</span><span class="grow"><span class="title">Ułóż Zdanie</span><span class="desc">Ćwicz zdania krok po kroku</span></span></button>
   </div>
 </section>
@@ -101,13 +104,72 @@ h1,h2{font-family:inherit;margin:0}h1{font-size:34px;line-height:1.15;margin-top
   <div id="board" class="board"><div id="confetti" class="confetti"></div></div>
 </section>
 
+<section id="guess-categories" class="screen hidden">
+  <div class="top"><div class="left"><button class="icon back" data-target="home">←</button><h2>WYBIERZ TEMAT</h2></div></div>
+  <div class="cats">
+    <button class="cat guess-category" data-category="food"><span class="emoji">🍎</span><span class="title">JEDZENIE</span></button>
+    <button class="cat guess-category" data-category="animals"><span class="emoji">🐶</span><span class="title">ZWIERZĘTA</span></button>
+    <button class="cat guess-category" data-category="colors"><span class="emoji">🎨</span><span class="title">KOLORY</span></button>
+    <button class="cat guess-category" data-category="numbers"><span class="emoji">🔢</span><span class="title">LICZBY</span></button>
+    <button class="cat guess-category" data-category="body"><span class="emoji">🧍</span><span class="title">CZĘŚCI CIAŁA</span></button>
+  </div>
+</section>
+
+<section id="guess-food-subcategories" class="screen hidden">
+  <div class="top"><div class="left"><button class="icon back" data-target="guess-categories">←</button><h2>WYBIERZ RODZAJ JEDZENIA</h2></div></div>
+  <div class="cats">
+    <button class="cat guess-food-subcategory" data-food="fruits"><span class="emoji">🍓</span><span class="title">OWOCE</span></button>
+    <button class="cat guess-food-subcategory" data-food="vegetables"><span class="emoji">🥕</span><span class="title">WARZYWA</span></button>
+    <button class="cat guess-food-subcategory" data-food="general"><span class="emoji">🍞</span><span class="title">OGÓLNE</span></button>
+    <button class="cat guess-food-subcategory" data-food="mix"><span class="emoji">🎲</span><span class="title">MIX</span><span class="soon">LOSOWANIE ZE WSZYSTKICH</span></button>
+  </div>
+</section>
+
+<section id="guess-number-subcategories" class="screen hidden">
+  <div class="top"><div class="left"><button class="icon back" data-target="guess-categories">←</button><h2>WYBIERZ ZAKRES LICZB</h2></div></div>
+  <div class="cats">
+    <button class="cat guess-number-subcategory" data-numbers="low"><span class="emoji">🔟</span><span class="title">0–10</span></button>
+    <button class="cat guess-number-subcategory" data-numbers="high"><span class="emoji">🔢</span><span class="title">11–20</span></button>
+  </div>
+</section>
+
+<section id="guess-sets" class="screen hidden">
+  <div class="top"><div class="left"><button id="guess-sets-back" class="icon back" data-target="guess-categories">←</button><h2>WYBIERZ ZESTAW</h2></div></div>
+  <p id="guess-sets-subtitle" class="subtitle center"></p>
+  <div id="guess-set-options" class="sets"></div>
+</section>
+
+<section id="guess-game" class="screen guess-screen hidden">
+  <div class="guess-topbar">
+    <button id="guess-game-back" class="icon back" data-target="guess-sets">←</button>
+    <span class="badge">🔤 ZGADNIJ SŁOWO</span>
+    <span class="progress"><span id="guess-index">1</span> / <span id="guess-total">10</span></span>
+  </div>
+  <p class="guess-instruction">WYBIERZ WŁAŚCIWE SŁOWO DO OBRAZKA</p>
+  <div class="guess-main">
+    <div class="guess-picture-card">
+      <div id="guess-picture" class="guess-picture"></div>
+      <button id="guess-hint" class="guess-hint" type="button">💡 PODPOWIEDŹ</button>
+    </div>
+    <div class="guess-answer-panel">
+      <div id="guess-options" class="guess-options"></div>
+      <div class="guess-feedback-row">
+        <div id="guess-feedback" class="guess-feedback">MOŻESZ ODSŁUCHAĆ KAŻDĄ ODPOWIEDŹ 🔊</div>
+        <button id="guess-next" class="guess-next hidden" type="button">NASTĘPNE →</button>
+      </div>
+    </div>
+    <div id="guess-confetti" class="guess-confetti"></div>
+  </div>
+</section>
+
 <section id="sentence-levels" class="screen hidden">
   <div class="top"><div class="left"><button class="icon back" data-target="home">←</button><h2>WYBIERZ POZIOM</h2></div></div>
-  <p class="subtitle center">WSZYSTKIE POZIOMY SĄ DOSTĘPNE</p>
+  <p class="subtitle center">WYBIERZ GRUPĘ OSÓB DO ĆWICZEŃ</p>
   <div class="cats sentence-cats sentence-levels">
     <button class="cat sentence-level" data-sentence-level="1"><span class="emoji">🌱</span><span class="title">POZIOM 1</span><span class="soon active">JA — I</span></button>
     <button class="cat sentence-level" data-sentence-level="2"><span class="emoji">🚀</span><span class="title">POZIOM 2</span><span class="soon active">TY, ON, ONA, ONO</span></button>
     <button class="cat sentence-level" data-sentence-level="3"><span class="emoji">🌟</span><span class="title">POZIOM 3</span><span class="soon active">WY, MY, ONI</span></button>
+    <button class="cat sentence-level" data-sentence-level="4"><span class="emoji">🎲</span><span class="title">POZIOM 4</span><span class="soon active">MIX WSZYSTKICH OSÓB</span></button>
   </div>
 </section>
 
@@ -146,6 +208,13 @@ h1,h2{font-family:inherit;margin:0}h1{font-size:34px;line-height:1.15;margin-top
 <div id="finish" class="overlay hidden">
   <div class="modal"><div class="party">🎉</div><h2>Brawo!</h2><p>Dopasowałeś wszystkie pary!</p>
     <div class="actions"><button id="replay" class="btn primary">↻ Zagraj jeszcze raz</button><button id="topics" class="btn secondary">Wróć do tematów</button></div>
+  </div>
+</div>
+
+<div id="guess-finish" class="overlay hidden">
+  <div class="modal"><div class="party">🏆</div><h2>BRAWO!</h2><p>UKOŃCZYŁEŚ 10 SŁÓW</p>
+    <div class="guess-summary"><div><strong id="guess-independent">0</strong>BEZ PODPOWIEDZI</div><div><strong id="guess-with-hint">0</strong>Z PODPOWIEDZIĄ 💡</div></div>
+    <div class="actions"><button id="guess-replay" class="btn primary">↻ ZAGRAJ JESZCZE RAZ</button><button id="guess-topics" class="btn secondary">WYBIERZ INNY ZESTAW</button></div>
   </div>
 </div>
 
@@ -319,16 +388,18 @@ they:{en:"they",polishLabel:"ONI",level:3,have:"have",negative:"don't",like:"lik
 const SENTENCE_LEVELS={
 1:{label:"JA",subjects:["i"]},
 2:{label:"TY, ON, ONA, ONO",subjects:["youOne","he","she","it"]},
-3:{label:"WY, MY, ONI",subjects:["youMany","we","they"]}
+3:{label:"WY, MY, ONI",subjects:["youMany","we","they"]},
+4:{label:"MIX WSZYSTKICH OSÓB",subjects:["i","youOne","he","she","it","youMany","we","they"]}
 };
 const SENTENCE_MODES={
 have:{emoji:"🍎",kinds:["have"]},dontHave:{emoji:"🚫",kinds:["dontHave"]},haveMixed:{emoji:"🔀",kinds:["have","dontHave"]},
 like:{emoji:"❤️",kinds:["like"]},dontLike:{emoji:"💔",kinds:["dontLike"]},likeMixed:{emoji:"🔀",kinds:["like","dontLike"]},
 am:{emoji:"🙂",kinds:["am"]},allMixed:{emoji:"🎲",kinds:["have","dontHave","like","dontLike","am"]}};
 const S={left:null,right:null,matched:new Set(),lock:false,voice:null,polishVoice:null,size:8,pool:[],fixedItems:null,category:CATEGORIES.food};
+const GUESS_STATE={category:CATEGORIES.animals,sourceItems:[],questions:[],index:0,current:null,options:[],solved:false,usedHint:false,independent:0,withHint:0};
 const SENTENCE_STATE={level:1,subject:"i",mode:"have",current:null,bank:[],answer:[],correctCount:0,locked:false,previousKey:null};
 const $=q=>document.querySelector(q);
-function show(id){["home","categories","food-subcategories","number-subcategories","sets","size","game","sentence-levels","sentence-categories","sentence-game"].forEach(x=>$("#"+x).classList.toggle("hidden",x!==id))}
+function show(id){["home","categories","food-subcategories","number-subcategories","sets","size","game","guess-categories","guess-food-subcategories","guess-number-subcategories","guess-sets","guess-game","sentence-levels","sentence-categories","sentence-game"].forEach(x=>$("#"+x).classList.toggle("hidden",x!==id))}
 function shuffle(a){a=[...a];for(let i=a.length-1;i;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function speak(t){if(!("speechSynthesis" in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.82;u.pitch=1.05;if(S.voice){u.voice=S.voice;u.lang=S.voice.lang}speechSynthesis.speak(u)}
 function tone(ok){const A=window.AudioContext||window.webkitAudioContext;if(!A)return;const c=new A(),fs=ok?[523,659,784]:[220,185];let t=c.currentTime;fs.forEach(f=>{const o=c.createOscillator(),g=c.createGain();o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.2,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+.22);o.connect(g).connect(c.destination);o.start(t);o.stop(t+.24);t+=.11})}
@@ -352,12 +423,28 @@ function renderSets(){const box=$("#set-options"),groups=learningSets(S.category
 function openSets(category,backTarget){S.category=category;S.pool=[];S.fixedItems=null;$("#sets-back").dataset.target=backTarget;renderSets();show("sets")}
 function sizeOptions(){const box=$("#sizes"),counts=mixCounts(S.category);$("#size-subtitle").textContent=`${S.category.emoji} ${S.category.name} — wybierz długość gry`;box.innerHTML="";counts.forEach((n,i)=>{const b=document.createElement("button");b.className="size-card";b.dataset.count=n;b.innerHTML=`<span class="size-number">${n}</span><span class="size-label">${i===0?"krótka":i===counts.length-1?"pełna":"średnia"}</span>`;b.onclick=()=>{S.fixedItems=null;S.size=n;$("#game-back").dataset.target="size";reset(true);show("game")};box.appendChild(b)})}
 function openSize(category,backTarget){S.category=category;S.pool=[];S.fixedItems=null;$("#size-back").dataset.target=backTarget;sizeOptions();show("size")}
+function guessItemPicture(item){if(item.art)return artSvg(item.art);if(item.image)return`<img class="art-icon" src="${item.image}" alt="">`;if(item.pic)return`<span>${item.pic}</span>`;if(item.number!==undefined)return`<span class="number-pic">${item.number}</span>`;return`<span class="color-pic" style="background:${item.color}"></span>`}
+function guessBurst(){const box=$("#guess-confetti"),colors=["#ff6b4a","#ffc93c","#1fb8a6","#7c5cfc","#3dd68c"];box.innerHTML="";for(let i=0;i<24;i++){const piece=document.createElement("i");piece.className="piece";piece.style.left=Math.random()*100+"%";piece.style.background=colors[i%colors.length];piece.style.animationDelay=Math.random()*.15+"s";box.appendChild(piece)}setTimeout(()=>box.innerHTML="",1300)}
+function guessRenderOptions(){const box=$("#guess-options");box.innerHTML="";GUESS_STATE.options.forEach(item=>{const wrap=document.createElement("div");wrap.className="guess-option";wrap.dataset.id=item.id;const answer=document.createElement("button");answer.type="button";answer.className="guess-answer";answer.textContent=item.en.toUpperCase();answer.onclick=()=>guessChoose(item,wrap);const speaker=document.createElement("button");speaker.type="button";speaker.className="guess-option-speaker";speaker.textContent="🔊";speaker.ariaLabel=`ODTWÓRZ ${item.en.toUpperCase()}`;speaker.onclick=()=>speak(item.en);wrap.appendChild(answer);wrap.appendChild(speaker);box.appendChild(wrap)})}
+function guessRenderQuestion(){const target=GUESS_STATE.questions[GUESS_STATE.index],distractors=shuffle(GUESS_STATE.sourceItems.filter(item=>item.id!==target.id)).slice(0,3);GUESS_STATE.current=target;GUESS_STATE.options=shuffle([target,...distractors]);GUESS_STATE.solved=false;GUESS_STATE.usedHint=false;$("#guess-index").textContent=GUESS_STATE.index+1;$("#guess-total").textContent=GUESS_STATE.questions.length;$("#guess-picture").innerHTML=guessItemPicture(target);$("#guess-feedback").textContent="MOŻESZ ODSŁUCHAĆ KAŻDĄ ODPOWIEDŹ 🔊";$("#guess-feedback").className="guess-feedback";$("#guess-next").classList.add("hidden");$("#guess-hint").disabled=false;guessRenderOptions()}
+function guessChoose(item,wrap){if(GUESS_STATE.solved)return;if(item.id!==GUESS_STATE.current.id){tone(false);wrap.classList.add("guess-wrong");setTimeout(()=>wrap.classList.remove("guess-wrong"),480);return}GUESS_STATE.solved=true;wrap.classList.add("guess-correct");GUESS_STATE.usedHint?GUESS_STATE.withHint++:GUESS_STATE.independent++;$("#guess-hint").disabled=true;$("#guess-feedback").textContent=`BRAWO! ${item.en.toUpperCase()}`;$("#guess-feedback").className="guess-feedback ok";$("#guess-next").classList.remove("hidden");speak(item.en);tone(true);guessBurst()}
+function guessHint(){if(!GUESS_STATE.current||GUESS_STATE.solved)return;GUESS_STATE.usedHint=true;speak(GUESS_STATE.current.en);$("#guess-feedback").textContent="POSŁUCHAJ I WYBIERZ WŁAŚCIWE SŁOWO"}
+function guessNext(){if(!GUESS_STATE.solved)return;if(GUESS_STATE.index+1<GUESS_STATE.questions.length){GUESS_STATE.index++;guessRenderQuestion();return}$("#guess-independent").textContent=`${GUESS_STATE.independent}`;$("#guess-with-hint").textContent=`${GUESS_STATE.withHint}`;$("#guess-finish").classList.remove("hidden")}
+function guessQuestions(items){const questions=[];while(questions.length<10){const batch=shuffle(items);if(questions.length&&batch.length>1&&questions[questions.length-1].id===batch[0].id)[batch[0],batch[1]]=[batch[1],batch[0]];questions.push(...batch)}return questions.slice(0,10)}
+function guessStart(items){GUESS_STATE.sourceItems=[...items];GUESS_STATE.questions=guessQuestions(items);GUESS_STATE.index=0;GUESS_STATE.independent=0;GUESS_STATE.withHint=0;$("#guess-finish").classList.add("hidden");guessRenderQuestion();show("guess-game")}
+function guessRenderSets(){const box=$("#guess-set-options"),groups=learningSets(GUESS_STATE.category.items);$("#guess-sets-subtitle").textContent=`${GUESS_STATE.category.emoji} ${GUESS_STATE.category.name} — 10 PYTAŃ`;box.innerHTML="";groups.forEach((group,index)=>{const button=document.createElement("button");button.type="button";button.className="cat set-card guess-set";button.innerHTML=`<span class="set-number">${index+1}</span><span class="title">ZESTAW ${index+1}</span><span class="soon">SŁOWA ${group.start}–${group.end}</span>`;button.onclick=()=>guessStart(group.items);box.appendChild(button)});const mix=document.createElement("button");mix.type="button";mix.className="cat set-card guess-set";mix.innerHTML=`<span class="emoji">🎲</span><span class="title">MIX</span><span class="soon">10 LOSOWYCH PYTAŃ</span>`;mix.onclick=()=>guessStart(GUESS_STATE.category.items);box.appendChild(mix)}
+function guessOpenSets(category,backTarget){GUESS_STATE.category=category;$("#guess-sets-back").dataset.target=backTarget;guessRenderSets();show("guess-sets")}
 function sentenceSpeak(text,lang="en-US",rate=.82){if(!("speechSynthesis" in window))return;speechSynthesis.cancel();const prefix=lang.slice(0,2).toLowerCase();if(prefix==="pl"&&!S.polishVoice||prefix==="en"&&!S.voice)voices();const u=new SpeechSynthesisUtterance(text);u.lang=lang;u.rate=rate;const vs=speechSynthesis.getVoices(),matching=vs.filter(v=>v.lang&&v.lang.toLowerCase().startsWith(prefix));const voice=prefix==="en"&&S.voice?S.voice:prefix==="pl"&&S.polishVoice?S.polishVoice:matching[0];u.pitch=prefix==="pl"?1.08:1.05;if(voice){u.voice=voice;u.lang=voice.lang}speechSynthesis.speak(u)}
 function sentenceFruitPicture(fruit,count,negative=false){const icons=Array.from({length:count},()=>`<span class="sentence-fruit">${fruit.emoji}</span>`).join("");return negative?`<div class="sentence-negative"><div class="sentence-negative-fruits">${icons}</div><span class="sentence-negative-mark" aria-hidden="true"></span></div>`:icons}
 function sentenceModeDetails(mode,level=SENTENCE_STATE.level){if(level===1){const subject=SENTENCE_SUBJECTS.i,positiveHave=`${subject.en} ${subject.have}`,negativeHave=`${subject.en} ${subject.negative} have`,positiveLike=`${subject.en} ${subject.like}`,negativeLike=`${subject.en} ${subject.negative} like`,be=`${subject.en} ${subject.be}`;return{
 have:{heading:`${positiveHave}…`,subtitle:"MAM + LICZBA 1–10 + OWOC"},dontHave:{heading:`${negativeHave}…`,subtitle:"NIE MAM + LICZBA 1–10 + OWOC"},haveMixed:{heading:"MAM CZY NIE MAM?",subtitle:`${positiveHave} / ${negativeHave}`},
 like:{heading:`${positiveLike}…`,subtitle:"LUBIĘ + OWOC"},dontLike:{heading:`${negativeLike}…`,subtitle:"NIE LUBIĘ + OWOC"},likeMixed:{heading:"LUBIĘ CZY NIE LUBIĘ?",subtitle:`${positiveLike} / ${negativeLike}`},
 am:{heading:`${be}…`,subtitle:"JESTEM + CECHA LUB STAN"},allMixed:{heading:"WIELKI MIX",subtitle:"HAVE / LIKE / BE / PRZECZENIA"}}[mode]}
+if(level===4)return{
+have:{heading:"HAVE / HAS…",subtitle:"WSZYSTKIE OSOBY + LICZBA 1–10 + OWOC"},dontHave:{heading:"DON'T / DOESN'T HAVE…",subtitle:"WSZYSTKIE OSOBY — PRZECZENIA"},haveMixed:{heading:"HAVE — MIX",subtitle:"HAVE / HAS / DON'T / DOESN'T HAVE"},
+like:{heading:"LIKE / LIKES…",subtitle:"WSZYSTKIE OSOBY + OWOC"},dontLike:{heading:"DON'T / DOESN'T LIKE…",subtitle:"WSZYSTKIE OSOBY — PRZECZENIA"},likeMixed:{heading:"LIKE — MIX",subtitle:"LIKE / LIKES / DON'T / DOESN'T LIKE"},
+am:{heading:"BE — AM / ARE / IS…",subtitle:"WSZYSTKIE OSOBY + CECHA LUB STAN"},allMixed:{heading:"WIELKI MIX",subtitle:"WSZYSTKIE OSOBY I KONSTRUKCJE"}
+}[mode];
 const levelDetails=level===2?{
 have:{heading:"HAVE / HAS…",subtitle:"MASZ / MA + LICZBA 1–10 + OWOC"},dontHave:{heading:"DON'T / DOESN'T HAVE…",subtitle:"NIE MASZ / NIE MA + LICZBA 1–10 + OWOC"},haveMixed:{heading:"HAVE — MIX",subtitle:"HAVE / HAS / DON'T / DOESN'T HAVE"},
 like:{heading:"LIKE / LIKES…",subtitle:"LUBISZ / LUBI + OWOC"},dontLike:{heading:"DON'T / DOESN'T LIKE…",subtitle:"NIE LUBISZ / NIE LUBI + OWOC"},likeMixed:{heading:"LIKE — MIX",subtitle:"LIKE / LIKES / DON'T / DOESN'T LIKE"},
@@ -381,7 +468,20 @@ function sentenceStart(mode){const details=sentenceModeDetails(mode);SENTENCE_ST
 function sentenceWordButton(item,source){const b=document.createElement("button");b.type="button";b.className="sentence-word";b.textContent=item.text.toUpperCase();b.onclick=()=>{if(SENTENCE_STATE.locked)return;sentenceSpeak(item.text,"en-US",.78);const from=source==="bank"?SENTENCE_STATE.bank:SENTENCE_STATE.answer,to=source==="bank"?SENTENCE_STATE.answer:SENTENCE_STATE.bank,index=from.findIndex(word=>word.id===item.id);if(index<0)return;to.push(from.splice(index,1)[0]);$("#sentence-message").textContent="";$("#sentence-message").className="sentence-message";sentenceRender()};return b}
 function sentenceRender(){const answer=$("#sentence-answer"),bank=$("#sentence-bank");answer.innerHTML="";bank.innerHTML="";if(!SENTENCE_STATE.answer.length){const placeholder=document.createElement("span");placeholder.className="sentence-placeholder";placeholder.textContent="KLIKAJ WYRAZY PONIŻEJ";answer.appendChild(placeholder)}else SENTENCE_STATE.answer.forEach(item=>answer.appendChild(sentenceWordButton(item,"answer")));SENTENCE_STATE.bank.forEach(item=>bank.appendChild(sentenceWordButton(item,"bank")))}
 function sentenceCheck(){if(!SENTENCE_STATE.current)return;sentenceSpeak(SENTENCE_STATE.current.sentence,"en-US",.82);if(SENTENCE_STATE.locked)return;const message=$("#sentence-message"),answer=$("#sentence-answer");if(SENTENCE_STATE.answer.length!==SENTENCE_STATE.current.tokens.length){message.textContent="UŻYJ WSZYSTKICH WYRAZÓW.";message.className="sentence-message bad";return}const submitted=SENTENCE_STATE.answer.map(item=>item.text).join(" "),expected=SENTENCE_STATE.current.tokens.join(" ");if(submitted===expected){SENTENCE_STATE.locked=true;SENTENCE_STATE.correctCount++;$("#sentence-score").textContent=`${SENTENCE_STATE.correctCount} POPRAWNYCH`;message.textContent=`BRAWO! ${SENTENCE_STATE.current.sentence.toUpperCase()}`;message.className="sentence-message ok";answer.className="sentence-answer correct"}else{message.textContent="SPRÓBUJ JESZCZE RAZ.";message.className="sentence-message bad";answer.className="sentence-answer sentence-wrong";setTimeout(()=>{if(!SENTENCE_STATE.locked)answer.className="sentence-answer"},450)}}
-$("#play").onclick=()=>show("categories");$("#sentence-play").onclick=()=>show("sentence-levels");document.querySelectorAll(".sentence-level").forEach(b=>b.onclick=()=>openSentenceLevel(Number(b.dataset.sentenceLevel)));document.querySelectorAll(".category").forEach(b=>b.onclick=()=>{const key=b.dataset.category;if(key==="food")show("food-subcategories");else if(key==="numbers")show("number-subcategories");else openSets(CATEGORIES[key],"categories")});document.querySelectorAll(".food-subcategory").forEach(b=>b.onclick=()=>{const key=b.dataset.food;if(key==="mix")openSize(FOOD_SUBCATEGORIES[key],"food-subcategories");else openSets(FOOD_SUBCATEGORIES[key],"food-subcategories")});document.querySelectorAll(".number-subcategory").forEach(b=>b.onclick=()=>openSets(NUMBER_SUBCATEGORIES[b.dataset.numbers],"number-subcategories"));document.querySelectorAll(".back").forEach(b=>b.onclick=()=>show(b.dataset.target));$("#replay").onclick=()=>reset(true);$("#topics").onclick=()=>{$("#finish").classList.add("hidden");show("categories")};$("#sentence-speak-polish").onclick=()=>{if(SENTENCE_STATE.current)sentenceSpeak(SENTENCE_STATE.current.polishSentence,"pl-PL",.78)};$("#sentence-check").onclick=sentenceCheck;$("#sentence-next").onclick=sentenceCreateRound;
+$("#play").onclick=()=>show("categories");
+$("#guess-play").onclick=()=>show("guess-categories");
+$("#sentence-play").onclick=()=>show("sentence-levels");
+document.querySelectorAll(".sentence-level").forEach(b=>b.onclick=()=>openSentenceLevel(Number(b.dataset.sentenceLevel)));
+document.querySelectorAll(".category").forEach(b=>b.onclick=()=>{const key=b.dataset.category;if(key==="food")show("food-subcategories");else if(key==="numbers")show("number-subcategories");else openSets(CATEGORIES[key],"categories")});
+document.querySelectorAll(".food-subcategory").forEach(b=>b.onclick=()=>{const key=b.dataset.food;if(key==="mix")openSize(FOOD_SUBCATEGORIES[key],"food-subcategories");else openSets(FOOD_SUBCATEGORIES[key],"food-subcategories")});
+document.querySelectorAll(".number-subcategory").forEach(b=>b.onclick=()=>openSets(NUMBER_SUBCATEGORIES[b.dataset.numbers],"number-subcategories"));
+document.querySelectorAll(".guess-category").forEach(b=>b.onclick=()=>{const key=b.dataset.category;if(key==="food")show("guess-food-subcategories");else if(key==="numbers")show("guess-number-subcategories");else guessOpenSets(CATEGORIES[key],"guess-categories")});
+document.querySelectorAll(".guess-food-subcategory").forEach(b=>b.onclick=()=>guessOpenSets(FOOD_SUBCATEGORIES[b.dataset.food],"guess-food-subcategories"));
+document.querySelectorAll(".guess-number-subcategory").forEach(b=>b.onclick=()=>guessOpenSets(NUMBER_SUBCATEGORIES[b.dataset.numbers],"guess-number-subcategories"));
+document.querySelectorAll(".back").forEach(b=>b.onclick=()=>show(b.dataset.target));
+$("#replay").onclick=()=>reset(true);$("#topics").onclick=()=>{$("#finish").classList.add("hidden");show("categories")};
+$("#guess-hint").onclick=guessHint;$("#guess-next").onclick=guessNext;$("#guess-replay").onclick=()=>guessStart(GUESS_STATE.sourceItems);$("#guess-topics").onclick=()=>{$("#guess-finish").classList.add("hidden");show("guess-sets")};
+$("#sentence-speak-polish").onclick=()=>{if(SENTENCE_STATE.current)sentenceSpeak(SENTENCE_STATE.current.polishSentence,"pl-PL",.78)};$("#sentence-check").onclick=sentenceCheck;$("#sentence-next").onclick=sentenceCreateRound;
 voices();if("speechSynthesis" in window)speechSynthesis.onvoiceschanged=voices;
 </script>
 </body>
