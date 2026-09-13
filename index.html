@@ -185,6 +185,18 @@ h1,h2{font-family:inherit;margin:0}h1{font-size:34px;line-height:1.15;margin-top
   <div id="sentence-variant-options" class="cats sentence-cats"></div>
 </section>
 
+<section id="sentence-example" class="screen sentence-screen hidden">
+  <div class="top"><button id="sentence-example-back" class="icon back" data-target="sentence-variants">←</button><h2>KRÓTKI PRZYKŁAD</h2></div>
+  <div class="sentence-card">
+    <p class="sentence-instruction">ZOBACZ, JAK ZBUDOWAĆ ZDANIE</p>
+    <div id="sentence-example-picture" class="sentence-picture"></div>
+    <div class="sentence-polish-row"><div id="sentence-example-english" class="sentence-polish" style="color:var(--ink)"></div><button id="sentence-example-en" class="sentence-speaker" aria-label="CZYTAJ PO ANGIELSKU">🔊</button></div>
+    <div class="sentence-polish-row"><div id="sentence-example-polish" class="sentence-polish"></div><button id="sentence-example-pl" class="sentence-speaker" aria-label="CZYTAJ PO POLSKU">🔊</button></div>
+    <p id="sentence-example-tip" class="sentence-instruction"></p>
+    <button id="sentence-begin" class="btn primary" type="button">ZACZYNAMY</button>
+  </div>
+</section>
+
 <section id="sentence-game" class="screen sentence-screen hidden">
   <div class="sentence-topbar">
     <button id="sentence-game-back" class="icon back" data-target="sentence-variants">←</button>
@@ -398,19 +410,19 @@ const SENTENCE_LEVELS={
 4:{label:"MIX WSZYSTKICH OSÓB",subjects:["i","youOne","he","she","it","youMany","we","they"]}
 };
 const SENTENCE_FAMILIES={
-have:{emoji:"🍎",label:"HAVE — MIEĆ",modes:["have","dontHave","haveMixed"]},
-like:{emoji:"❤️",label:"LIKE — LUBIĆ",modes:["like","dontLike","likeMixed"]},
-be:{emoji:"🙂",label:"BE — BYĆ",modes:["am","notAm","amMixed"]},
-want:{emoji:"🌠",label:"WANT — CHCIEĆ",modes:["want","dontWant","wantMixed"]},
-can:{emoji:"🏅",label:"CAN — POTRAFIĆ",modes:["can","cant","canMixed"]}
+have:{emoji:"🍎",label:"HAVE — MIEĆ",modes:["have","dontHave","haveQuestion","haveMixed"]},
+like:{emoji:"❤️",label:"LIKE — LUBIĆ",modes:["like","dontLike","likeQuestion","likeMixed"]},
+be:{emoji:"🙂",label:"BE — BYĆ",modes:["am","notAm","beQuestion","amMixed"]},
+want:{emoji:"🌠",label:"WANT — CHCIEĆ",modes:["want","dontWant","wantQuestion","wantMixed"]},
+can:{emoji:"🏅",label:"CAN — POTRAFIĆ",modes:["can","cant","canQuestion","canMixed"]}
 };
 const SENTENCE_MODES={
-have:{kinds:["have"]},dontHave:{kinds:["dontHave"]},haveMixed:{kinds:["have","dontHave"]},
-like:{kinds:["like"]},dontLike:{kinds:["dontLike"]},likeMixed:{kinds:["like","dontLike"]},
-am:{kinds:["am"]},notAm:{kinds:["notAm"]},amMixed:{kinds:["am","notAm"]},
-want:{kinds:["want"]},dontWant:{kinds:["dontWant"]},wantMixed:{kinds:["want","dontWant"]},
-can:{kinds:["can"]},cant:{kinds:["cant"]},canMixed:{kinds:["can","cant"]},
-allMixed:{kinds:["have","dontHave","like","dontLike","am","notAm","want","dontWant","can","cant"]}
+have:{kinds:["have"]},dontHave:{kinds:["dontHave"]},haveQuestion:{kinds:["haveQuestion"]},haveMixed:{kinds:["have","dontHave","haveQuestion"]},
+like:{kinds:["like"]},dontLike:{kinds:["dontLike"]},likeQuestion:{kinds:["likeQuestion"]},likeMixed:{kinds:["like","dontLike","likeQuestion"]},
+am:{kinds:["am"]},notAm:{kinds:["notAm"]},beQuestion:{kinds:["beQuestion"]},amMixed:{kinds:["am","notAm","beQuestion"]},
+want:{kinds:["want"]},dontWant:{kinds:["dontWant"]},wantQuestion:{kinds:["wantQuestion"]},wantMixed:{kinds:["want","dontWant","wantQuestion"]},
+can:{kinds:["can"]},cant:{kinds:["cant"]},canQuestion:{kinds:["canQuestion"]},canMixed:{kinds:["can","cant","canQuestion"]},
+allMixed:{kinds:["have","dontHave","like","dontLike","am","notAm","want","dontWant","can","cant","haveQuestion","likeQuestion","beQuestion","wantQuestion","canQuestion"]}
 };
 const SENTENCE_ACTIONS=[
 {en:"swim",pl:"pływać",emoji:"🏊"},{en:"run",pl:"biegać",emoji:"🏃"},
@@ -432,7 +444,7 @@ const S={left:null,right:null,matched:new Set(),lock:false,voice:null,polishVoic
 const GUESS_STATE={category:CATEGORIES.animals,sourceItems:[],questions:[],index:0,current:null,options:[],solved:false,usedHint:false,independent:0,withHint:0};
 const SENTENCE_STATE={level:1,subject:"i",mode:"have",current:null,bank:[],answer:[],correctCount:0,locked:false,previousKey:null};
 const $=q=>document.querySelector(q);
-function show(id){["home","categories","food-subcategories","number-subcategories","sets","size","game","guess-categories","guess-food-subcategories","guess-number-subcategories","guess-sets","guess-game","sentence-levels","sentence-categories","sentence-variants","sentence-game"].forEach(x=>$("#"+x).classList.toggle("hidden",x!==id))}
+function show(id){["home","categories","food-subcategories","number-subcategories","sets","size","game","guess-categories","guess-food-subcategories","guess-number-subcategories","guess-sets","guess-game","sentence-levels","sentence-categories","sentence-variants","sentence-example","sentence-game"].forEach(x=>$("#"+x).classList.toggle("hidden",x!==id))}
 function shuffle(a){a=[...a];for(let i=a.length-1;i;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function speak(t){if(!("speechSynthesis" in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.82;u.pitch=1.05;if(S.voice){u.voice=S.voice;u.lang=S.voice.lang}speechSynthesis.speak(u)}
 function tone(ok){const A=window.AudioContext||window.webkitAudioContext;if(!A)return;const c=new A(),fs=ok?[523,659,784]:[220,185];let t=c.currentTime;fs.forEach(f=>{const o=c.createOscillator(),g=c.createGain();o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.2,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+.22);o.connect(g).connect(c.destination);o.start(t);o.stop(t+.24);t+=.11})}
@@ -480,11 +492,11 @@ const positive={have:s.polish.have,like:s.polish.like,be:s.copula,want:extra.wan
 const negative={have:s.polish.dontHave,like:s.polish.dontLike,be:extra.notBe,want:extra.dontWant,can:extra.cant};
 return (variant===0?positive:negative)[familyKey].toUpperCase();
 });
-return{heading:variant===2?"MIX":level===1?labels[0]:variant===0?"TWIERDZENIA":"PRZECZENIA",subtitle:variant===2?"TWIERDZENIA I PRZECZENIA":level===1?family.label:family.label+" — "+SENTENCE_LEVELS[level].label}
+return{heading:variant===3?"MIX":variant===2?"PYTANIA":level===1?labels[0]:variant===0?"TWIERDZENIA":"PRZECZENIA",subtitle:variant===3?"TWIERDZENIA, PRZECZENIA I PYTANIA":level===1?family.label:family.label+" — "+SENTENCE_LEVELS[level].label}
 }
 function sentenceMenuButton(box,emoji,title,subtitle,onclick){const button=document.createElement("button");button.type="button";button.className="cat sentence-mode";button.innerHTML=`<span class="emoji">${emoji}</span><span class="title">${title.toUpperCase()}</span><span class="soon active">${subtitle.toUpperCase()}</span>`;button.onclick=onclick;box.appendChild(button);return button}
 function renderSentenceModes(){const box=$("#sentence-mode-options");box.innerHTML="";Object.entries(SENTENCE_FAMILIES).forEach(([key,f])=>{const button=sentenceMenuButton(box,f.emoji,f.label,"WYBIERZ WARIANT",()=>openSentenceFamily(key));button.dataset.family=key});sentenceMenuButton(box,"🎲","WIELKI MIX","WSZYSTKIE KONSTRUKCJE",()=>sentenceStart("allMixed"));$("#sentence-category-subtitle").textContent=`POZIOM ${SENTENCE_STATE.level}: ${SENTENCE_LEVELS[SENTENCE_STATE.level].label}`}
-function openSentenceFamily(key){SENTENCE_STATE.family=key;const family=SENTENCE_FAMILIES[key],box=$("#sentence-variant-options");box.innerHTML="";$("#sentence-variant-heading").textContent=family.label;$("#sentence-variant-subtitle").textContent=`POZIOM ${SENTENCE_STATE.level}: ${SENTENCE_LEVELS[SENTENCE_STATE.level].label}`;family.modes.forEach((mode,index)=>{const details=sentenceModeDetails(mode),button=sentenceMenuButton(box,["✅","🚫","🎲"][index],details.heading,details.subtitle,()=>sentenceStart(mode));button.dataset.sentenceMode=mode});show("sentence-variants")}
+function openSentenceFamily(key){SENTENCE_STATE.family=key;const family=SENTENCE_FAMILIES[key],box=$("#sentence-variant-options");box.innerHTML="";$("#sentence-variant-heading").textContent=family.label;$("#sentence-variant-subtitle").textContent=`POZIOM ${SENTENCE_STATE.level}: ${SENTENCE_LEVELS[SENTENCE_STATE.level].label}`;family.modes.forEach((mode,index)=>{const details=sentenceModeDetails(mode),button=sentenceMenuButton(box,["✅","🚫","❓","🎲"][index],details.heading,details.subtitle,()=>sentenceStart(mode));button.dataset.sentenceMode=mode});show("sentence-variants")}
 function openSentenceLevel(level){SENTENCE_STATE.level=level;SENTENCE_STATE.subject=SENTENCE_LEVELS[level].subjects[0];$("#sentence-categories-back").dataset.target="sentence-levels";renderSentenceModes();show("sentence-categories")}
 function sentencePickSubjectKey(level=SENTENCE_STATE.level){const subjects=SENTENCE_LEVELS[level].subjects;return subjects[Math.floor(Math.random()*subjects.length)]}
 function sentencePolishFruit(fruit,kind,number,subject){const base=kind==="have"||kind==="dontHave"?fruit.polish[kind][number.value]:fruit.polish[kind],prefixes={have:"Mam",dontHave:"Nie mam",like:"Lubię",dontLike:"Nie lubię"};return base.replace(prefixes[kind],subject.polish[kind])}
@@ -510,10 +522,28 @@ function sentenceCanRound(negative,subjectKey=sentencePickSubjectKey()){
 const s=SENTENCE_SUBJECTS[subjectKey],action=SENTENCE_ACTIONS[Math.floor(Math.random()*SENTENCE_ACTIONS.length)],kind=negative?"cant":"can",tokens=[s.en,negative?"can't":"can",action.en];
 return{kind,key:`${subjectKey}-${kind}-${action.en}`,tokens,sentence:`${tokens.join(" ")}.`,polishSentence:`${SENTENCE_EXTRA_POLISH[subjectKey][kind]} ${action.pl}.`,pictureHtml:sentenceMarkPicture(action.emoji,negative)}
 }
-function sentenceBuildRound(mode){const kinds=SENTENCE_MODES[mode].kinds,kind=kinds[Math.floor(Math.random()*kinds.length)],subjectKey=sentencePickSubjectKey();if(kind==="have"||kind==="dontHave")return sentenceHaveRound(kind==="dontHave",subjectKey);if(kind==="like"||kind==="dontLike")return sentenceLikeRound(kind==="dontLike",subjectKey);if(kind==="want"||kind==="dontWant")return sentenceWantRound(kind==="dontWant",subjectKey);if(kind==="can"||kind==="cant")return sentenceCanRound(kind==="cant",subjectKey);return sentenceAmRound(subjectKey,kind==="notAm")}
+function sentenceQuestionRound(family,subjectKey=sentencePickSubjectKey()){
+const s=SENTENCE_SUBJECTS[subjectKey];
+let base=family==="have"?sentenceHaveRound(false,subjectKey):family==="like"?sentenceLikeRound(false,subjectKey):family==="want"?sentenceWantRound(false,subjectKey):family==="can"?sentenceCanRound(false,subjectKey):sentenceAmRound(subjectKey);
+if(family==="have"&&Math.random()<.25)base={key:subjectKey+"-have-dog",tokens:[s.en,s.have,"a","dog"],polishSentence:s.polish.have+" psa.",pictureHtml:sentenceMarkPicture("🐶",false)};
+const tokens=family==="be"||family==="can"?[base.tokens[1],base.tokens[0],...base.tokens.slice(2)]:[s.have==="has"?"does":"do",s.en,family,...base.tokens.slice(2)];
+const polish=base.polishSentence.replace(/\.$/,"");
+return{...base,kind:family+"Question",key:base.key+"-question",tokens,sentence:tokens.join(" ")+"?",polishSentence:"Czy "+polish[0].toLowerCase()+polish.slice(1)+"?"}
+}
+function sentenceBuildRound(mode){const kinds=SENTENCE_MODES[mode].kinds,kind=kinds[Math.floor(Math.random()*kinds.length)],subjectKey=sentencePickSubjectKey();if(kind.endsWith("Question"))return sentenceQuestionRound(kind.replace("Question",""),subjectKey);if(kind==="have"||kind==="dontHave")return sentenceHaveRound(kind==="dontHave",subjectKey);if(kind==="like"||kind==="dontLike")return sentenceLikeRound(kind==="dontLike",subjectKey);if(kind==="want"||kind==="dontWant")return sentenceWantRound(kind==="dontWant",subjectKey);if(kind==="can"||kind==="cant")return sentenceCanRound(kind==="cant",subjectKey);return sentenceAmRound(subjectKey,kind==="notAm")}
 function sentenceSetRound(round){SENTENCE_STATE.previousKey=round.key;SENTENCE_STATE.current=round;SENTENCE_STATE.bank=shuffle(round.tokens.map((text,index)=>({id:`${round.key}-${index}-${text}`,text})));SENTENCE_STATE.answer=[];SENTENCE_STATE.locked=false;$("#sentence-picture").innerHTML=round.pictureHtml;$("#sentence-polish").textContent=round.polishSentence.toUpperCase();$("#sentence-message").textContent="";$("#sentence-message").className="sentence-message";$("#sentence-answer").className="sentence-answer";sentenceRender()}
 function sentenceCreateRound(){let round;do{round=sentenceBuildRound(SENTENCE_STATE.mode)}while(round.key===SENTENCE_STATE.previousKey);sentenceSetRound(round)}
-function sentenceStart(mode){$("#sentence-game-back").dataset.target=mode==="allMixed"?"sentence-categories":"sentence-variants";const details=sentenceModeDetails(mode);SENTENCE_STATE.mode=mode;SENTENCE_STATE.current=null;SENTENCE_STATE.previousKey=null;SENTENCE_STATE.correctCount=0;$("#sentence-score").textContent="0 POPRAWNYCH";$("#sentence-heading").textContent=details.heading.toUpperCase();$("#sentence-subtitle").textContent=details.subtitle.toUpperCase();sentenceCreateRound();show("sentence-game")}
+function sentenceStart(mode){$("#sentence-game-back").dataset.target=mode==="allMixed"?"sentence-categories":"sentence-variants";const details=sentenceModeDetails(mode);SENTENCE_STATE.mode=mode;SENTENCE_STATE.current=null;SENTENCE_STATE.previousKey=null;SENTENCE_STATE.correctCount=0;$("#sentence-score").textContent="0 POPRAWNYCH";$("#sentence-heading").textContent=details.heading.toUpperCase();$("#sentence-subtitle").textContent=details.subtitle.toUpperCase();sentenceShowExample(mode)}
+function sentenceShowExample(mode){
+const example=sentenceBuildRound(mode);SENTENCE_STATE.example=example;
+$("#sentence-example-back").dataset.target=mode==="allMixed"?"sentence-categories":"sentence-variants";
+$("#sentence-example-picture").innerHTML=example.pictureHtml;
+$("#sentence-example-english").textContent=example.sentence.toUpperCase();
+$("#sentence-example-polish").textContent=example.polishSentence.toUpperCase();
+$("#sentence-example-tip").textContent=example.kind.endsWith("Question")?"PYTANIE ZACZYNAMY OD DO / DOES, AM / IS / ARE LUB CAN.":"POSŁUCHAJ PRZYKŁADU, A POTEM UŁÓŻ WŁASNE ZDANIE.";
+show("sentence-example")
+}
+function sentenceBegin(){if("speechSynthesis" in window)speechSynthesis.cancel();SENTENCE_STATE.previousKey=SENTENCE_STATE.example.key;sentenceCreateRound();show("sentence-game")}
 function sentenceWordButton(item,source){const b=document.createElement("button");b.type="button";b.className="sentence-word";b.textContent=item.text.toUpperCase();b.onclick=()=>{if(SENTENCE_STATE.locked)return;sentenceSpeak(item.text,"en-US",.78);const from=source==="bank"?SENTENCE_STATE.bank:SENTENCE_STATE.answer,to=source==="bank"?SENTENCE_STATE.answer:SENTENCE_STATE.bank,index=from.findIndex(word=>word.id===item.id);if(index<0)return;to.push(from.splice(index,1)[0]);$("#sentence-message").textContent="";$("#sentence-message").className="sentence-message";sentenceRender()};return b}
 function sentenceRender(){const answer=$("#sentence-answer"),bank=$("#sentence-bank");answer.innerHTML="";bank.innerHTML="";if(!SENTENCE_STATE.answer.length){const placeholder=document.createElement("span");placeholder.className="sentence-placeholder";placeholder.textContent="KLIKAJ WYRAZY PONIŻEJ";answer.appendChild(placeholder)}else SENTENCE_STATE.answer.forEach(item=>answer.appendChild(sentenceWordButton(item,"answer")));SENTENCE_STATE.bank.forEach(item=>bank.appendChild(sentenceWordButton(item,"bank")))}
 function sentenceCheck(){if(!SENTENCE_STATE.current)return;sentenceSpeak(SENTENCE_STATE.current.sentence,"en-US",.82);if(SENTENCE_STATE.locked)return;const message=$("#sentence-message"),answer=$("#sentence-answer");if(SENTENCE_STATE.answer.length!==SENTENCE_STATE.current.tokens.length){message.textContent="UŻYJ WSZYSTKICH WYRAZÓW.";message.className="sentence-message bad";return}const submitted=SENTENCE_STATE.answer.map(item=>item.text).join(" "),expected=SENTENCE_STATE.current.tokens.join(" ");if(submitted===expected){SENTENCE_STATE.locked=true;SENTENCE_STATE.correctCount++;$("#sentence-score").textContent=`${SENTENCE_STATE.correctCount} POPRAWNYCH`;message.textContent=`BRAWO! ${SENTENCE_STATE.current.sentence.toUpperCase()}`;message.className="sentence-message ok";answer.className="sentence-answer correct"}else{message.textContent="SPRÓBUJ JESZCZE RAZ.";message.className="sentence-message bad";answer.className="sentence-answer sentence-wrong";setTimeout(()=>{if(!SENTENCE_STATE.locked)answer.className="sentence-answer"},450)}}
@@ -530,6 +560,9 @@ document.querySelectorAll(".guess-number-subcategory").forEach(b=>b.onclick=()=>
 document.querySelectorAll(".back").forEach(b=>b.onclick=()=>show(b.dataset.target));
 $("#replay").onclick=()=>reset(true);$("#topics").onclick=()=>{$("#finish").classList.add("hidden");show("categories")};
 $("#guess-hint").onclick=guessHint;$("#guess-next").onclick=guessNext;$("#guess-replay").onclick=()=>guessStart(GUESS_STATE.sourceItems);$("#guess-topics").onclick=()=>{$("#guess-finish").classList.add("hidden");show("guess-sets")};
+$("#sentence-example-en").onclick=()=>sentenceSpeak(SENTENCE_STATE.example.sentence,"en-US",.82);
+$("#sentence-example-pl").onclick=()=>sentenceSpeak(SENTENCE_STATE.example.polishSentence,"pl-PL",.78);
+$("#sentence-begin").onclick=sentenceBegin;
 $("#sentence-speak-polish").onclick=()=>{if(SENTENCE_STATE.current)sentenceSpeak(SENTENCE_STATE.current.polishSentence,"pl-PL",.78)};$("#sentence-check").onclick=sentenceCheck;$("#sentence-next").onclick=sentenceCreateRound;
 voices();if("speechSynthesis" in window)speechSynthesis.onvoiceschanged=voices;
 </script>
