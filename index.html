@@ -3,6 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff8e9">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Angielska Przygoda">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
 <title>Angielska Przygoda</title>
 <style>
 :root{--bg:#fff8e9;--card:#fff;--ink:#2b2118;--soft:#8a7a68;--coral:#ff6b4a;--teal:#1fb8a6;--yellow:#ffc93c;--purple:#7c5cfc;--ok:#3dd68c;--bad:#ff5470}
@@ -35,6 +42,7 @@ h1,h2{font-family:inherit;margin:0}h1{font-size:34px;line-height:1.15;margin-top
 .overlay{position:fixed;inset:0;background:#2b211873;backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;padding:24px;z-index:10}
 .modal{width:min(350px,100%);background:#fff;border-radius:26px;padding:34px 30px;text-align:center;box-shadow:0 10px 0 #2b211826}.party{font-size:50px}.modal p{color:var(--soft);font-weight:700}
 .actions{display:grid;gap:12px;margin-top:25px}.btn{width:100%;border-radius:16px;padding:13px 18px;font-weight:900;cursor:pointer}.primary{background:var(--coral);color:#fff;box-shadow:0 4px 0 #c6472f}.secondary{background:#f3ecdd}
+.install-prompt{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));z-index:40;width:min(460px,calc(100% - 24px));transform:translateX(-50%)}.install-panel{position:relative;background:#fff;border:3px solid #ffd56b;border-radius:24px;padding:20px;box-shadow:0 8px 0 #2b211826,0 16px 42px #2b21182e;text-align:left}.install-close{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:12px;background:#f3ecdd;color:var(--ink);font-size:18px;font-weight:900;cursor:pointer}.install-title{display:block;padding-right:36px;font-size:20px;font-weight:900}.install-message{margin:8px 0 16px;color:var(--soft);font-size:13px;font-weight:800;line-height:1.45}.install-actions{display:grid;grid-template-columns:1fr auto;gap:10px}.install-actions .btn{padding:12px 14px}.install-later{white-space:nowrap}
 .sentence-cats .cat{min-height:130px;padding:18px 8px}.sentence-cats .title{font-size:16px;text-align:center}.sentence-levels .cat{min-height:150px}.sentence-subjects{grid-template-columns:repeat(3,1fr)}.sentence-subjects .cat{min-height:145px}.sentence-subjects .title{font-size:24px}.sentence-screen{max-width:720px;text-transform:uppercase;padding-top:24px}.sentence-topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}.sentence-heading{text-align:center;font-size:34px;margin:10px 0 5px}.sentence-subtitle{text-align:center;color:var(--soft);font-weight:900;margin:0 0 20px}.sentence-card{background:#fff;border-radius:26px;padding:24px;box-shadow:0 6px 0 #2b21181a}.sentence-instruction{text-align:center;color:var(--soft);font-size:15px;font-weight:900;margin-bottom:14px}.sentence-picture{min-height:145px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;padding:12px;border:3px dashed #f0d69a;border-radius:22px;background:#fff4d5}.sentence-fruit{font-size:52px;line-height:1;filter:drop-shadow(0 3px 0 #00000014)}.sentence-negative{position:relative;display:flex;align-items:center;justify-content:center;min-width:min(390px,100%);min-height:112px}.sentence-negative-fruits{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;padding:8px 36px}.sentence-negative-mark{position:absolute;width:min(116px,35%);aspect-ratio:1;border:9px solid #ed3f4f;border-radius:50%;filter:drop-shadow(0 2px 0 #fff)}.sentence-negative-mark:after{content:"";position:absolute;left:8%;right:8%;top:44%;height:9px;border-radius:9px;background:#ed3f4f;transform:rotate(-45deg)}.sentence-polish-row{display:flex;align-items:center;justify-content:center;gap:10px;margin:15px 0 5px}.sentence-polish{color:var(--soft);font-size:20px;font-weight:900;text-align:center}.sentence-speaker{width:42px;height:42px;flex:0 0 42px;border-radius:14px;background:#e7f7f5;color:#147d72;font-size:21px;font-weight:900;cursor:pointer;box-shadow:0 3px 0 #b9e4de}.sentence-speaker:hover{transform:translateY(-2px)}.sentence-answer{min-height:76px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:9px;padding:12px;margin-top:18px;border:3px solid #ded4ff;border-radius:20px;background:#f4f0ff}.sentence-placeholder{color:#9c8fbc;font-weight:900}.sentence-bank{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:18px 0}.sentence-word{border-radius:15px;padding:12px 17px;background:#fff;color:var(--ink);font-size:21px;font-weight:900;letter-spacing:.4px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 0 #2b211821}.sentence-word:hover{transform:translateY(-2px)}.sentence-answer .sentence-word{background:#e9e2ff;box-shadow:0 3px 0 #c9bdf4}.sentence-answer.correct{border-color:var(--ok);background:#ecfff5}.sentence-answer.sentence-wrong{border-color:var(--bad);animation:sentenceShake .35s ease}.sentence-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px}.sentence-btn{border-radius:16px;padding:14px;font-size:16px;font-weight:900;text-transform:uppercase;cursor:pointer}.sentence-check{background:var(--coral);color:#fff;box-shadow:0 4px 0 #c6472f}.sentence-next{background:#ede5d5;color:var(--ink)}.sentence-message{min-height:36px;padding-top:14px;text-align:center;font-size:18px;font-weight:900}.sentence-message.ok{color:#19965a}.sentence-message.bad{color:var(--bad)}
 @keyframes sentenceShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}50%{transform:translateX(6px)}75%{transform:translateX(-4px)}}
 .guess-screen{max-width:1040px;height:100vh;height:100dvh;overflow:hidden;padding-top:16px;padding-bottom:16px;display:flex;flex-direction:column}.guess-topbar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px}.guess-topbar .progress{justify-self:end}.guess-instruction{text-align:center;color:var(--soft);font-size:15px;font-weight:900;margin:10px 0 12px}.guess-main{position:relative;flex:1;min-height:0;display:grid;grid-template-columns:minmax(240px,.82fr) minmax(360px,1.18fr);gap:18px}.guess-picture-card,.guess-answer-panel{min-height:0;background:#fff;border-radius:26px;box-shadow:0 5px 0 #2b21181a}.guess-picture-card{padding:18px;display:grid;grid-template-rows:1fr auto;gap:12px}.guess-picture{min-height:0;display:flex;align-items:center;justify-content:center;border:3px dashed #f0d69a;border-radius:22px;background:#fff4d5;font-size:clamp(90px,17vh,170px);overflow:hidden}.guess-picture svg{width:min(72%,230px);height:min(72%,230px)}.guess-picture .art-icon{width:min(72%,230px);height:min(72%,230px)}.guess-picture .number-pic,.guess-picture .color-pic{width:min(46%,180px)}.guess-hint{justify-self:center;border-radius:16px;padding:12px 18px;background:#fff0ae;color:#735600;font-weight:900;cursor:pointer;box-shadow:0 4px 0 #dec45f}.guess-hint:disabled{opacity:.55}.guess-answer-panel{padding:18px;display:grid;grid-template-rows:minmax(0,1fr) auto;gap:12px}.guess-options{min-height:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:12px}.guess-option{min-width:0;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 50px;border:3px solid transparent;border-radius:20px;background:#f8f5ee;box-shadow:0 3px 0 #2b21181a;overflow:hidden;transition:.12s}.guess-answer{min-width:0;background:transparent;padding:12px 8px 12px 16px;font-size:clamp(16px,2.2vw,24px);font-weight:900;cursor:pointer}.guess-option-speaker{border-left:2px solid #e9e0d2;background:#fff;font-size:20px;cursor:pointer}.guess-option:hover{transform:translateY(-2px)}.guess-option.guess-correct{border-color:var(--ok);background:#eafff3}.guess-option.guess-wrong{border-color:var(--bad);animation:shake .45s}.guess-feedback-row{min-height:52px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px}.guess-feedback{font-weight:900;color:var(--soft);text-align:center}.guess-feedback.ok{color:#19965a}.guess-next{border-radius:15px;padding:12px 17px;background:var(--coral);color:#fff;font-weight:900;cursor:pointer;box-shadow:0 4px 0 #c6472f}.guess-confetti{pointer-events:none;position:absolute;inset:0;overflow:hidden}.guess-summary{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0 4px}.guess-summary div{background:#f8f5ee;border-radius:16px;padding:13px 8px}.guess-summary strong{display:block;font-size:25px;color:var(--purple)}
@@ -56,6 +64,18 @@ h1,h2{font-family:inherit;margin:0}h1{font-size:34px;line-height:1.15;margin-top
     <button id="sentence-play" class="card"><span class="emoji">📝</span><span class="grow"><span class="title">Ułóż Zdanie</span><span class="desc">Ćwicz zdania krok po kroku</span></span></button>
   </div>
 </section>
+
+<div id="install-prompt" class="install-prompt hidden" role="dialog" aria-labelledby="install-title" aria-describedby="install-message">
+  <div class="install-panel">
+    <button id="install-close" class="install-close" type="button" aria-label="ZAMKNIJ">×</button>
+    <strong id="install-title" class="install-title">🎈 ZAINSTALUJ APLIKACJĘ</strong>
+    <p id="install-message" class="install-message">ANGIELSKA PRZYGODA BĘDZIE DOSTĘPNA Z EKRANU TELEFONU JAK ZWYKŁA APLIKACJA.</p>
+    <div class="install-actions">
+      <button id="install-confirm" class="btn primary" type="button">ZAINSTALUJ</button>
+      <button id="install-later" class="btn secondary install-later" type="button">MOŻE PÓŹNIEJ</button>
+    </div>
+  </div>
+</div>
 
 <section id="categories" class="screen hidden">
   <div class="top"><div class="left"><button class="icon back" data-target="home">←</button><h2>Wybierz temat</h2></div></div>
@@ -565,7 +585,22 @@ $("#sentence-example-pl").onclick=()=>sentenceSpeak(SENTENCE_STATE.example.polis
 $("#sentence-begin").onclick=sentenceBegin;
 $("#sentence-speak-polish").onclick=()=>{if(SENTENCE_STATE.current)sentenceSpeak(SENTENCE_STATE.current.polishSentence,"pl-PL",.78)};$("#sentence-check").onclick=sentenceCheck;$("#sentence-next").onclick=sentenceCreateRound;
 voices();if("speechSynthesis" in window)speechSynthesis.onvoiceschanged=voices;
+let installDeferredPrompt=null;
+const INSTALL_DISMISS_KEY="angielska-przygoda-install-dismissed",INSTALL_DISMISS_TIME=7*24*60*60*1000;
+function installStandalone(){return window.matchMedia&&window.matchMedia("(display-mode: standalone)").matches||window.navigator&&window.navigator.standalone===true}
+function installMobile(){const ua=window.navigator&&window.navigator.userAgent||"";return /Android|iPhone|iPad|iPod/i.test(ua)||window.navigator&&window.navigator.maxTouchPoints>1&&window.innerWidth<=1024}
+function installIOS(){const n=window.navigator||{},ua=n.userAgent||"";return /iPhone|iPad|iPod/i.test(ua)||n.platform==="MacIntel"&&n.maxTouchPoints>1}
+function installSafari(){const ua=window.navigator&&window.navigator.userAgent||"";return /Safari/i.test(ua)&&!/CriOS|FxiOS|EdgiOS|OPiOS/i.test(ua)}
+function installDismissed(){try{return Date.now()-Number(localStorage.getItem(INSTALL_DISMISS_KEY)||0)<INSTALL_DISMISS_TIME}catch{return false}}
+function installHide(remember=false){$("#install-prompt").classList.add("hidden");if(remember)try{localStorage.setItem(INSTALL_DISMISS_KEY,String(Date.now()))}catch{}}
+function installShow(kind){if(!installMobile()||installStandalone()||installDismissed())return;const ios=kind==="ios";$("#install-message").textContent=ios?(installSafari()?"W SAFARI NACIŚNIJ UDOSTĘPNIJ, WYBIERZ DODAJ DO EKRANU POCZĄTKOWEGO I WŁĄCZ OTWÓRZ JAKO APLIKACJĘ.":"OTWÓRZ TĘ STRONĘ W SAFARI. NASTĘPNIE WYBIERZ UDOSTĘPNIJ → DODAJ DO EKRANU POCZĄTKOWEGO."):"ANGIELSKA PRZYGODA BĘDZIE DOSTĘPNA Z EKRANU TELEFONU JAK ZWYKŁA APLIKACJA.";$("#install-confirm").textContent=ios?"ROZUMIEM":"ZAINSTALUJ";$("#install-prompt").classList.remove("hidden")}
+async function installConfirm(){if(installDeferredPrompt){installDeferredPrompt.prompt();await installDeferredPrompt.userChoice;installDeferredPrompt=null;installHide(true)}else installHide(true)}
+if(typeof window!=="undefined"&&window.addEventListener){
+window.addEventListener("beforeinstallprompt",event=>{event.preventDefault();installDeferredPrompt=event;installShow("android")});
+window.addEventListener("appinstalled",()=>installHide(false));
+window.addEventListener("load",()=>{if("serviceWorker" in navigator)navigator.serviceWorker.register("/service-worker.js");if(installIOS())setTimeout(()=>installShow("ios"),900)});
+$("#install-confirm").onclick=installConfirm;$("#install-later").onclick=()=>installHide(true);$("#install-close").onclick=()=>installHide(true)
+}
 </script>
 </body>
 </html>
-
