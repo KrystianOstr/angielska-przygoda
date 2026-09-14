@@ -1,7 +1,13 @@
 const LISTEN_STATE={category:CATEGORIES.animals,sourceItems:[],questions:[],index:0,current:null,options:[],solved:false};
 const SHORT_STATE={level:1,family:"mix",index:0,current:null,solved:false,correct:0,previousKey:null};
 const SHORT_FAMILIES=["have","like","be","want","can"];
-const SHORT_ANSWER_SUBJECTS={i:"you",youOne:"I",he:"he",she:"she",it:"it",youMany:"we",we:"you",they:"they"};
+const SHORT_LEVELS={
+  1:{label:"TY",subjects:["youOne"]},
+  2:{label:"ON, ONA, ONO",subjects:["he","she","it"]},
+  3:{label:"WY, MY, ONI",subjects:["youMany","we","they"]},
+  4:{label:"MIX WSZYSTKICH OSÓB",subjects:["youOne","he","she","it","youMany","we","they"]}
+};
+const SHORT_ANSWER_SUBJECTS={i:"you",youOne:"I",he:"he",she:"she",it:"it",youMany:"we",we:"we",they:"they"};
 
 function featureBurst(selector){
   const box=$(selector),colors=["#ff6b4a","#ffc93c","#1fb8a6","#7c5cfc","#3dd68c"];
@@ -112,11 +118,11 @@ function listenOpenSets(category,backTarget){
 }
 
 function shortAnswerText(subjectKey,family,positive){
-  const subject=SENTENCE_SUBJECTS[subjectKey];
   const answerSubject=SHORT_ANSWER_SUBJECTS[subjectKey];
   let auxiliary;
   if(family==="be"){
     const answerBe=answerSubject==="I"?"am":["he","she","it"].includes(answerSubject)?"is":"are";
+    if(!positive&&answerSubject==="I")return "no, I'm not.";
     auxiliary=positive?answerBe:answerBe==="am"?"am not":answerBe==="is"?"isn't":"aren't";
   }else if(family==="can"){
     auxiliary=positive?"can":"can't";
@@ -127,11 +133,16 @@ function shortAnswerText(subjectKey,family,positive){
   return `${positive?"yes":"no"}, ${answerSubject} ${auxiliary}.`;
 }
 
+function shortPickSubjectKey(level=SHORT_STATE.level){
+  const subjects=SHORT_LEVELS[level].subjects;
+  return subjects[Math.floor(Math.random()*subjects.length)];
+}
+
 function shortNegativePicture(html){
   return `<div class="short-negative-picture"><div class="short-picture-content">${html}</div><span class="sentence-negative-mark" aria-hidden="true"></span></div>`;
 }
 
-function shortBuildRound(family=SHORT_STATE.family,subjectKey=sentencePickSubjectKey(SHORT_STATE.level),positive=Math.random()<.5){
+function shortBuildRound(family=SHORT_STATE.family,subjectKey=shortPickSubjectKey(),positive=Math.random()<.5){
   if(family==="mix")family=SHORT_FAMILIES[Math.floor(Math.random()*SHORT_FAMILIES.length)];
   const question=sentenceQuestionRound(family,subjectKey);
   return{
@@ -229,7 +240,7 @@ function shortRenderFamilies(){
   });
   const mix=sentenceMenuButton(box,"🎲","WIELKI MIX","WSZYSTKIE KONSTRUKCJE",()=>shortStart("mix"));
   mix.dataset.shortFamily="mix";
-  $("#short-category-subtitle").textContent=`POZIOM ${SHORT_STATE.level}: ${SENTENCE_LEVELS[SHORT_STATE.level].label}`;
+  $("#short-category-subtitle").textContent=`POZIOM ${SHORT_STATE.level}: ${SHORT_LEVELS[SHORT_STATE.level].label}`;
 }
 
 function shortOpenLevel(level){
