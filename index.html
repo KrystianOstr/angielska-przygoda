@@ -46,6 +46,10 @@ h1,h2{font-family:inherit;margin:0}h1{font-size:34px;line-height:1.15;margin-top
 .sentence-cats .cat{min-height:130px;padding:18px 8px}.sentence-cats .title{font-size:16px;text-align:center}.sentence-levels .cat{min-height:150px}.sentence-subjects{grid-template-columns:repeat(3,1fr)}.sentence-subjects .cat{min-height:145px}.sentence-subjects .title{font-size:24px}.sentence-screen{max-width:720px;text-transform:uppercase;padding-top:24px}.sentence-topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}.sentence-heading{text-align:center;font-size:34px;margin:10px 0 5px}.sentence-subtitle{text-align:center;color:var(--soft);font-weight:900;margin:0 0 20px}.sentence-card{background:#fff;border-radius:26px;padding:24px;box-shadow:0 6px 0 #2b21181a}.sentence-instruction{text-align:center;color:var(--soft);font-size:15px;font-weight:900;margin-bottom:14px}.sentence-picture{min-height:145px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;padding:12px;border:3px dashed #f0d69a;border-radius:22px;background:#fff4d5}.sentence-fruit{font-size:52px;line-height:1;filter:drop-shadow(0 3px 0 #00000014)}.sentence-negative{position:relative;display:flex;align-items:center;justify-content:center;min-width:min(390px,100%);min-height:112px}.sentence-negative-fruits{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;padding:8px 36px}.sentence-negative-mark{position:absolute;width:min(116px,35%);aspect-ratio:1;border:9px solid #ed3f4f;border-radius:50%;filter:drop-shadow(0 2px 0 #fff)}.sentence-negative-mark:after{content:"";position:absolute;left:8%;right:8%;top:44%;height:9px;border-radius:9px;background:#ed3f4f;transform:rotate(-45deg)}.sentence-polish-row{display:flex;align-items:center;justify-content:center;gap:10px;margin:15px 0 5px}.sentence-polish{color:var(--soft);font-size:20px;font-weight:900;text-align:center}.sentence-speaker{width:42px;height:42px;flex:0 0 42px;border-radius:14px;background:#e7f7f5;color:#147d72;font-size:21px;font-weight:900;cursor:pointer;box-shadow:0 3px 0 #b9e4de}.sentence-speaker:hover{transform:translateY(-2px)}.sentence-answer{min-height:76px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:9px;padding:12px;margin-top:18px;border:3px solid #ded4ff;border-radius:20px;background:#f4f0ff}.sentence-placeholder{color:#9c8fbc;font-weight:900}.sentence-bank{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:18px 0}.sentence-word{border-radius:15px;padding:12px 17px;background:#fff;color:var(--ink);font-size:21px;font-weight:900;letter-spacing:.4px;text-transform:uppercase;cursor:pointer;box-shadow:0 4px 0 #2b211821}.sentence-word:hover{transform:translateY(-2px)}.sentence-answer .sentence-word{background:#e9e2ff;box-shadow:0 3px 0 #c9bdf4}.sentence-answer.correct{border-color:var(--ok);background:#ecfff5}.sentence-answer.sentence-wrong{border-color:var(--bad);animation:sentenceShake .35s ease}.sentence-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px}.sentence-btn{border-radius:16px;padding:14px;font-size:16px;font-weight:900;text-transform:uppercase;cursor:pointer}.sentence-check{background:var(--coral);color:#fff;box-shadow:0 4px 0 #c6472f}.sentence-next{background:#ede5d5;color:var(--ink)}.sentence-message{min-height:36px;padding-top:14px;text-align:center;font-size:18px;font-weight:900}.sentence-message.ok{color:#19965a}.sentence-message.bad{color:var(--bad)}
 @keyframes sentenceShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}50%{transform:translateX(6px)}75%{transform:translateX(-4px)}}
 .guess-screen{max-width:1040px;height:100vh;height:100dvh;overflow:hidden;padding-top:16px;padding-bottom:16px;display:flex;flex-direction:column}.guess-topbar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px}.guess-topbar .progress{justify-self:end}.guess-instruction{text-align:center;color:var(--soft);font-size:15px;font-weight:900;margin:10px 0 12px}.guess-main{position:relative;flex:1;min-height:0;display:grid;grid-template-columns:minmax(240px,.82fr) minmax(360px,1.18fr);gap:18px}.guess-picture-card,.guess-answer-panel{min-height:0;background:#fff;border-radius:26px;box-shadow:0 5px 0 #2b21181a}.guess-picture-card{padding:18px;display:grid;grid-template-rows:1fr auto;gap:12px}.guess-picture{min-height:0;display:flex;align-items:center;justify-content:center;border:3px dashed #f0d69a;border-radius:22px;background:#fff4d5;font-size:clamp(90px,17vh,170px);overflow:hidden}.guess-picture svg{width:min(72%,230px);height:min(72%,230px)}.guess-picture .art-icon{width:min(72%,230px);height:min(72%,230px)}.guess-picture .number-pic,.guess-picture .color-pic{width:min(46%,180px)}.guess-hint{justify-self:center;border-radius:16px;padding:12px 18px;background:#fff0ae;color:#735600;font-weight:900;cursor:pointer;box-shadow:0 4px 0 #dec45f}.guess-hint:disabled{opacity:.55}.guess-answer-panel{padding:18px;display:grid;grid-template-rows:minmax(0,1fr) auto;gap:12px}.guess-options{min-height:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:12px}.guess-option{min-width:0;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 50px;border:3px solid transparent;border-radius:20px;background:#f8f5ee;box-shadow:0 3px 0 #2b21181a;overflow:hidden;transition:.12s}.guess-answer{min-width:0;background:transparent;padding:12px 8px 12px 16px;font-size:clamp(16px,2.2vw,24px);font-weight:900;cursor:pointer}.guess-option-speaker{border-left:2px solid #e9e0d2;background:#fff;font-size:20px;cursor:pointer}.guess-option:hover{transform:translateY(-2px)}.guess-option.guess-correct{border-color:var(--ok);background:#eafff3}.guess-option.guess-wrong{border-color:var(--bad);animation:shake .45s}.guess-feedback-row{min-height:52px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px}.guess-feedback{font-weight:900;color:var(--soft);text-align:center}.guess-feedback.ok{color:#19965a}.guess-next{border-radius:15px;padding:12px 17px;background:var(--coral);color:#fff;font-weight:900;cursor:pointer;box-shadow:0 4px 0 #c6472f}.guess-confetti{pointer-events:none;position:absolute;inset:0;overflow:hidden}.guess-summary{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0 4px}.guess-summary div{background:#f8f5ee;border-radius:16px;padding:13px 8px}.guess-summary strong{display:block;font-size:25px;color:var(--purple)}
+.listen-speaker-card{min-height:0;background:#fff;border-radius:26px;box-shadow:0 5px 0 #2b21181a;padding:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px}.listen-ear{font-size:clamp(90px,18vh,170px);filter:drop-shadow(0 5px 0 #2b21181a)}.listen-repeat{border-radius:18px;padding:14px 18px;background:#e7f7f5;color:#147d72;font-weight:900;cursor:pointer;box-shadow:0 4px 0 #b9e4de}.listen-repeat:hover{transform:translateY(-2px)}.listen-option{min-width:0;min-height:0;border:3px solid transparent;border-radius:20px;background:#fff4d5;box-shadow:0 3px 0 #2b21181a;display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;transition:.12s;font-size:clamp(58px,12vh,115px)}.listen-option:hover{transform:translateY(-2px)}.listen-option svg,.listen-option .art-icon{width:min(70%,130px);height:min(70%,130px)}.listen-option .number-pic,.listen-option .color-pic{width:min(48%,105px)}.listen-option.guess-correct{border-color:var(--ok);background:#eafff3}.listen-option.guess-wrong{border-color:var(--bad);animation:shake .45s}
+.short-screen{max-width:820px;height:100vh;height:100dvh;overflow:hidden;padding-top:16px;padding-bottom:16px;display:flex;flex-direction:column}.short-card{position:relative;flex:1;min-height:0;background:#fff;border-radius:26px;padding:20px;box-shadow:0 5px 0 #2b21181a;display:grid;grid-template-rows:auto auto minmax(130px,1fr) auto auto;gap:10px}.short-question-row{display:flex;align-items:center;justify-content:center;gap:12px}.short-question{font-size:clamp(21px,3.4vw,31px);text-align:center}.short-polish{margin:0;text-align:center;color:var(--soft);font-size:15px;font-weight:900}.short-picture{min-height:0;padding:8px}.short-picture .sentence-fruit{font-size:clamp(34px,7vh,50px)}.short-negative-picture{position:relative;min-width:min(390px,100%);min-height:100px;display:flex;align-items:center;justify-content:center}.short-picture-content{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:7px;padding:8px 34px}.short-negative-picture .sentence-negative-mark{width:min(104px,32%)}.short-answers{display:grid;grid-template-columns:1fr 1fr;gap:12px}.short-answer{min-height:64px;border:3px solid transparent;border-radius:18px;background:#f4f0ff;color:var(--ink);padding:12px;font-size:clamp(15px,2.8vw,21px);font-weight:900;cursor:pointer;box-shadow:0 4px 0 #c9bdf4;transition:.12s}.short-answer:hover{transform:translateY(-2px)}.short-answer.guess-correct{border-color:var(--ok);background:#eafff3;box-shadow:0 4px 0 #a8e4c3}.short-answer.guess-wrong{border-color:var(--bad);animation:shake .45s}
+@media(max-width:720px){.listen-main{grid-template-rows:minmax(125px,.6fr) minmax(285px,1.4fr)}.listen-speaker-card{padding:8px;flex-direction:row;gap:12px}.listen-ear{font-size:clamp(56px,12vh,90px)}.listen-repeat{padding:11px;font-size:12px}.listen-option{font-size:clamp(46px,11vh,82px)}.short-screen{padding:8px 10px}.short-card{padding:10px;grid-template-rows:auto auto minmax(115px,1fr) auto auto;gap:7px}.short-question-row{gap:7px}.short-polish{font-size:12px}.short-answers{gap:8px}.short-answer{min-height:55px;padding:8px;font-size:clamp(13px,4vw,17px)}}
+@media(max-height:670px) and (max-width:720px){.listen-main{grid-template-rows:minmax(100px,.5fr) minmax(260px,1.5fr)}.short-card{grid-template-rows:auto auto minmax(95px,1fr) auto auto}.short-answer{min-height:48px}.short-picture .sentence-fruit{font-size:34px}}
 @media(max-width:720px){.guess-screen{padding:8px 10px}.guess-topbar .badge{font-size:11px;padding:7px 9px}.guess-topbar .progress{font-size:11px;padding:7px 9px}.guess-instruction{font-size:12px;margin:7px 0}.guess-main{grid-template-columns:1fr;grid-template-rows:minmax(150px,.78fr) minmax(270px,1.22fr);gap:9px}.guess-picture-card{padding:9px;grid-template-columns:1fr auto;grid-template-rows:1fr;gap:8px}.guess-picture{font-size:clamp(65px,16vh,115px)}.guess-picture svg,.guess-picture .art-icon{width:min(62%,145px);height:min(62%,145px)}.guess-picture .number-pic,.guess-picture .color-pic{width:min(42%,105px)}.guess-hint{align-self:center;padding:11px 10px;font-size:12px;max-width:105px}.guess-answer-panel{padding:9px;gap:8px}.guess-options{gap:8px}.guess-option{grid-template-columns:minmax(0,1fr) 42px;border-radius:15px}.guess-answer{font-size:clamp(13px,4vw,18px);padding:8px 4px 8px 8px}.guess-option-speaker{font-size:17px}.guess-feedback-row{min-height:43px;gap:6px}.guess-feedback{font-size:12px}.guess-next{padding:10px 12px;font-size:12px}}
 @media(max-height:670px) and (max-width:720px){.guess-instruction{margin:4px 0}.guess-main{grid-template-rows:minmax(125px,.68fr) minmax(245px,1.32fr)}.guess-picture-card{padding:7px}.guess-answer-panel{padding:7px}.guess-hint{padding:8px}.guess-feedback-row{min-height:36px}}
 @media(max-width:600px){.screen{padding-left:10px;padding-right:10px}h1{font-size:29px}.sizes{gap:8px}.size-card{padding:20px 5px}.sets{grid-template-columns:1fr 1fr;gap:10px}.set-card{min-height:125px;padding:17px 6px}.game-screen{padding-top:8px;padding-bottom:8px}.game-screen .top{margin-bottom:7px}.hint{font-size:11px;margin-bottom:6px}.board{grid-template-columns:repeat(var(--mobile-cols),minmax(0,1fr));grid-template-rows:repeat(var(--mobile-rows),minmax(0,1fr));gap:5px;width:100%;height:calc(100dvh - 105px)}.tile{border-radius:11px;border-width:2px;box-shadow:0 2px 0 #2b21181a}.image-tile{font-size:clamp(24px,9vw,38px)}.number-pic{border-radius:12px;font-size:clamp(20px,7vw,32px)}.color-pic{border-width:3px}.en{font-size:clamp(9px,3.2vw,13px)}.spk{display:none}}
@@ -61,7 +65,9 @@ h1,h2{font-family:inherit;margin:0}h1{font-size:34px;line-height:1.15;margin-top
   <div class="stack">
     <button id="play" class="card"><span class="emoji">🧩</span><span class="grow"><span class="title">Dopasuj Pary</span><span class="desc">Połącz obrazek ze słówkiem</span></span></button>
     <button id="guess-play" class="card"><span class="emoji">🔤</span><span class="grow"><span class="title">Zgadnij Słowo</span><span class="desc">Wybierz właściwe słowo do obrazka</span></span></button>
+    <button id="listen-play" class="card"><span class="emoji">👂</span><span class="grow"><span class="title">Posłuchaj i Wybierz</span><span class="desc">Posłuchaj słowa i wskaż obrazek</span></span></button>
     <button id="sentence-play" class="card"><span class="emoji">📝</span><span class="grow"><span class="title">Ułóż Zdanie</span><span class="desc">Ćwicz zdania krok po kroku</span></span></button>
+    <button id="short-play" class="card"><span class="emoji">💬</span><span class="grow"><span class="title">Krótkie Odpowiedzi</span><span class="desc">Odpowiadaj YES albo NO</span></span></button>
   </div>
 </section>
 
@@ -183,6 +189,64 @@ h1,h2{font-family:inherit;margin:0}h1{font-size:34px;line-height:1.15;margin-top
   </div>
 </section>
 
+<section id="listen-categories" class="screen hidden">
+  <div class="top"><div class="left"><button class="icon back" data-target="home">←</button><h2>WYBIERZ TEMAT</h2></div></div>
+  <div class="cats">
+    <button class="cat listen-category" data-category="food"><span class="emoji">🍎</span><span class="title">JEDZENIE</span></button>
+    <button class="cat listen-category" data-category="animals"><span class="emoji">🐶</span><span class="title">ZWIERZĘTA</span></button>
+    <button class="cat listen-category" data-category="colors"><span class="emoji">🎨</span><span class="title">KOLORY</span></button>
+    <button class="cat listen-category" data-category="numbers"><span class="emoji">🔢</span><span class="title">LICZBY</span></button>
+    <button class="cat listen-category" data-category="body"><span class="emoji">🧍</span><span class="title">CZĘŚCI CIAŁA</span></button>
+  </div>
+</section>
+
+<section id="listen-food-subcategories" class="screen hidden">
+  <div class="top"><div class="left"><button class="icon back" data-target="listen-categories">←</button><h2>WYBIERZ RODZAJ JEDZENIA</h2></div></div>
+  <div class="cats">
+    <button class="cat listen-food-subcategory" data-food="fruits"><span class="emoji">🍓</span><span class="title">OWOCE</span></button>
+    <button class="cat listen-food-subcategory" data-food="vegetables"><span class="emoji">🥕</span><span class="title">WARZYWA</span></button>
+    <button class="cat listen-food-subcategory" data-food="general"><span class="emoji">🍞</span><span class="title">OGÓLNE</span></button>
+    <button class="cat listen-food-subcategory" data-food="mix"><span class="emoji">🎲</span><span class="title">MIX</span><span class="soon">LOSOWANIE ZE WSZYSTKICH</span></button>
+  </div>
+</section>
+
+<section id="listen-number-subcategories" class="screen hidden">
+  <div class="top"><div class="left"><button class="icon back" data-target="listen-categories">←</button><h2>WYBIERZ ZAKRES LICZB</h2></div></div>
+  <div class="cats">
+    <button class="cat listen-number-subcategory" data-numbers="low"><span class="emoji">🔟</span><span class="title">0–10</span></button>
+    <button class="cat listen-number-subcategory" data-numbers="high"><span class="emoji">🔢</span><span class="title">11–20</span></button>
+  </div>
+</section>
+
+<section id="listen-sets" class="screen hidden">
+  <div class="top"><div class="left"><button id="listen-sets-back" class="icon back" data-target="listen-categories">←</button><h2>WYBIERZ ZESTAW</h2></div></div>
+  <p id="listen-sets-subtitle" class="subtitle center"></p>
+  <div id="listen-set-options" class="sets"></div>
+</section>
+
+<section id="listen-game" class="screen guess-screen hidden">
+  <div class="guess-topbar">
+    <button class="icon back" data-target="listen-sets">←</button>
+    <span class="badge">👂 POSŁUCHAJ I WYBIERZ</span>
+    <span class="progress"><span id="listen-index">1</span> / <span id="listen-total">10</span></span>
+  </div>
+  <p class="guess-instruction">POSŁUCHAJ SŁOWA I WSKAŻ WŁAŚCIWY OBRAZEK</p>
+  <div class="guess-main listen-main">
+    <div class="listen-speaker-card">
+      <div class="listen-ear" aria-hidden="true">👂</div>
+      <button id="listen-repeat" class="listen-repeat" type="button">🔊 POSŁUCHAJ JESZCZE RAZ</button>
+    </div>
+    <div class="guess-answer-panel">
+      <div id="listen-options" class="guess-options listen-options"></div>
+      <div class="guess-feedback-row">
+        <div id="listen-feedback" class="guess-feedback">POSŁUCHAJ I WSKAŻ OBRAZEK</div>
+        <button id="listen-next" class="guess-next hidden" type="button">NASTĘPNE →</button>
+      </div>
+    </div>
+    <div id="listen-confetti" class="guess-confetti"></div>
+  </div>
+</section>
+
 <section id="sentence-levels" class="screen hidden">
   <div class="top"><div class="left"><button class="icon back" data-target="home">←</button><h2>WYBIERZ POZIOM</h2></div></div>
   <p class="subtitle center">WYBIERZ GRUPĘ OSÓB DO ĆWICZEŃ</p>
@@ -204,6 +268,46 @@ h1,h2{font-family:inherit;margin:0}h1{font-size:34px;line-height:1.15;margin-top
   <div class="top"><div class="left"><button class="icon back" data-target="sentence-categories">←</button><h2 id="sentence-variant-heading">WYBIERZ WARIANT</h2></div></div>
   <p id="sentence-variant-subtitle" class="subtitle center"></p>
   <div id="sentence-variant-options" class="cats sentence-cats"></div>
+</section>
+
+<section id="short-levels" class="screen hidden">
+  <div class="top"><div class="left"><button class="icon back" data-target="home">←</button><h2>WYBIERZ POZIOM</h2></div></div>
+  <p class="subtitle center">WYBIERZ GRUPĘ OSÓB DO KRÓTKICH ODPOWIEDZI</p>
+  <div class="cats sentence-cats sentence-levels">
+    <button class="cat short-level" data-short-level="1"><span class="emoji">🌱</span><span class="title">POZIOM 1</span><span class="soon active">JA — I</span></button>
+    <button class="cat short-level" data-short-level="2"><span class="emoji">🚀</span><span class="title">POZIOM 2</span><span class="soon active">TY, ON, ONA, ONO</span></button>
+    <button class="cat short-level" data-short-level="3"><span class="emoji">🌟</span><span class="title">POZIOM 3</span><span class="soon active">WY, MY, ONI</span></button>
+    <button class="cat short-level" data-short-level="4"><span class="emoji">🎲</span><span class="title">POZIOM 4</span><span class="soon active">MIX WSZYSTKICH OSÓB</span></button>
+  </div>
+</section>
+
+<section id="short-categories" class="screen hidden">
+  <div class="top"><div class="left"><button class="icon back" data-target="short-levels">←</button><h2>WYBIERZ KONSTRUKCJĘ</h2></div></div>
+  <p id="short-category-subtitle" class="subtitle center"></p>
+  <div id="short-family-options" class="cats sentence-cats"></div>
+</section>
+
+<section id="short-game" class="screen short-screen hidden">
+  <div class="guess-topbar">
+    <button class="icon back" data-target="short-categories">←</button>
+    <span class="badge">💬 KRÓTKIE ODPOWIEDZI</span>
+    <span class="progress"><span id="short-index">1</span> / 10</span>
+  </div>
+  <p id="short-game-family" class="guess-instruction">HAVE — MIEĆ</p>
+  <div class="short-card">
+    <div class="short-question-row">
+      <h2 id="short-question" class="short-question"></h2>
+      <button id="short-question-speaker" class="sentence-speaker" type="button" aria-label="CZYTAJ PYTANIE">🔊</button>
+    </div>
+    <p id="short-polish" class="short-polish"></p>
+    <div id="short-picture" class="sentence-picture short-picture"></div>
+    <div id="short-answers" class="short-answers"></div>
+    <div class="guess-feedback-row">
+      <div id="short-feedback" class="guess-feedback">WYBIERZ ODPOWIEDŹ PASUJĄCĄ DO OBRAZKA</div>
+      <button id="short-next" class="guess-next hidden" type="button">NASTĘPNE →</button>
+    </div>
+    <div id="short-confetti" class="guess-confetti"></div>
+  </div>
 </section>
 
 <section id="sentence-example" class="screen sentence-screen hidden">
@@ -254,6 +358,19 @@ h1,h2{font-family:inherit;margin:0}h1{font-size:34px;line-height:1.15;margin-top
   <div class="modal"><div class="party">🏆</div><h2>BRAWO!</h2><p>UKOŃCZYŁEŚ 10 SŁÓW</p>
     <div class="guess-summary"><div><strong id="guess-independent">0</strong>BEZ PODPOWIEDZI</div><div><strong id="guess-with-hint">0</strong>Z PODPOWIEDZIĄ 💡</div></div>
     <div class="actions"><button id="guess-replay" class="btn primary">↻ ZAGRAJ JESZCZE RAZ</button><button id="guess-topics" class="btn secondary">WYBIERZ INNY ZESTAW</button></div>
+  </div>
+</div>
+
+<div id="listen-finish" class="overlay hidden">
+  <div class="modal"><div class="party">🎧</div><h2>BRAWO!</h2><p>UKOŃCZYŁEŚ 10 ZADAŃ SŁUCHOWYCH</p>
+    <div class="actions"><button id="listen-replay" class="btn primary">↻ ZAGRAJ JESZCZE RAZ</button><button id="listen-topics" class="btn secondary">WYBIERZ INNY ZESTAW</button></div>
+  </div>
+</div>
+
+<div id="short-finish" class="overlay hidden">
+  <div class="modal"><div class="party">💬</div><h2>BRAWO!</h2><p>UKOŃCZYŁEŚ 10 KRÓTKICH ODPOWIEDZI</p>
+    <div class="guess-summary"><div><strong id="short-result">10</strong>POPRAWNYCH ODPOWIEDZI</div><div><strong>YES / NO</strong>ŚWIETNA ROBOTA!</div></div>
+    <div class="actions"><button id="short-replay" class="btn primary">↻ ZAGRAJ JESZCZE RAZ</button><button id="short-topics" class="btn secondary">WYBIERZ INNĄ KONSTRUKCJĘ</button></div>
   </div>
 </div>
 
@@ -465,7 +582,7 @@ const S={left:null,right:null,matched:new Set(),lock:false,voice:null,polishVoic
 const GUESS_STATE={category:CATEGORIES.animals,sourceItems:[],questions:[],index:0,current:null,options:[],solved:false,usedHint:false,independent:0,withHint:0};
 const SENTENCE_STATE={level:1,subject:"i",mode:"have",current:null,bank:[],answer:[],correctCount:0,locked:false,previousKey:null};
 const $=q=>document.querySelector(q);
-function show(id){["home","categories","food-subcategories","number-subcategories","sets","size","game","guess-categories","guess-food-subcategories","guess-number-subcategories","guess-sets","guess-game","sentence-levels","sentence-categories","sentence-variants","sentence-example","sentence-game"].forEach(x=>$("#"+x).classList.toggle("hidden",x!==id))}
+function show(id){["home","categories","food-subcategories","number-subcategories","sets","size","game","guess-categories","guess-food-subcategories","guess-number-subcategories","guess-sets","guess-game","listen-categories","listen-food-subcategories","listen-number-subcategories","listen-sets","listen-game","short-levels","short-categories","short-game","sentence-levels","sentence-categories","sentence-variants","sentence-example","sentence-game"].forEach(x=>$("#"+x).classList.toggle("hidden",x!==id))}
 function shuffle(a){a=[...a];for(let i=a.length-1;i;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function speak(t){if(!("speechSynthesis" in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.82;u.pitch=1.05;if(S.voice){u.voice=S.voice;u.lang=S.voice.lang}speechSynthesis.speak(u)}
 function tone(ok){const A=window.AudioContext||window.webkitAudioContext;if(!A)return;const c=new A(),fs=ok?[523,659,784]:[220,185];let t=c.currentTime;fs.forEach(f=>{const o=c.createOscillator(),g=c.createGain();o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.2,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+.22);o.connect(g).connect(c.destination);o.start(t);o.stop(t+.24);t+=.11})}
@@ -604,5 +721,7 @@ window.addEventListener("load",()=>{if("serviceWorker" in navigator)navigator.se
 $("#install-confirm").onclick=installConfirm;$("#install-later").onclick=()=>installHide(true);$("#install-close").onclick=()=>installHide(true);$("#install-already").onclick=installMarkIOSInstalled
 }
 </script>
+<script src="/features.js"></script>
 </body>
 </html>
+
