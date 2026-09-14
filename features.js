@@ -2,10 +2,10 @@ const LISTEN_STATE={category:CATEGORIES.animals,sourceItems:[],questions:[],inde
 const SHORT_STATE={level:1,family:"mix",index:0,current:null,solved:false,correct:0,previousKey:null};
 const SHORT_FAMILIES=["have","like","be","want","can"];
 const SHORT_LEVELS={
-  1:{label:"TY",subjects:["youOne"]},
-  2:{label:"ON, ONA, ONO",subjects:["he","she","it"]},
+  1:{label:"JA",subjects:["i"]},
+  2:{label:"TY, ON, ONA, ONO",subjects:["youOne","he","she","it"]},
   3:{label:"WY, MY, ONI",subjects:["youMany","we","they"]},
-  4:{label:"MIX WSZYSTKICH OSÓB",subjects:["youOne","he","she","it","youMany","we","they"]}
+  4:{label:"MIX WSZYSTKICH OSÓB",subjects:["i","youOne","he","she","it","youMany","we","they"]}
 };
 const SHORT_ANSWER_SUBJECTS={i:"you",youOne:"I",he:"he",she:"she",it:"it",youMany:"we",we:"we",they:"they"};
 

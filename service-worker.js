@@ -1,4 +1,4 @@
-const CACHE_NAME="angielska-przygoda-v4";
+const CACHE_NAME="angielska-przygoda-v5";
 const BODY_ICONS=["arm","back","belly-button","chest","ear","eye","face","finger","foot","hair","hand","head","knee","leg","mouth","neck","nose","shoulder","stomach","toe","tooth"].map(name=>`/assets/body/${name}.svg`);
 const CORE=["/","/index.html","/features.js","/manifest.webmanifest","/icons/icon-192.png","/icons/icon-512.png",...BODY_ICONS];
 self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting())));
